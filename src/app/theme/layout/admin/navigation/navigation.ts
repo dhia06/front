@@ -39,10 +39,18 @@ const NavigationItems = [
         url: '/dashboard/default',
         icon: 'feather icon-home',
         classes: 'nav-item',
+      },
+      {
+        id: 'kk',
+        title: 'Professionals',
+        type: 'item',
+        url: '/dashboard/admin',
+        icon: 'feather icon-home',
+        classes: 'nav-item',
       }
     ]
   },
-  {
+ /* {
     id: 'ui-element',
     title: 'UI ELEMENT',
     type: 'group',
@@ -192,7 +200,7 @@ const NavigationItems = [
         external: true
       }
     ]
-  }
+  }*/
 ];
 
 @Injectable()

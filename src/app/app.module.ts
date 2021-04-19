@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './theme/shared/shared.module';
 import { AppComponent } from './app.component';
@@ -23,6 +23,21 @@ import { NavRightComponent } from './theme/layout/admin/nav-bar/nav-right/nav-ri
 import { ConfigurationComponent } from './theme/layout/admin/configuration/configuration.component';
 import { AcceuilComponent } from './acceuil/acceuil.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { LeastComponent } from './least/least.component';
+import { MatStepperModule} from '@angular/material/stepper';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
+
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatRippleModule } from '@angular/material/core';
+import {MatInputModule} from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { LogginnComponent } from './logginn/logginn.component';
+import { NewComponent } from './new/new.component';
+import { AddserviceComponent } from './addservice/addservice.component';
+import { MystepperComponent } from './mystepper/mystepper.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,9 +55,22 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NavSearchComponent,
     NavRightComponent,
     ConfigurationComponent,
-    AcceuilComponent
+    AcceuilComponent,
+    LeastComponent,
+    LogginnComponent,
+    NewComponent,
+    AddserviceComponent,
+    MystepperComponent
   ],
   imports: [
+    MatFormFieldModule,
+    MatStepperModule,
+    MatButtonModule,
+   MatInputModule,
+     MatRippleModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule ,
     BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
@@ -53,7 +81,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NgbTabsetModule,
     NgbModule
   ],
-  providers: [NavigationItem],
-  bootstrap: [AppComponent]
+  providers: [
+    NavigationItem,
+   {
+     
+   provide: STEPPER_GLOBAL_OPTIONS,
+   useValue: { showError: true }
+ 
+},],
+ bootstrap: [AppComponent]
 })
 export class AppModule { }

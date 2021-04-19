@@ -1,0 +1,14 @@
+<form [formGroup]='orderForm' (ngSubmit)='submitForm(orderForm.value)'>
+  <div formArrayName="items" *ngFor="let item of formData.controls; let i = index; let c = count">
+    <div class="line" [formGroupName]="i">
+      <span>{{i+1}} </span>
+      <input formControlName="name" placeholder="Item name">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <div class="addbutton">
+    <button type="button" (click)="addItem()">Ajouter une ligne</button>
+  </div>
+  <hr>
+  <button type="submit" (click)="submitToServer()">Envoyer</button>
+</form>
