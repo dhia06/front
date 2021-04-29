@@ -1,0 +1,346 @@
+<div class="yaa">
+    <mat-horizontal-stepper class="active" [linear]="isLinear" #stepper>
+
+        <mat-step>
+
+            <form [formGroup]='orderForm'>
+
+                <ng-template matStepLabel>
+
+                    <h3 class="h3"> <img src="../../assets/stepper/serv.png">Create a service</h3>
+                </ng-template>
+                <br>
+                <mat-form-field>
+
+                    <mat-label class="title">Categorie</mat-label>
+                    <mat-select formControlName="categorie">
+
+                        <ng-container *ngFor="let cat of all">
+                            <mat-option value="{{cat.name}}">{{cat.name}}</mat-option>
+
+                        </ng-container>
+
+                    </mat-select>
+
+                </mat-form-field>
+                <br>
+                <mat-form-field>
+                    <mat-label class="title">Nameservice
+                    </mat-label>
+                    <div formArrayName="items" *ngFor="let item of formData.controls; let i = index; let c = count">
+                        <div class="line" [formGroupName]="i">
+                            <input matInput name="nameservice" formControlName="nameservice" type="textp">
+                        </div>
+
+                    </div>
+
+                </mat-form-field>
+                <div class="addbutton">
+                    <p class="btnm" (click)="addItem()"><i class="fa fa-plus"></i></p>
+                </div>
+                <hr>
+                <a><button mat-button matStepperNext (click)="submit2ToServer()">
+                        <mat-label class="title">Next
+                        </mat-label>
+                    </button></a>
+
+            </form>
+        </mat-step>
+
+
+
+        <mat-step>
+            <form [formGroup]='TaskForm'>
+                <ng-template matStepLabel>
+                    <h3 class="h3"> <img src="../../assets/stepper/pp.jpg">Create a Task</h3>
+                </ng-template>
+                <br>
+                <mat-form-field>
+                    <mat-label class="title">Nameservice</mat-label>
+
+                    <mat-select formControlName="serviceid">
+                        <ng-container *ngFor="let cat of services">
+                            <mat-option value="{{cat.id}}">{{cat.nameservice}}</mat-option>
+                        </ng-container>
+                    </mat-select>
+                </mat-form-field>
+                <br>
+                <mat-form-field>
+                    <mat-label class="title">Taskname</mat-label>
+                    <div formArrayName="itemst" *ngFor="let item of formDatat.controls; let i = index; let c = count">
+                        <div class="line" [formGroupName]="i">
+                            <input matInput type="textp" name="travailname" formControlName="travailname"
+                                placeholder="tapez votre travail...">
+
+
+                        </div>
+                    </div>
+                </mat-form-field>
+                <br>
+
+                <div class="addbutton">
+                    <p class="btnm" (click)="addItemt()"><i class="fa fa-plus"></i></p>
+                </div>
+
+                <hr>
+                <a><button mat-button matStepperNext (click)="submit3ToServer()">
+                        <mat-label class="title">Next
+                        </mat-label>
+                    </button></a>
+
+            </form>
+
+        </mat-step>
+
+
+        <mat-step>
+
+
+            <form [formGroup]="TaskFormGroup">
+                <ng-template matStepLabel>
+                    <h2 class="h2"> <img src="../../assets/stepper/oo.png">
+                        Create a detailed task</h2>
+                </ng-template>
+                <mat-form-field>
+                    <br>
+                    <mat-label class="title">Tasks</mat-label>
+                    <mat-select formControlName="travailid">
+                        <ng-container *ngFor="let item of travaux">
+                            <mat-option value="{{item.id}}">{{item.travailname}}</mat-option>
+                        </ng-container>
+
+                    </mat-select>
+                </mat-form-field>
+
+                <br>
+
+                <mat-form-field>
+                    <mat-label class="title">Detailed Task</mat-label>
+                    <div formArrayName="itemstd" *ngFor="let item of formDatatd.controls; let i = index; let c = count">
+                        <div class="line" [formGroupName]="i">
+
+                            <input matInput class="tdt" name="dtname" formControlName="dtname"
+                                placeholder="Put your detailed task" type="textp">
+
+                        </div>
+                    </div>
+                </mat-form-field>
+
+
+                <br>
+                <mat-form-field>
+                    <mat-label class="title">Description</mat-label>
+                    <div formArrayName="itemstd" *ngFor="let item of formDatatd.controls; let i = index; let c = count">
+                        <div class="line" [formGroupName]="i">
+
+                            <input matInput class="desc" ROWS=4 COLS=40 name="description" type="textp"
+                                formControlName="description" placeholder="describe your detailed task">
+
+                        </div>
+                    </div>
+                </mat-form-field>
+
+                <br>
+
+                <div class="addbutton">
+                    <p class="btnm" (click)="addItemtd()"><i class="fa fa-plus"></i></p>
+                </div>
+                <br>
+                <a><button mat-button matStepperNext (click)="submit4ToServer()">
+                        <mat-label class="title">Next
+                        </mat-label>
+                    </button></a>
+
+
+            </form>
+        </mat-step>
+
+
+
+        <mat-step>
+
+
+            <form [formGroup]="ArticleForm">
+                <ng-template matStepLabel>
+                    <h2 class="h2"> <img src="../../assets/stepper/uu.jpg">
+                        Create an an article</h2>
+                </ng-template>
+                <mat-form-field>
+
+                    <mat-label class="title">Tasks</mat-label>
+                    <mat-select formControlName="travdetid">
+                        <ng-container *ngFor="let t of tous">
+                            <mat-option value="{{t.id}}">{{t.dtname}}</mat-option>
+
+                        </ng-container>
+
+                    </mat-select>
+                </mat-form-field>
+
+                <br>
+
+                <mat-form-field>
+                    <mat-label class="title">Article</mat-label>
+                    <div formArrayName="itemsa" *ngFor="let item of formDataa.controls; let i = index; let c = count">
+                        <div class="line" [formGroupName]="i">
+                            <input matInput type="textp" name="articlename" formControlName="articlename"
+                                placeholder="tipe your article....">
+
+
+                        </div>
+                    </div>
+                </mat-form-field>
+
+
+                <br>
+                <mat-form-field>
+                    <mat-label class="title">Image</mat-label>
+                    <div formArrayName="itemsa" *ngFor="let item of formDataa.controls; let i = index; let c = count">
+                        <div class="line" [formGroupName]="i">
+                            <input matInput type="textp" name="image" formControlName="image"
+                                placeholder="Put your image....">
+
+
+                        </div>
+                    </div>
+                </mat-form-field>
+
+                <br>
+                <mat-form-field>
+                    <mat-label class="title">Unity</mat-label>
+                    <div formArrayName="itemsa" *ngFor="let item of formDataa.controls; let i = index; let c = count">
+                        <div class="line" [formGroupName]="i">
+                            <input matInput type="textp" name="unite" formControlName="unite" placeholder="Unity...">
+
+
+
+                        </div>
+                    </div>
+                </mat-form-field>
+                <br>
+                <mat-form-field>
+                    <mat-label class="title">Price</mat-label>
+                    <div formArrayName="itemsa" *ngFor="let item of formDataa.controls; let i = index; let c = count">
+                        <div class="line" [formGroupName]="i">
+                            <input matInput type="textp" name="prix" formControlName="prix"
+                                placeholder="Insert the price....">
+
+
+                        </div>
+                    </div>
+                </mat-form-field>
+
+                <br>
+                <div class="addbutton">
+                    <p class="btnm" (click)="addItema()"><i class="fa fa-plus"></i></p>
+                </div>
+                <br>
+                <a><button mat-button matStepperNext (click)="submit5ToServer()">
+                        <mat-label class="title">Add an article
+                        </mat-label>
+                    </button></a>
+
+
+            </form>
+        </mat-step>
+
+
+
+
+    </mat-horizontal-stepper>
+</div>
+
+
+
+
+<style>
+    img {
+        font-size: 20px;
+        height: 27px;
+        width: 28px;
+        padding-top: 2px;
+
+    }
+
+    .next {
+        padding: 11px 55px;
+    }
+
+    .title {
+        color: rgb(206, 87, 196);
+        position: -ms-page;
+        right: 15px;
+        size: 5px;
+        height: 3px;
+        width: 9px;
+
+    }
+
+    input[type=texto] {
+        width: 100%;
+        padding: 9px 13px;
+        margin: 4px 4px;
+        display: inline-block;
+        border: 1px solid rgb(57, 76, 131);
+        box-sizing: border-box;
+    }
+
+
+
+
+    a {
+        
+        position: relative;
+        display: inline-block;
+        padding: 1.2em 2em;
+        text-decoration: none;
+        text-align: center;
+        cursor: pointer;
+        user-select: none;
+        color: rgb(248, 248, 248);
+        padding: 7px 15px;
+
+    }
+
+
+    .h3 {
+        font-weight: bold;
+        font-size: 1.3em;
+        padding-top: 10%;
+    }
+
+    .h2 {
+        font-weight: bold;
+        font-size: 1.3em;
+        padding-top: 7%;
+    }
+
+
+    .p {
+        color: bisque;
+    }
+
+
+    .yaa {
+        padding-left: 9%;
+        padding-top: 3%;
+    }
+
+    .active {
+        border-width: 1em;
+        border: 3.8px outset rgb(206, 87, 196);
+
+        height: 90%;
+        width: 90%;
+
+    }
+
+    input[type=textp] {
+        width: 100%;
+        padding: 9px 13px;
+        margin: 4px 4px;
+        display: inline-block;
+        border: 1px solid rgb(250, 250, 250);
+        box-sizing: border-box;
+    }
+</style>

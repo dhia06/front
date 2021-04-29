@@ -41,13 +41,55 @@ const NavigationItems = [
         classes: 'nav-item',
       },
       {
-        id: 'kk',
-        title: 'Professionals',
+        id: 'dashboard',
+        title: 'Article management',
         type: 'item',
-        url: '/dashboard/admin',
+        url: '/dashboard/articlemg',
         icon: 'feather icon-home',
         classes: 'nav-item',
-      }
+      },
+      {
+        id: 'dashboardoo',
+        title: 'Task management',
+        type: 'item',
+        url: 'dashboard/taskmg',
+        icon: 'feather icon-home',
+        classes: 'nav-item',
+      },
+      {
+        id: 'da',
+        title: 'Service management',
+        type: 'item',
+        url: 'dashboard/servmg',
+        icon: 'feather icon-home',
+        classes: 'nav-item',
+      },
+      {
+        id: 'day',
+        title: 'Detailed Task management',
+        type: 'item',
+        url: 'dashboard/taskdmg',
+        icon: 'feather icon-home',
+        classes: 'nav-item',
+      },
+  
+      {
+        id: 'pmmmp',
+        title: 'Professionals',
+        type: 'item',
+        url: '/dashboard/data',
+        icon: 'feather icon-home',
+        classes: 'nav-item',
+      },
+      {
+        id: 'kk',
+        title: 'Data jobs',
+        type: 'item',
+        url: '/dashboard/charge',
+        icon: 'feather icon-home',
+        classes: 'nav-item',
+      },
+     
     ]
   },
  /* {

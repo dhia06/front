@@ -1,10 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA,NO_ERRORS_SCHEMA, NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './theme/shared/shared.module';
 import { AppComponent } from './app.component';
+import {MatTableModule} from '@angular/material/table';
+
 import { AdminComponent } from './theme/layout/admin/admin.component';
 import { AuthComponent } from './theme/layout/auth/auth.component';
 import { NavigationComponent } from './theme/layout/admin/navigation/navigation.component';
@@ -23,19 +25,29 @@ import { NavRightComponent } from './theme/layout/admin/nav-bar/nav-right/nav-ri
 import { ConfigurationComponent } from './theme/layout/admin/configuration/configuration.component';
 import { AcceuilComponent } from './acceuil/acceuil.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { LeastComponent } from './least/least.component';
+import { SignupClientComponent } from './Authentification/SignupClient/SignupClient.component';
 import { MatStepperModule} from '@angular/material/stepper';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
-
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatRippleModule } from '@angular/material/core';
 import {MatInputModule} from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-import { LogginnComponent } from './logginn/logginn.component';
-import { NewComponent } from './new/new.component';
-import { AddserviceComponent } from './addservice/addservice.component';
-import { MystepperComponent } from './mystepper/mystepper.component';
+import {LogginproComponent } from './Authentification/logginpro/logginpro.component';
+import { MatSelectModule } from '@angular/material/select';
+import { DataTablesModule } from 'angular-datatables';
+import { SignupproComponent } from './Authentification/signuppro/signuppro.component';
+import { TaskdmetiersComponent } from './Dashboard-Admin/taskdmetiers/taskdmetiers.component';
+import { TaskmetiersComponent } from './Dashboard-Admin/taskmetiers/taskmetiers.component';
+import { ServicetmetiersComponent } from './Dashboard-Admin/servicetmetiers/servicetmetiers.component';
+// import { Ng2TableModule } from '@pluritech/ng2-responsive-table';
+import {MatCardModule} from '@angular/material/card';
+import { ListeProComponent } from './Dashboard-Admin/liste-pro/liste-pro.component';
+import { DatametiersComponent } from './Dashboard-Admin/Datametiers/Datametiers.component';
+import { DevisComponent } from './Espace-Client/Devis/Devis.component';
+
+
+
 
 
 @NgModule({
@@ -56,13 +68,21 @@ import { MystepperComponent } from './mystepper/mystepper.component';
     NavRightComponent,
     ConfigurationComponent,
     AcceuilComponent,
-    LeastComponent,
-    LogginnComponent,
-    NewComponent,
-    AddserviceComponent,
-    MystepperComponent
+   SignupClientComponent,
+    LogginproComponent,
+    DatametiersComponent,
+    DevisComponent,
+    SignupproComponent,
+    TaskdmetiersComponent,
+    TaskmetiersComponent,
+    ServicetmetiersComponent,
+    ListeProComponent,
+    // SwallServiceComponent
   ],
   imports: [
+    // Ng2TableModule,
+    DataTablesModule.forRoot(),
+    MatSelectModule,
     MatFormFieldModule,
     MatStepperModule,
     MatButtonModule,
@@ -79,7 +99,17 @@ import { MystepperComponent } from './mystepper/mystepper.component';
     NgbTooltipModule,
     NgbButtonsModule,
     NgbTabsetModule,
-    NgbModule
+    NgbModule,  MatTableModule,
+    MatCardModule,
+    
+    
+  ],
+  exports: [
+    MatButtonModule,
+ 
+    MatFormFieldModule,
+    MatSelectModule,
+    MatInputModule
   ],
   providers: [
     NavigationItem,
@@ -89,6 +119,11 @@ import { MystepperComponent } from './mystepper/mystepper.component';
    useValue: { showError: true }
  
 },],
- bootstrap: [AppComponent]
+ bootstrap: [AppComponent],
+  schemas: [
+ CUSTOM_ELEMENTS_SCHEMA,
+//   NO_ERRORS_SCHEMA
+ ]
+
 })
 export class AppModule { }

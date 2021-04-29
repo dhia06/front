@@ -1,0 +1,85 @@
+<div style="text-align:center">
+  <h1>
+    Tasks Management
+  </h1>
+</div>
+
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Tasks</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" style="width: 100%;">
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>ID </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+      <ng-container matColumnDef="travailname">
+        <th mat-header-cell *matHeaderCellDef>Name of Task</th>
+        <td mat-cell *matCellDef="let element"> {{element.travailname}} </td>
+      </ng-container>
+      <ng-container matColumnDef="serviceid">
+        <th mat-header-cell *matHeaderCellDef> ServiceID</th>
+        <td mat-cell *matCellDef="let element"> {{element.serviceid}} </td>
+      </ng-container>
+      <ng-container matColumnDef="nameservice">
+        <th mat-header-cell *matHeaderCellDef> Servicename</th>
+        <td mat-cell *matCellDef="let element"> {{element.ServiceEntity.nameservice}} </td>
+      </ng-container>
+      <ng-container matColumnDef="categorie">
+        <th mat-header-cell *matHeaderCellDef> Category</th>
+        <td mat-cell *matCellDef="let element"> {{element.ServiceEntity.categorie}} </td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef> Actions </th>
+        <td mat-cell *matCellDef="let element">
+
+          <button class="btn btn-danger btn-xs" mat-raised-button (click)="deletetask(element.id)"
+            color="secondary"><span>DELETE</span> </button>
+
+          <button class="btn btn-success btn-xs" mat-raised-button (click)="selectService(element)"
+            color="secondary"><span>SELECT</span> </button>
+
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+  </mat-card-content>
+</mat-card>
+
+<mat-card *ngIf="hidden">
+  <mat-card-header>
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Update a Task </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <form #f="ngForm" class="mat-elevation-z8" style="width: 100%; padding: 5px;">
+
+          <mat-form-field>
+            <input matInput placeholder="Name" name="travailname" [(ngModel)]="travaux.travailname" required>
+          </mat-form-field>
+          <!-- <mat-form-field>
+                  <input matInput placeholder="Service" name="serviceid" [(ngModel)] = "travaux.serviceid" required>
+                </mat-form-field> -->
+
+
+
+
+        </form>
+
+      </mat-card-content>
+      <mat-card-actions>
+        <!-- <button  mat-raised-button (click)="createContact(f)" color="primary">Save Contact</button> -->
+        <button class="btn btn-success btn-xs" mat-raised-button (click)="updatetask(f)" color="primary">Update
+          Task</button>
+        <!-- <button  mat-raised-button (click)="newContact()" color="primary">New..</button> -->
+
+      </mat-card-actions>
+    </mat-card>

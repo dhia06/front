@@ -1,0 +1,950 @@
+
+
+<body data-spy="scroll" data-target="#navbar-example">
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+      <div class="container d-flex">
+
+          <div class="logo mr-auto">
+              <h1 class="text-light"><a href="index.html"><span>B</span>TP Brain</a></h1>
+          </div>
+
+          <nav class="nav-menu d-none d-lg-block">
+              <ul>
+                  <li class="active"><a href="#header">Home</a></li>
+                  <li><a href="#aboutttt">About</a></li>
+                  <li><a href="#services">Services</a></li>
+                  <li><a href="#team">Team</a></li>
+                  <li><a href="#portfolio">Portfolio</a></li>
+                  <li><a href="#blog">Blog</a></li>
+                  <li class="drop-down"><a href="">Drop Down</a>
+                      <ul>
+                          <li><a href="#">Drop Down 1</a></li>
+                          <li class="drop-down"><a href="#">Drop Down 2</a>
+                              <ul>
+                                  <li><a href="#">Deep Drop Down 1</a></li>
+                                  <li><a href="#">Deep Drop Down 2</a></li>
+                                  <li><a href="#">Deep Drop Down 3</a></li>
+                                  <li><a href="#">Deep Drop Down 4</a></li>
+                                  <li><a href="#">Deep Drop Down 5</a></li>
+                              </ul>
+                          </li>
+                          <li><a href="#">Drop Down 3</a></li>
+                          <li><a href="#">Drop Down 4</a></li>
+                          <li><a href="#">Drop Down 5</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="#contact">Contact</a></li>
+
+              </ul>
+          </nav><!-- .nav-menu -->
+
+      </div>
+
+    </header><!-- End Header -->
+
+    <div class="et_pb_section et_pb_section_0 et_pb_with_background et_section_regular">
+      <div class="et_pb_row et_pb_row_0">
+      <div class="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child">
+      <div class="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_center et_pb_bg_layout_dark">
+      <div class="et_pb_text_inner"><h2 class="main2">Demande de Devis</h2>
+      <p>&nbsp;</p></div>
+      </div> <!-- .et_pb_text -->
+    
+      </div> <!-- .et_pb_column -->
+
+      </div> <!-- .et_pb_row -->
+      <h2 class="main1">Pour vous donner une idée du budget que vous devez prévoir pour une maison neuve </h2>
+      </div>
+      
+     
+    
+
+<div class="try">  
+ <h2 class="main">
+ Remplissez le formulaire de demande de devis </h2>
+ 
+ </div>
+
+
+
+  <div class="mystep">
+<mat-horizontal-stepper [linear]="isLinear" #stepper>
+
+
+  <mat-step>
+    <ng-template matStepLabel> <h3 class="titre">Type</h3></ng-template>
+    <div id="devistap_step1" class="devistap_step ">
+      <div class="vud_padding_8 vud_center">
+
+<br><br>
+        <h2 class="h2"> Quel est le type de bien concerné par les travaux&nbsp;?</h2>
+        <div class="classe1">
+        <hr class="gris margin_top">
+        <div id="" class="margin_top devistap_choix_container">
+          <div class="devistap_choix">
+            <button mat-button matStepperNext  class="devistap_choix_texte" ><h4 class="h4">Maison</h4></button>
+          </div>
+          <div class="devistap_choix">
+            <button mat-button matStepperNext class="devistap_choix_texte"><h4 class="h4">Appartement</h4></button>
+          </div>
+          <br>
+          <div class="devistap_choix">
+            <button mat-button matStepperNext class="devistap_choix_texte"><h4 class="h4">Bureau</h4></button>
+          </div>
+          <div class="devistap_choix">
+            <button mat-button matStepperNext class="devistap_choix_texte"><h4 class="h4">Autre</h4></button>
+          </div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+      <!-- <div class="devistap_rectangle_gris">
+        <a href="#" onclick="jQuery('#vud_mb_js_box').load('//www.viteundevis.com/mb/v2/home.php');return(false)"
+          class="devistap_bouton devistap_bouton_retour_metier"><img
+            src="//media1.forumconstruire.com/img/icpa/back_16.png" alt="Picto back" class="v16"> Retour à la liste des
+          métiers</a>
+      </div> -->
+    </div>
+
+
+
+
+  </mat-step>
+
+
+  <mat-step>
+    <ng-template matStepLabel> <h3 class="titre">Surface</h3></ng-template>
+
+
+
+
+    <div class="devistap_formulaire_box">
+      <div id="devistap">
+
+        <div id="devistap_step2" class="devistap_step vud_disnone" style="display: block;">
+          <div class="vud_padding_8 vud_center">
+
+            <br><br>
+            <h2 class="h2"> Quelle surface habitable souhaitez-vous&nbsp;?</h2>
+            <div class="classe1">
+            <hr class="gris margin_top">
+            <div id="" class="margin_top devistap_choix_container">
+
+              <div class="devistap_choix">
+                <button mat-button matStepperNext  class="devistap_choix_texte" ><h4 class="h5">Moins de 100m2</h4></button>
+              </div>
+                <div class="devistap_choix">
+                  <button mat-button matStepperNext  class="devistap_choix_texte" ><h4 class="h5"> Entre 100 et 120m2</h4></button>
+                </div>
+                <br>
+                <div class="devistap_choix">
+                  <button mat-button matStepperNext  class="devistap_choix_texte" ><h4 class="h5"> Entre 120 et 150m2</h4></button>
+                </div>
+                <div class="devistap_choix">
+                  <button mat-button matStepperNext  class="devistap_choix_texte" ><h4 class="h5">Entre 150 et 200m2</h4></button>
+                </div>
+                 </div>
+            </div>
+
+          </div>
+        </div>
+
+
+
+        <div class="devistap_rectangle_gris">
+          <a href="#" onclick="devistap_retour_etap(1);return(false)" class="devistap_bouton"><img
+              src="//media1.forumconstruire.com/img/icpa/back_16.png" alt="Picto back" class="v16"> Retour</a> <a
+            href="#" onclick="document.location.href=document.location.href;return(false)" class="devistap_bouton"><img
+              src="//media1.forumconstruire.com/img/icpa/reload_16.png" alt="Picto reload" class="v16"> Recommencer</a>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </div>
+  </mat-step>
+
+
+
+
+
+
+  <mat-step>
+
+   <ng-template matStepLabel> <h3 class="titre1">Extension</h3></ng-template>
+    <div id="devistap_step1" class="devistap_step ">
+      <div class="vud_padding_8 vud_center">
+
+        <br><br>
+        <h2 class="h2">Quel Type d'extension aimeriez-vous?</h2>
+        <div class="classe1">
+        <hr class="gris margin_top">
+
+        <div id="" class="margin_top devistap_choix_container">
+          <div class="devistap_choixExt">
+            <button mat-button matStepperNext class="devistap_choix_texte"><h3 class="h5">Une maison en rez de chaussée</h3></button>
+          </div>
+          <div class="devistap_choixExt">
+            <button mat-button matStepperNext class="devistap_choix_texte"><h3 class="h5">Une maison à un étage</h3></button>
+          </div>
+          <br>
+          <div class="devistap_choixExt">
+            <button mat-button matStepperNext class="devistap_choix_texte"><h3 class="h5">Une maison à deux étages</h3></button>
+          </div>
+          <div class="devistap_choixExt">
+            <button mat-button matStepperNext class="devistap_choix_texte"><h3 class="h5">Plus que deux étages</h3></button>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="devistap_rectangle_gris">
+        <a href="#" onclick="jQuery('#vud_mb_js_box').load('//www.viteundevis.com/mb/v2/home.php');return(false)"
+          class="devistap_bouton devistap_bouton_retour_metier"><img
+            src="//media1.forumconstruire.com/img/icpa/back_16.png" alt="Picto back" class="v16"> Retour à la liste des
+          métiers</a>
+      </div>
+    </div>
+
+
+
+
+  </mat-step>
+
+
+  <mat-step>
+
+    <ng-template matStepLabel> <h3 class="titre1">Chambres</h3></ng-template>
+     <div id="devistap_step1" class="devistap_step ">
+       <div class="vud_padding_8 vud_center">
+ 
+        <br><br>
+         <h2 class="h2">Combien de chambres aimeriez-vous avoir?</h2>
+         <div class="classe1">
+         <hr class="gris margin_top">
+ 
+ 
+ 
+         <div id="" class="margin_top devistap_choix_container">
+ 
+           <div class="devistap_choix">
+             <button mat-button matStepperNext class="devistap_choix_texte"><h4 class="h5">1 chambre</h4></button>
+           </div>
+ 
+           <div class="devistap_choix">
+             <button mat-button matStepperNext class="devistap_choix_texte"><h4 class="h5">2 chambres</h4></button>
+           </div>
+           <br>
+           <div class="devistap_choix">
+             <button mat-button matStepperNext class="devistap_choix_texte"><h4 class="h5">3 chambres</h4></button>
+           </div>
+           <div class="devistap_choix">
+             <button mat-button matStepperNext class="devistap_choix_texte"><h4 class="h5">4 chambres</h4></button>
+           </div>
+           <br>
+           <div class="midd">
+           <div class="devistap_choixExt" >         
+             <button mat-button matStepperNext class="devistap_choix_texte"><h5 class="h6">Plus que 4 chambres</h5></button>
+             </div>
+           </div>
+           </div>
+         </div>
+ 
+       </div>
+ 
+ 
+ 
+       <div class="devistap_rectangle_gris">
+         <a href="#" onclick="jQuery('#vud_mb_js_box').load('//www.viteundevis.com/mb/v2/home.php');return(false)"
+           class="devistap_bouton devistap_bouton_retour_metier"><img
+             src="//media1.forumconstruire.com/img/icpa/back_16.png" alt="Picto back" class="v16"> Retour à la liste des
+           métiers</a>
+       </div>
+     </div>
+ 
+ 
+ 
+ 
+   </mat-step>
+ 
+
+
+    <mat-step>
+
+      <ng-template matStepLabel> <h3 class="titre1">Délai</h3></ng-template>
+       <div id="devistap_step1" class="devistap_step ">
+         <div class="vud_padding_8 vud_center">
+          <br><br>
+   
+           <h2 class="h2"> Dans quel délai souhaitez-vous que vos travaux commencent?</h2>
+           <div class="classe1">
+           <hr class="gris margin_top">
+   
+           <div id="" class="margin_top devistap_choix_container">
+             <div class="devistap_choixExt">
+               <button mat-button matStepperNext class="devistap_choix_texte"><h3 class="h5">Au plus vite</h3></button>
+             </div>
+             <div class="devistap_choixExt">
+               <button mat-button matStepperNext class="devistap_choix_texte"><h3 class="h5">Dans moins d'un mois</h3></button>
+             </div>
+             <br>
+             <div class="devistap_choixExt">
+               <button mat-button matStepperNext class="devistap_choix_texte"><h3 class="h5">Dans moins de six mois</h3></button>
+             </div>
+             <div class="devistap_choixExt">
+               <button mat-button matStepperNext class="devistap_choix_texte"><h3 class="h5">Pas de date fixe</h3></button>
+             </div>
+           </div>
+         </div>
+         </div>
+   
+         <div class="devistap_rectangle_gris">
+           <a href="#" onclick="jQuery('#vud_mb_js_box').load('//www.viteundevis.com/mb/v2/home.php');return(false)"
+             class="devistap_bouton devistap_bouton_retour_metier"><img
+               src="//media1.forumconstruire.com/img/icpa/back_16.png" alt="Picto back" class="v16"> Retour à la liste des
+             métiers</a>
+         </div>
+       </div>
+   
+   
+   
+   
+     </mat-step>
+
+   
+
+
+     <mat-step>
+
+      <ng-template matStepLabel> <h3 class="titre1">Objectif</h3></ng-template>
+       <div id="devistap_step1" class="devistap_step ">
+         <div class="vud_padding_8 vud_center">
+   
+          <br><br>
+           <h2 class="h2">Quel est l'objectif de votre demande?</h2>
+           <div class="classe1">
+           <hr class="gris margin_top">
+   
+           <div id="" class="margin_top devistap_choix_container">
+             <div class="devistap_choixExt">
+               <button mat-button matStepperNext class="devistap_choix_texte"><h3 class="h5">Obtenir un devis estiamtif</h3></button>
+             </div>
+             <div class="devistap_choixExt">
+               <button mat-button matStepperNext class="devistap_choix_texte"><h3 class="h5">Avoir juste une idée des prix</h3></button>
+             </div>
+          <br>
+             <div class="devistap_choix">
+               <button mat-button matStepperNext class="devistap_choix_texte"><h3 class="h4">Autre</h3></button>
+             </div>
+             
+           </div>
+         </div>
+         </div>
+   
+         <div class="devistap_rectangle_gris">
+           <a href="#" onclick="jQuery('#vud_mb_js_box').load('//www.viteundevis.com/mb/v2/home.php');return(false)"
+             class="devistap_bouton devistap_bouton_retour_metier"><img
+               src="//media1.forumconstruire.com/img/icpa/back_16.png" alt="Picto back" class="v16"> Retour à la liste des
+             métiers</a>
+         </div>
+       </div>
+   
+   
+   
+   
+     </mat-step>
+
+  <mat-step>
+    <ng-template matStepLabel> <h3 class="titre1">Budget</h3></ng-template>
+
+    <div id="devistap_step1" class="devistap_step ">
+      <div class="vud_padding_8 vud_center">
+
+        <br><br>
+        <h2 class="h2"> Quel est votre budget pour ce projet ?</h2>
+        <div class="classe1">
+        <hr class="gris margin_top">
+
+
+
+        <div id="" class="margin_top devistap_choix_container">
+
+          <div class="devistap_choixExt">
+            <button mat-button matStepperNext class="devistap_choix_texte"><h4 class="h5">100 000 TND</h4></button>
+          </div>
+
+          <div class="devistap_choixExt">
+            <button mat-button matStepperNext class="devistap_choix_texte"><h4 class="h5">Entre 100 000 et 150 000 TND</h4></button>
+          </div>
+          <br>
+          <div class="devistap_choixExt">
+            <button mat-button matStepperNext class="devistap_choix_texte"><h4 class="h5">Entre 150 000 et 200 000 TND</h4></button>
+          </div>
+          <div class="devistap_choixExt">
+            <button mat-button matStepperNext class="devistap_choix_texte"><h4 class="h5">Pas de contraintes</h4></button>
+          </div>
+         
+          </div>
+        </div>
+
+      </div>
+
+
+
+      <div class="devistap_rectangle_gris">
+        <a href="#" onclick="jQuery('#vud_mb_js_box').load('//www.viteundevis.com/mb/v2/home.php');return(false)"
+          class="devistap_bouton devistap_bouton_retour_metier"><img
+            src="//media1.forumconstruire.com/img/icpa/back_16.png" alt="Picto back" class="v16"> Retour à la liste des
+          métiers</a>
+      </div>
+    </div>
+
+
+
+  </mat-step>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <mat-step>
+    <ng-template matStepLabel><h3 class="titre">Done</h3></ng-template>
+ <h2 class="coor">Pour avoir un devis estimatif veuillez inserer vos cordonnées</h2>
+
+    <div>
+      <div class="app-body">
+        <main class="main d-flex align-items-center">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 mx-auto">
+                <div class="card mx-4">
+                  <div class="card-body p-4">
+                    <form>
+                      <h3>Register</h3>
+                      <p class="text-muted">Create your account</p>
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="icon-user"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Username" autocomplete="username" required>
+                      </div>
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">@</span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Email" autocomplete="email" required>
+                      </div>
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="icon-lock"></i></span>
+                        </div>
+                        <input type="password" class="form-control" placeholder="Password" autocomplete="new-password" required>
+                      </div>
+                      <div class="input-group mb-4">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="icon-lock"></i></span>
+                        </div>
+                        <input type="password" class="form-control" placeholder="Repeat password" autocomplete="new-password" required>
+                      </div>
+                      <button type="button" class="btn btn-block btn-success">Create Account</button>
+                    </form>
+                  </div>
+                  <div class="card-footer p-4">
+                    <div class="row">
+                      <div class="col-6">
+                        <button class="btn btn-block btn-facebook" type="button"><span>facebook</span></button>
+                      </div>
+                      <div class="col-6">
+                        <button class="btn btn-block btn-twitter" type="button"><span>twitter</span></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+</div>
+
+
+  </mat-step>
+ 
+
+</mat-horizontal-stepper>
+
+</div>
+
+
+
+
+
+
+<footer class="footer">
+  <div class="footer-area">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-4 col-sm-4 col-xs-12">
+                  <div class="footer-content">
+                      <div class="footer-head">
+                          <div class="footer-logo">
+                              <h2><span>B</span>rain <span>C</span>onsulting</h2>
+                          </div>
+
+                          <p>Experienced or young graduates, our project attracts you? Do you want to join a growing institution?
+                              <br>We are constantly looking for talents to accompany our growth...
+                             </p>
+                          <div class="footer-icons">
+                              <ul>
+                                  <li>
+                                      <a href="#"><i class="fa fa-facebook"></i></a>
+                                  </li>
+                                  <li>
+                                      <a href="#"><i class="fa fa-twitter"></i></a>
+                                  </li>
+                                  <li>
+                                      <a href="#"><i class="fa fa-google"></i></a>
+                                  </li>
+                                  <li>
+                                      <a href="#"><i class="fa fa-pinterest"></i></a>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- end single footer -->
+              <div class="col-md-4 col-sm-4 col-xs-12">
+                  <div class="footer-content">
+                      <div class="footer-head">
+                          <h4>information</h4>
+      
+                          <div class="footer-contacts">
+                              <p><span>Adress : Rue Lac Leman 1053 Berges du lac</span></p>
+                              <p><span>Tel:</span> (+216)52884352 (+33)0699942007 </p>
+                              <p><span>Email:</span> brainconsulting21@gmail.com</p>
+                              <p><span>Working Hours:</span> 8am-5pm</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- end single footer -->
+              <div class="col-md-4 col-sm-4 col-xs-12">
+                  <div class="footer-content">
+                      <div class="footer-head">
+                          <h4>Instagram</h4>
+                          <div class="flicker-img">
+                              <a href="#"><img src="assets/img/portfolio/1.jpg" alt=""></a>
+                              <a href="#"><img src="assets/img/portfolio/2.jpg" alt=""></a>
+                              <a href="#"><img src="assets/img/portfolio/3.jpg" alt=""></a>
+                              <a href="#"><img src="assets/img/portfolio/4.jpg" alt=""></a>
+                              <a href="#"><img src="assets/img/portfolio/5.jpg" alt=""></a>
+                              <a href="#"><img src="assets/img/portfolio/6.jpg" alt=""></a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="footer-area-bottom">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                  <div class="copyright text-center">
+                      <p>
+                          &copy; Copyright <strong>Brain Consulting</strong>. All Rights Reserved
+                      </p>
+                  </div>
+                  <div class="credits">
+                      Designed by <a href="https://bootstrapmade.com/">Brain's Team</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer><!-- End  Footer -->
+
+
+<style>
+  div.et_pb_section.et_pb_section_0 {
+    /* background-position: center; */
+    background-position: static;
+    
+        background-size: cover;
+         
+    background-image: linear-gradient(
+45deg
+,rgba(29,38,0,0.85) 0%,rgba(29,38,0,0) 100%),url(https://www.dsm-construction.fr/files/2020/01/news-bg-2000x750.jpg);
+width: 100%;
+height: 60%;
+/* padding-bottom: 40px; */
+}
+
+.et_pb_text_inner {
+    position: relative;
+}
+
+.et_pb_column {
+    float: left;
+    background-size: cover;
+    background-position: 50%;
+    position: relative;
+    z-index: 2;
+    min-height: 1px;
+}
+
+.et_pb_row {
+    max-width: 100%;
+}
+
+.et_pb_section {
+    position: relative;
+    background-color: #fff;
+    /* max-width: 980px; */
+}
+
+
+.et_pb_column .et_pb_row_inner, .et_pb_row {
+    padding: 30px 0;
+}
+
+.et_pb_row {
+    width: 80%;
+    max-width: 1080px;
+    margin: auto;
+    position: relative;
+}
+
+.footer{
+  padding-top:0% ;
+}
+.try{
+  /* padding-top:16px */
+  margin-top: 50px;
+   
+}
+  .mystep{
+    /* margin-bottom: 1200px; */
+    /* padding-top: 12%; */
+        padding-bottom: 15%;
+        height: 450%;
+    width:90%;
+    padding-left:9%;
+
+
+  }
+  .titre{
+    font-weight: bold;
+    font-size: 1.6em; 
+    padding-top: 20%;
+ 
+}
+.titre1{
+    font-weight: bold;
+    font-size: 1.6em; 
+    padding-top: 14%;
+ 
+}
+
+  .midd
+{
+  position: center;
+  text-align: center;
+    
+}
+  /* .fieldset {
+    background-color: #CCC;
+    max-width: 900x;
+    max-height: 120px;
+    padding: 10px;
+  }
+
+
+  .f2 {
+    background-color: rgb(216, 140, 140);
+    max-width: 700px;
+    max-height: 240px;
+    padding: 45px;
+  } */
+
+  .devistap_choix {
+    display: inline-block;
+    position: relative;
+    border: 3px solid #ccc;
+    padding: 10px;
+    width: 270px;
+    margin: 10px 2%;
+    text-align: center;
+    height: 90px;
+    cursor: pointer;
+    box-sizing: border-box;
+    vertical-align: middle;
+    font-size: 90px;
+    font-family: QlassikMediumRegular, Roboto, sans-serif;
+    border-radius: 5px;
+    background: SandyBrown;
+    transition: all 0.5s ease;
+  }
+
+  .devistap_choix_texte {
+    position: absolute;
+    display: block;
+    text-align: center;
+    top: 50%;
+    right: 0px;
+    left: 0px;
+    transform: translateY(-50%);
+    padding: 10px;
+  }
+
+  .devistap_choix {
+    border: 3px solid #dddddd;
+    background: #f8f8f8;
+  }
+
+  body #vud_mb_js_box .vud_reinitialise .devistap_choix {
+    display: inline-block;
+    position: relative;
+    border: 3px solid #ccc;
+    padding: 10px;
+    width: 270px;
+    margin: 10px 2%;
+    text-align: center;
+    height: 90px;
+    margin: 10px 2%;
+    margin-top: 10px;
+    margin-right: 2%;
+    margin-bottom: 10px;
+    margin-left: 2%;
+    cursor: pointer;
+    box-sizing: border-box;
+    vertical-align: middle;
+    font-size: 25px;
+    font-family: QlassikMediumRegular, Roboto, sans-serif;
+    border-radius: 5px;
+    background: SandyBrown;
+    transition: all 0.5s ease;
+  }
+
+  .devistap_choixExt {
+    display: inline-block;
+    position: relative;
+    border: 3px solid DarkKhaki;
+    color: rgb(192, 132, 41)
+;      margin-left: auto;
+    margin-right: auto;
+
+    font-size: 120px;
+    padding: 10px;
+    width: 410px;
+    margin: 10px 2%;
+    text-align: center;
+    height: 110px;
+    cursor: pointer;
+    box-sizing: border-box;
+    vertical-align: middle;
+  
+    font-family: QlassikMediumRegular, Roboto, sans-serif;
+    border-radius: 5px;
+    background: 
+
+    rgb(209, 202, 103)
+;
+    transition: all 0.5s ease;
+  }
+.coor{
+  margin-top: 50px;
+  padding-left: 350px;
+  font-weight: bold;
+  font-size:1.8em;
+  color: rgb(192, 132, 41);
+}
+  .devistap_choix {
+    display: inline-block;
+    position: relative;
+    border: 3px solid DarkKhaki;
+    color: rgb(192, 132, 41)
+;      margin-left: auto;
+    margin-right: auto;
+
+    font-size: 120px;
+    padding: 10px;
+    width: 270px;
+    margin: 10px 2%;
+    text-align: center;
+    height: 100px;
+    cursor: pointer;
+    box-sizing: border-box;
+    vertical-align: middle;
+  
+    font-family: QlassikMediumRegular, Roboto, sans-serif;
+    border-radius: 5px;
+    background: 
+
+    rgb(209, 202, 103)
+;
+    transition: all 0.5s ease;
+  }
+
+  body #vud_mb_js_box .vud_reinitialise .vud_padding_8 {
+    padding: 8px;
+  }
+
+  .h2 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+
+    font-size: 30px;
+
+  }
+  .button{
+    padding-left: 230px;
+max-width: 1800x;
+    max-height: 500px; 
+  }
+  .h4 {
+    text-align: center;
+    margin-left: auto;
+    /* margin-right: 10px; */
+padding-left:70px;
+max-width: 900x;
+    max-height: 120px;
+
+    font-size: 30px;}
+
+    .h3 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: 10px;
+padding-left: 105px;
+
+    font-size: 30px;}
+    .h1 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: 10px;
+padding-left: 70x;
+
+    font-size: 30px;
+    }
+    .h5 {
+    text-align: center;
+    margin-left: auto;
+    /* margin-right: 10px; */
+/* margin-left: 40px; */
+
+    font-size: 27px;
+    }
+    .h6 {
+    text-align: center;
+    margin-left: 50px;
+    /* margin-right: 10px; */
+/* margin-left: 40px; */
+    font-size: 27px;
+    }
+    .main1 {
+
+    color: black;
+    font-weight: bold;
+    margin-top: 290px;
+    text-align: center;
+    /* margin-bottom: 70%; */
+    /* margin-left: 20px; */
+    font-size: 30px;
+    }
+    .main {
+    text-align: center;
+    margin-left: auto;
+    color:rgb(177, 177, 43) ;
+    font-weight: bold;
+    margin-right: 15px;
+/* padding-left: 130px; */
+
+    font-size: 28px;
+    }
+
+    .main2 {
+      text-align: right;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    margin-right: 12px;
+    /* padding-top: 58%; */
+    margin-top: 160px;
+    margin-left: 297px;
+    font-size: 42px;
+    }
+
+
+    input[type=text],
+  input[type=password] {
+      width: 35%;
+      padding: 12px 20px;
+      margin: 8px 8px;
+      display: inline-block;
+      border: 1px solid rgb(94, 61, 214);
+      box-sizing: border-box;
+  }
+  .classe1{
+    position: center;
+    /* margin-right: 100px; */
+    text-align: center;
+  }
+
+  button {
+     /* background-color: rgb(94, 61, 214); */
+      width: 35%;
+      color: white;
+      padding: 10px 8px;
+      margin: 8px;
+      border: none;
+      cursor: pointer;
+
+  }
+
+  .btt {
+      /* background-color: rgb(148, 130, 216); */
+      width: 35%;
+      color: white;
+      padding: 10px 8px;
+      margin: 8px;
+      border: none;
+      cursor: pointer;
+
+  }
+
+  .centrer {
+      position: static;
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-top: 7%;
+      padding-bottom: 15%;
+  }
+
+  .title {
+      color: rgb(89, 70, 158);
+      position: -ms-page;
+  }
+</style>

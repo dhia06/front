@@ -1,14 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AcceuilComponent } from './acceuil/acceuil.component';
-import { AddserviceComponent } from './addservice/addservice.component';
-import { LeastComponent } from './least/least.component';
-import { LogginnComponent } from './logginn/logginn.component';
-import { MystepperComponent } from './mystepper/mystepper.component';
-import { NewComponent } from './new/new.component';
+
+import { ServicetmetiersComponent } from './Dashboard-Admin/servicetmetiers/servicetmetiers.component';
+import { SignupproComponent } from './Authentification/signuppro/signuppro.component';
+import { TaskdmetiersComponent } from './Dashboard-Admin/taskdmetiers/taskdmetiers.component';
+import { TaskmetiersComponent } from './Dashboard-Admin/taskmetiers/taskmetiers.component';
 
 import { AdminComponent } from './theme/layout/admin/admin.component';
 import { AuthComponent } from './theme/layout/auth/auth.component';
+import { LogginproComponent } from './Authentification/logginpro/logginpro.component';
+import { SignupClientComponent } from './Authentification/SignupClient/SignupClient.component';
+import { DatametiersComponent } from './Dashboard-Admin/Datametiers/Datametiers.component';
+import { DevisComponent } from './Espace-Client/Devis/Devis.component';
 
 const routes: Routes = [
   {
@@ -20,27 +24,24 @@ const routes: Routes = [
     component: AcceuilComponent
   },
   {
-    path: 'login',
-    component: LogginnComponent
+    path: 'login-pro',
+    component: LogginproComponent
+  },
+  {
+    path: 'signuppro',
+    component: SignupproComponent
   },
  
   {
-    path: 'least',
-    component: LeastComponent,
+    path: 'Signup-Client',
+    component: SignupClientComponent,
   
   },
+
   {
-    path: 'mystepper',
-    component: MystepperComponent,
+    path: 'Devis',
+    component: DevisComponent,
   
-  },
-  {
-    path: 'new',
-    component: NewComponent
-  },
-  {
-    path: 'addservice',
-    component: AddserviceComponent
   },
 
   {
@@ -53,10 +54,27 @@ const routes: Routes = [
         pathMatch: 'full'
       },
       // {
-      //   path: 'dashboard/admin',  
-      //   component: AppoComponent,
-        
+      //   path: 'dashboard/articlemg',
+      //   component: ArticlemgComponent
       // },
+       {
+        path: 'dashboard/taskmg',
+        component: TaskmetiersComponent
+      },
+      {
+        path: 'dashboard/servmg',
+        component: ServicetmetiersComponent
+      },
+      {
+        path: 'dashboard/taskdmg',
+        component: TaskdmetiersComponent
+      },
+
+      {
+        path: 'dashboard/Datametiers',
+        component: DatametiersComponent
+      },
+
      
       {
         path: 'dashboard',
