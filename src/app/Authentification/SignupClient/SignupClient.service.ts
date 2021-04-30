@@ -21,7 +21,7 @@ export class SignupClientService {
 
     return this.http.post(API_LINK, user);
   }
-//Récuperer la liste des pro
+//Récuperer la liste des profe
     allpro(): Observable<User[]> {
       return this.http.get<User[]>('http://localhost:3000/get');   }
 
