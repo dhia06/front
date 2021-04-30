@@ -13,6 +13,7 @@ import { LogginproComponent } from './Authentification/logginpro/logginpro.compo
 import { SignupClientComponent } from './Authentification/SignupClient/SignupClient.component';
 import { DatametiersComponent } from './Dashboard-Admin/Datametiers/Datametiers.component';
 import { DevisComponent } from './Espace-Client/Devis/Devis.component';
+import { ListeProComponent } from './Dashboard-Admin/liste-pro/liste-pro.component';
 
 const routes: Routes = [
   {
@@ -68,6 +69,10 @@ const routes: Routes = [
       {
         path: 'dashboard/taskdmg',
         component: TaskdmetiersComponent
+      },
+      {
+        path: 'dashboard/liste-pro',
+        component: ListeProComponent
       },
 
       {

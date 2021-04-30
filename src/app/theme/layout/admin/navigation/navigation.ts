@@ -40,6 +40,7 @@ const NavigationItems = [
         icon: 'feather icon-home',
         classes: 'nav-item',
       },
+
       {
         id: 'dashboard',
         title: 'Article management',
@@ -77,7 +78,7 @@ const NavigationItems = [
         id: 'pmmmp',
         title: 'Professionals',
         type: 'item',
-        url: '/dashboard/data',
+        url: '/dashboard/liste-pro',
         icon: 'feather icon-home',
         classes: 'nav-item',
       },
@@ -85,7 +86,7 @@ const NavigationItems = [
         id: 'kk',
         title: 'Data jobs',
         type: 'item',
-        url: '/dashboard/charge',
+        url: '/dashboard/Datametiers',
         icon: 'feather icon-home',
         classes: 'nav-item',
       },
