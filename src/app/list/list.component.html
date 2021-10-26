@@ -1,0 +1,19 @@
+
+<div class="alert alert-primary">
+    {{date|date|uppercase}}
+  </div>
+
+  <ol class="list-group">
+    <app-item *ngFor="let projet of projet" [projet]="projet"  (selectPersonne)="forwardPersonne($event)"
+   >
+
+   <!-- (click)="details(projet)" -->
+
+   
+     <!-- <button class="btn btn-info btn-xs" (clsick)="details(us)"><span class="glyphicon glyphicon-remove"></span> Details</button> -->
+    </app-item>
+  </ol>
+
+
+
+  

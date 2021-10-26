@@ -1,0 +1,18 @@
+ 
+ 
+ 
+
+ 
+ 
+<!--  
+ <p>Les Data Metiers:</p> -->
+ <ejs-treegrid #treegrid [dataSource]='data' [treeColumnIndex]='1'  [editSettings]='editSettings' [toolbar]='toolbar' [sortSettings]="sortSettings"
+            [allowFiltering]="true" [allowSorting]="true"  
+               childMapping='subtasks'   [allowPaging]="true" [pageSettings]='pageSettings' (toolbarClick)='toolbarClick($event)'
+               allowExcelExport='true' allowPdfExport='true' >
+                <e-columns>
+                    <e-column field='' headerText='' textAlign='Left' width=7  ></e-column> 
+                    <e-column field='name' headerText='Nom du service ' textAlign='Left' width=180 editType='stringedit'  [validationRules]='tasknamerules'  [edit]='editParams'></e-column>
+                  </e-columns>
+             
+           </ejs-treegrid>

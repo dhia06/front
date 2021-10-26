@@ -1,6 +1,6 @@
 export class Servicemodel {
-    id: number;
-   
-    nameservice: string;
-  categorie: string="";
+  id: number;
+ 
+  nameservice: string;
+categorie: string="";
 }

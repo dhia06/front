@@ -2,6 +2,9 @@ import {Component, DoCheck, OnInit} from '@angular/core';
 import {NgbDropdownConfig} from '@ng-bootstrap/ng-bootstrap';
 import {animate, style, transition, trigger} from '@angular/animations';
 import {DattaConfig} from '../../../../../app-config';
+import { LoginService } from 'src/app/Authentification/logginpro/login.service';
+
+
 
 @Component({
   selector: 'app-nav-right',
@@ -35,12 +38,18 @@ export class NavRightComponent implements OnInit, DoCheck {
   public friendId: boolean;
   public dattaConfig: any;
 
-  constructor(config: NgbDropdownConfig) {
+  constructor(config: NgbDropdownConfig, public loginservice: LoginService) {
     config.placement = 'bottom-right';
     this.visibleUserList = false;
     this.chatMessage = false;
     this.dattaConfig = DattaConfig.config;
   }
+
+
+  
+  // OnLogout(){
+  //   this.loginservice.logout();
+  // }
 
   ngOnInit() {
   }

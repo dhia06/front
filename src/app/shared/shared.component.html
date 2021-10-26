@@ -1,0 +1,259 @@
+<style>
+    .vv{
+position: right;
+padding-left: 1190px;
+padding-top: 90px;
+    }
+
+    .elementor {
+ background-image: url("../../assets/images/BTP/lolo.PNG"); 
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+
+</style>
+   
+
+
+<header id="header" class="fixed-top">
+  <div class="container d-flex">
+
+      <div class="logo mr-auto">
+          <h1 class="text-light"><a href="index.html"><span>B</span>TP Brain</a></h1>
+      </div>
+
+      <nav class="nav-menu d-none d-lg-block">
+          <ul>
+              <li class="active"><a href="#header">Accueil</a></li>
+              <li><a href="bloog">A propos</a></li>
+              <li><a href="#team">Equipe</a></li>
+              <!-- <li><a href="#services">Services</a></li> -->
+              <!-- <li><a href="#team">Equipe</a></li> -->
+              <!-- <li><a href="#portfolio">Portfolio</a></li> -->
+              <li><a href="propos">Blog</a></li>
+              <li class="drop-down"><a href="feather icon-pie-chart"> Services</a>
+                  <ul>
+                      <li class="drop-down"><a href="#">Devis Personalisé</a>
+                          <ul>
+                              <li><a href="Devis">Devis Express</a></li>
+                              <li><a href="#">Devis Detaillé</a></li>
+                          </ul>
+                      </li>
+                      <li class="drop-down"><a href="#">Construction </a>
+                          <ul>
+                              <li><a href="#">Genie Civil</a></li>
+                              <li><a href="#">Genie Fluides</a></li>
+                              <li><a href="#">Finition</a></li>
+
+                          </ul>
+                      </li>
+                      <li><a href="#">Prise des Rendez-vous</a></li>
+                 
+                  </ul>
+              </li>
+
+             <li class="drop-down"><a href="#currentuser">{{userService.loggedUser}} {{userService.loggedUser2}}</a>
+          
+              <ul>
+
+                  <li> <a href="#" *ngIf="!userService.isloggedIn" class="dropdown-item"  [routerLink]="['/connexion']" routerLinkActive="router-link-active">Login</a></li>
+                <li> <a href="#" *ngIf="userService.isloggedIn" class="dropdown-item" (click) = "OnLogout()">Déconnexion</a></li>
+                
+              </ul>           
+          </li>
+
+
+
+
+
+
+
+
+
+       </ul>
+      </nav><!-- .nav-menu -->
+
+  </div>
+
+</header><!-- End Header -->
+
+
+
+
+<div class="elementor">
+
+
+  
+    <!-- jjjjjjj<svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.5211 8.29802L22.636 17.4719C23.6819 18.5209 25.3738 18.5209 26.4197 17.4719L29.3579 14.5147L30.0958 13.7688C31.138 12.7161 31.138 11.0133 30.0958 9.96063L20.9841 0.786723C19.9382 -0.262241 18.2463 -0.262241 17.2003 0.786723L13.5211 4.49966C12.4853 5.55121 12.4853 7.24647 13.5211 8.29802ZM14.9053 5.88295L18.5846 2.17987C18.865 1.89785 19.3194 1.89785 19.5999 2.17987L28.7115 11.3538C28.9917 11.636 28.9917 12.0934 28.7115 12.3757L25.0355 16.0754C24.7551 16.3575 24.3007 16.3575 24.0202 16.0754L14.9086 6.90154C14.6283 6.61929 14.6283 6.16191 14.9086 5.87966L14.9053 5.88295ZM3.36799 31.282C4.31908 32.2393 5.8611 32.2393 6.8122 31.282L12.4437 25.6174C13.3948 24.6601 13.3948 23.1081 12.4437 22.1509L12.0063 21.7106L13.9651 19.7391C14.7048 18.995 14.9378 17.8814 14.5592 16.9002L9.98872 5.01878C9.69391 4.11729 9.97953 3.12611 10.7078 2.52327C11.4361 1.92042 12.4576 1.8297 13.2795 2.29487C13.5839 2.47095 13.9585 2.47021 14.2623 2.29291C14.566 2.11561 14.7527 1.7887 14.752 1.43532C14.7513 1.08194 14.5633 0.755774 14.2589 0.579689C12.7281 -0.304008 10.8138 -0.142114 9.45096 0.986287C8.08817 2.11469 7.56135 3.97411 8.12786 5.65622V5.69894L12.7408 17.6033C12.8376 17.8556 12.7774 18.1416 12.5874 18.3328L10.6286 20.3042L10.1813 19.8705C9.23023 18.9133 7.68821 18.9133 6.73711 19.8705L1.10558 25.5286C0.647847 25.9885 0.390625 26.6126 0.390625 27.2635C0.390625 27.9144 0.647847 28.5386 1.10558 28.9984L3.36799 31.282ZM2.48979 26.9317L8.12133 21.2571C8.30841 21.0704 8.61004 21.0704 8.79711 21.2571L11.0595 23.5572C11.1494 23.6472 11.2 23.7696 11.2 23.8972C11.2 24.0249 11.1494 24.1473 11.0595 24.2373L5.42799 29.8889C5.33853 29.9794 5.21693 30.0302 5.09009 30.0302C4.96326 30.0302 4.84166 29.9794 4.7522 29.8889L2.48979 27.6118C2.39988 27.5218 2.34933 27.3994 2.34933 27.2717C2.34933 27.1441 2.39988 27.0217 2.48979 26.9317ZM31.4375 15.3427C31.8194 15.7276 31.8194 16.351 31.4375 16.7359L29.3645 18.8223C29.1203 19.0861 28.7526 19.1946 28.4056 19.1054C28.0586 19.0162 27.7876 18.7435 27.699 18.3943C27.6104 18.045 27.7182 17.6749 27.9803 17.4292L30.0533 15.3427C30.4357 14.9583 31.0551 14.9583 31.4375 15.3427Z" fill="white"></path></svg> -->
+<div class="pid1">
+   <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-e017875"
+	data-id="e017875" data-element_type="column">
+	<div class="elementor-column-wrap elementor-element-populated">
+		<div class="elementor-widget-wrap">
+			<div class="elementor-element elementor-element-85e6cc3 elementor-view-stacked elementor-position-left elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-inherit elementor-shape-circle elementor-vertical-align-top elementor-widget elementor-widget-icon-box"
+				data-id="85e6cc3" data-element_type="widget" data-widget_type="icon-box.default">
+			
+							<a class="elementor-icon elementor-animation-shrink"
+								href="https://ld-wp73.template-help.com/wordpress/prod_10684/v1/services/plumbing-services/">
+								<i aria-hidden="true" class="fas fa-home"></i> </a>
+					
+							<div class="elementor-icon-box-title">
+								<a href="https://ld-wp73.template-help.com/wordpress/prod_10684/v1/services/plumbing-services/">
+                  <h5><div class="exm">Mon Espace</div></h5></a>
+							</div>
+						
+				
+		
+			</div>
+		</div>
+	</div>
+</div>
+</div> 
+<tr>
+  <td>
+<div class="pid2">
+  <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-e017875"
+ data-id="e017875" data-element_type="column">
+ <div class="elementor-column-wrap elementor-element-populated">
+   <div class="elementor-widget-wrap">
+     <div class="elementor-element elementor-element-85e6cc3 elementor-view-stacked elementor-position-left elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-inherit elementor-shape-circle elementor-vertical-align-top elementor-widget elementor-widget-icon-box"
+       data-id="85e6cc3" data-element_type="widget" data-widget_type="icon-box.default">
+     
+             <a class="elementor-icon elementor-animation-shrink"
+               href="https://ld-wp73.template-help.com/wordpress/prod_10684/v1/services/plumbing-services/">
+               <i aria-hidden="true" class="far fa-address-book"></i> </a>
+       
+             <div class="elementor-icon-box-title">
+               <a href="https://ld-wp73.template-help.com/wordpress/prod_10684/v1/services/plumbing-services/"><h5>Projets</h5></a>
+             </div>
+           
+       
+   
+     </div>
+   </div>
+ </div>
+</div>
+</div> 
+</td>
+<td>
+<div class="pid4">
+  <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-e017875"
+ data-id="e017875" data-element_type="column">
+ <div class="elementor-column-wrap elementor-element-populated">
+   <div class="elementor-widget-wrap">
+     <div class="elementor-element elementor-element-85e6cc3 elementor-view-stacked elementor-position-left elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-inherit elementor-shape-circle elementor-vertical-align-top elementor-widget elementor-widget-icon-box"
+       data-id="85e6cc3" data-element_type="widget" data-widget_type="icon-box.default">
+     
+             <a class="elementor-icon elementor-animation-shrink"
+               href="https://ld-wp73.template-help.com/wordpress/prod_10684/v1/services/plumbing-services/">
+               <i aria-hidden="true" class="fas fa-bath"></i> </a>
+         
+             <div class="elementor-icon-box-title">
+               <a href="https://ld-wp73.template-help.com/wordpress/prod_10684/v1/services/plumbing-services/"><h5>Reclamation</h5></a>
+             </div>
+           
+       
+   
+     </div>
+   </div>
+ </div>
+</div>
+</div> 
+</td>
+</tr>
+
+<tr>
+  <td>
+<div class="pid5">
+  <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-e017875"
+ data-id="e017875" data-element_type="column">
+ <div class="elementor-column-wrap elementor-element-populated">
+   <div class="elementor-widget-wrap">
+     <div class="elementor-element elementor-element-85e6cc3 elementor-view-stacked elementor-position-left elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-inherit elementor-shape-circle elementor-vertical-align-top elementor-widget elementor-widget-icon-box"
+       data-id="85e6cc3" data-element_type="widget" data-widget_type="icon-box.default">
+     
+          
+       <a class="elementor-icon elementor-animation-shrink"
+       [routerLink]="['/app-doffres']"
+       routerLinkActive="router-link-active">
+         <i class="fas fa-phone"></i> </a>
+         <i class="far fa-phone"></i>
+             <div class="elementor-icon-box-title">
+               <a href="https://ld-wp73.template-help.com/wordpress/prod_10684/v1/services/plumbing-services/"><h5>Appels d'offres</h5></a>
+             </div>
+           
+       
+   
+     </div>
+   </div>
+ </div>
+</div>
+</div> 
+</td>
+<td>
+
+
+
+<div class="pid6">
+  <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-e017875"
+ data-id="e017875" data-element_type="column">
+ <div class="elementor-column-wrap elementor-element-populated">
+   <div class="elementor-widget-wrap">
+     <div class="elementor-element elementor-element-85e6cc3 elementor-view-stacked elementor-position-left elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-inherit elementor-shape-circle elementor-vertical-align-top elementor-widget elementor-widget-icon-box"
+       data-id="85e6cc3" data-element_type="widget" data-widget_type="icon-box.default">
+     
+             <a class="elementor-icon elementor-animation-shrink"
+             [routerLink]="['/depot-prix']"
+             routerLinkActive="router-link-active">
+               <i aria-hidden="true" class="fas fa-file-invoice-dollar"></i> </a>
+             
+             <div class="elementor-icon-box-title">
+               <a><h5>Depot des prix</h5></a>
+             </div>
+           
+       
+   
+     </div>
+   </div>
+ </div>
+</div>
+</div> 
+</td>
+</tr>
+
+
+<!-- 
+<h1>Message from Service : {{related}}</h1>
+<button (click)="newMessage()">Change Message</button>   -->
+<!-- <liste-projets-admin (sendRequest)="process($event)"></liste-projets-admin>   -->
+
+<simple-notifications ></simple-notifications>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

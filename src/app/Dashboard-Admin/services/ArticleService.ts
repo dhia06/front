@@ -15,6 +15,7 @@ export class ArticleService {
   }
 
   API_SERVER = "http://localhost:3000/article";
+  API_SERVERR = "http://localhost:3000/avoir";
   constructor(private httpClient: HttpClient) { }
   public readTravaux(){
     return   this.httpClient.get<Article>(`${this.API_SERVER}`); 
@@ -35,6 +36,9 @@ export class ArticleService {
   }
   deleteserv(Article:Article){
     return this.httpClient.delete<Article>('http://localhost:3000/Servicet/'+Article.id+'/delete');
+  }
+  addprix(Article:Article){
+    return this.httpClient.post<Article>(`${this.API_SERVERR}/create`, Article);
   }
 
   

@@ -12,13 +12,12 @@
 
           <nav class="nav-menu d-none d-lg-block">
               <ul>
-                  <li class="active"><a href="#header">Home</a></li>
-                  <li><a href="#aboutttt">About</a></li>
-                  <li><a href="#services">Services</a></li>
-                  <li><a href="#team">Team</a></li>
-                  <li><a href="#portfolio">Portfolio</a></li>
+                  <li class="active"><a href="#header">Accueil</a></li>
+                  <li><a href="#aboutttt">A propos</a></li>
+                  <li><a href="#services">Equipe</a></li>
+              
                   <li><a href="#blog">Blog</a></li>
-                  <li class="drop-down"><a href="">Drop Down</a>
+                  <li class="drop-down"><a href="">Services</a>
                       <ul>
                           <li><a href="#">Drop Down 1</a></li>
                           <li class="drop-down"><a href="#">Drop Down 2</a>
@@ -35,7 +34,7 @@
                           <li><a href="#">Drop Down 5</a></li>
                       </ul>
                   </li>
-                  <li><a href="#contact">Contact</a></li>
+                  <li><a href="#contact">Connexion</a></li>
 
               </ul>
           </nav><!-- .nav-menu -->
@@ -55,11 +54,10 @@
       </div> <!-- .et_pb_column -->
 
       </div> <!-- .et_pb_row -->
-      <h2 class="main1">Pour vous donner une idée du budget que vous devez prévoir pour une maison neuve </h2>
+  
       </div>
-      
+       <h2 class="main1">Pour vous donner une idée du budget que vous devez prévoir pour une maison neuve </h2>
      
-    
 
 <div class="try">  
  <h2 class="main">
@@ -71,59 +69,212 @@
 
   <div class="mystep">
 <mat-horizontal-stepper [linear]="isLinear" #stepper>
-
-
   <mat-step>
-    <ng-template matStepLabel> <h3 class="titre">Type</h3></ng-template>
+    <ng-template matStepLabel> <h3 class="titre">Categorie</h3></ng-template>
     <div id="devistap_step1" class="devistap_step ">
       <div class="vud_padding_8 vud_center">
 
 <br><br>
-        <h2 class="h2"> Quel est le type de bien concerné par les travaux&nbsp;?</h2>
+        <h2 class="h2"> Veuillez choisir la categorie qui vous convient&nbsp;?</h2>
         <div class="classe1">
         <hr class="gris margin_top">
         <div id="" class="margin_top devistap_choix_container">
-          <div class="devistap_choix">
-            <button mat-button matStepperNext  class="devistap_choix_texte" ><h4 class="h4">Maison</h4></button>
+      
+          
+          <div class="lol">
+          <ul>
+          <tr>
+           
+
+           <td>
+            <label ><h2>Haut Standing</h2></label>
+           </td>
+            <!-- <div style="width: 20rem;"> -->
+     <td>  <label><h2>Standing</h2></label> </td>
+          
+
+<td><label> <h2> Normal</h2> </label> </td>   </tr>
+
+<tr>
+<td>
+  <li>
+
+<div (click)="click1()" type="checkbox" matinput>
+  <div class="opack">
+
+  <input type="radio" id="myCheckbox1"/>
+  <label for="myCheckbox1">
+  <img src="../../assets/images/bg-images/a.jpg"  width="60%" height="60%" />
+</label>
+
+</div>
+</div>
+
+</li>
+</td>
+
+<td>
+  <li>
+
+<div (click)="click2()" type="checkbox" matinput>
+  <div class="opack">
+
+  <input type="radio" id="myCheckbox2"/>
+  <label for="myCheckbox2">
+    <img src="../../assets/images/bg-images/b.jpg" />
+</label>
+
+</div>
+</div>
+
+</li>
+</td>
+
+
+
+
+<td>
+
+
+<div (click)="click3()" matinput>
+  <div class="opack">
+
+  <input type="radio" id="myCheckbox3" />
+  <label for="myCheckbox3">
+    <img src="../../assets/images/bg-images/c.jpg"/>
+</label>
+
+</div>
+</div>
+
+
+</td>
+
+    
+             
+<!-- <td>
+<label (click)="click2()" type="checkbox"for="myCheckbox2">
+  <img src="../../assets/images/bg-images/b.jpg" /></label>
+        
+</td>        -->
+
+<!-- <td>
+<label (click)="click3()" type="checkbox" for="myCheckbox3">
+  <img src="../../assets/images/bg-images/c.jpg"/></label>
+</td>  -->
+
+
+
+
+
+
+
+
+
+
+
+
+</tr>
+</ul>
+
+
+<br><br>
+      
+     <!-- <p style="float:right" class="hyhy"> Entrer votre surfaceeeee: </p>     -->
+     <li class="jiji"> 
+
+          <div class="input-group">
+       <h3  style="font-weight: bold;font-size: 19px;padding-right: 18px;padding-top: 11px;color: rgb(177, 177, 43) ;" >  Entrer votre surface: </h3>       
+             <input mat-button matStepperNext [(ngModel)]="superficie" name="superficie"  type="textp" 
+                class="sc-AxgMl AWIFW form-control text-dark text-right" step="any"
+                min="0" max="9007199254740991" class="form-control" (blur)="test()">
+           
+
+            <div class="input-group-append">
+                <span class="input-group-text ">
+                  <mat-label >    <span class="font-weight-bold text-nowrap">m²</span></mat-label>
+
+                </span>
+            </div>
+
+        </div>
+
+
+
+      </li>
+
+
+                    <!-- <input  [(ngModel)]="superficie" name="superficie"  type="textp"> <mat-label >M²
+                    </mat-label> -->
+                  
+                <div class="title">
+                      <button mat-button matStepperNext>
+                     <img src="https://img.icons8.com/cute-clipart/64/000000/circled-chevron-right.png"/>
+                 
+                  </button>
+                </div>
+                
+
+            
           </div>
-          <div class="devistap_choix">
-            <button mat-button matStepperNext class="devistap_choix_texte"><h4 class="h4">Appartement</h4></button>
-          </div>
-          <br>
-          <div class="devistap_choix">
-            <button mat-button matStepperNext class="devistap_choix_texte"><h4 class="h4">Bureau</h4></button>
-          </div>
-          <div class="devistap_choix">
-            <button mat-button matStepperNext class="devistap_choix_texte"><h4 class="h4">Autre</h4></button>
-          </div>
-          </div>
+
+
         </div>
 
       </div>
 
-
-
-      <!-- <div class="devistap_rectangle_gris">
-        <a href="#" onclick="jQuery('#vud_mb_js_box').load('//www.viteundevis.com/mb/v2/home.php');return(false)"
-          class="devistap_bouton devistap_bouton_retour_metier"><img
-            src="//media1.forumconstruire.com/img/icpa/back_16.png" alt="Picto back" class="v16"> Retour à la liste des
-          métiers</a>
-      </div> -->
+    </div>
     </div>
 
 
 
 
-  </mat-step>
-
-
+  </mat-step> 
   <mat-step>
-    <ng-template matStepLabel> <h3 class="titre">Surface</h3></ng-template>
+
+    <ng-template matStepLabel> <h3 class="titre1">Objectif</h3></ng-template>
+     <div id="devistap_step1" class="devistap_step ">
+       <div class="vud_padding_8 vud_center">
+ 
+        <br><br>
+         <h2 class="h2">Quel est l'objectif de votre demande?</h2>
+         <div class="classe1">
+         <hr class="gris margin_top">
+ 
+         <div id="" class="margin_top devistap_choix_container">
+           <div class="devistap_choixExt">
+             <button mat-button matStepperNext class="devistap_choix_texte"><div class="hh">Obtenir un devis estiamtif </div>
+          <div class="hhh">plus détaillé</div></button>
+           </div>
+           <div class="devistap_choixExt">
+             <button mat-button  class="devistap_choix_texte" [routerLink]="['/home']"><div class="hh">Avoir juste une idée des prix</div></button>
+           </div>
+        <br>
+          
+           
+         </div>
+       </div>
+       </div>
+ 
+    
+     </div>
+ 
+ 
+ 
+ 
+   </mat-step>
 
 
 
 
-    <div class="devistap_formulaire_box">
+
+  <!-- <mat-step>
+    <ng-template matStepLabel> <h3 class="titre">one more step</h3></ng-template> -->
+
+
+
+
+    <!-- <div class="devistap_formulaire_box">
       <div id="devistap">
 
         <div id="devistap_step2" class="devistap_step vud_disnone" style="display: block;">
@@ -134,6 +285,9 @@
             <div class="classe1">
             <hr class="gris margin_top">
             <div id="" class="margin_top devistap_choix_container">
+              <div>
+                <mat-input >entrez la superficie</mat-input>
+              </div>
 
               <div class="devistap_choix">
                 <button mat-button matStepperNext  class="devistap_choix_texte" ><h4 class="h5">Moins de 100m2</h4></button>
@@ -163,23 +317,23 @@
               src="//media1.forumconstruire.com/img/icpa/reload_16.png" alt="Picto reload" class="v16"> Recommencer</a>
         </div>
       </div>
-    </div>
+    </div> -->
 
 
 
 
-    <div>
+    <!-- <div>
       <button mat-button matStepperPrevious>Back</button>
       <button mat-button matStepperNext>Next</button>
     </div>
-  </mat-step>
+  </mat-step> -->
 
 
 
 
 
 
-  <mat-step>
+  <!-- <mat-step>
 
    <ng-template matStepLabel> <h3 class="titre1">Extension</h3></ng-template>
     <div id="devistap_step1" class="devistap_step ">
@@ -411,7 +565,7 @@
 
 
 
-  </mat-step>
+  </mat-step> -->
 
 
 
@@ -429,65 +583,8 @@
 
   <mat-step>
     <ng-template matStepLabel><h3 class="titre">Done</h3></ng-template>
- <h2 class="coor">Pour avoir un devis estimatif veuillez inserer vos cordonnées</h2>
-
-    <div>
-      <div class="app-body">
-        <main class="main d-flex align-items-center">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-6 mx-auto">
-                <div class="card mx-4">
-                  <div class="card-body p-4">
-                    <form>
-                      <h3>Register</h3>
-                      <p class="text-muted">Create your account</p>
-                      <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="icon-user"></i></span>
-                        </div>
-                        <input type="text" class="form-control" placeholder="Username" autocomplete="username" required>
-                      </div>
-                      <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text">@</span>
-                        </div>
-                        <input type="text" class="form-control" placeholder="Email" autocomplete="email" required>
-                      </div>
-                      <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="icon-lock"></i></span>
-                        </div>
-                        <input type="password" class="form-control" placeholder="Password" autocomplete="new-password" required>
-                      </div>
-                      <div class="input-group mb-4">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="icon-lock"></i></span>
-                        </div>
-                        <input type="password" class="form-control" placeholder="Repeat password" autocomplete="new-password" required>
-                      </div>
-                      <button type="button" class="btn btn-block btn-success">Create Account</button>
-                    </form>
-                  </div>
-                  <div class="card-footer p-4">
-                    <div class="row">
-                      <div class="col-6">
-                        <button class="btn btn-block btn-facebook" type="button"><span>facebook</span></button>
-                      </div>
-                      <div class="col-6">
-                        <button class="btn btn-block btn-twitter" type="button"><span>twitter</span></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </main>
-      </div>
-</div>
-
-
+ <h2 class="coor">Créer votre compte afin d'avoir votre devis detaillé!</h2>
+ <app-register></app-register>
   </mat-step>
  
 
@@ -588,18 +685,24 @@
 
 <style>
   div.et_pb_section.et_pb_section_0 {
-    /* background-position: center; */
-    background-position: static;
-    
+   background-position: center;
+   height: 430px;
         background-size: cover;
+        
          
-    background-image: linear-gradient(
-45deg
-,rgba(29,38,0,0.85) 0%,rgba(29,38,0,0) 100%),url(https://www.dsm-construction.fr/files/2020/01/news-bg-2000x750.jpg);
-width: 100%;
-height: 60%;
+    background-image: linear-gradient(45deg,rgba(29,38,0,0.85) 0%,rgba(29,38,0,0) 100%),
+    url(https://www.dsm-construction.fr/files/2020/01/news-bg-2000x750.jpg);
+    width: 100%;
+     
+
 /* padding-bottom: 40px; */
 }
+
+           
+label:hover {
+  background-color: rgb(177, 177, 43) ;
+}
+
 
 .et_pb_text_inner {
     position: relative;
@@ -618,11 +721,11 @@ height: 60%;
     max-width: 100%;
 }
 
-.et_pb_section {
+/*.et_pb_section {
     position: relative;
     background-color: #fff;
-    /* max-width: 980px; */
-}
+    /* max-width: 980px; 
+}*/
 
 
 .et_pb_column .et_pb_row_inner, .et_pb_row {
@@ -869,10 +972,8 @@ padding-left: 70x;
 
     color: black;
     font-weight: bold;
-    margin-top: 290px;
+    margin-top: 30px;
     text-align: center;
-    /* margin-bottom: 70%; */
-    /* margin-left: 20px; */
     font-size: 30px;
     }
     .main {
@@ -892,8 +993,8 @@ padding-left: 70x;
     font-weight: bold;
     margin-right: 12px;
     /* padding-top: 58%; */
-    margin-top: 160px;
-    margin-left: 297px;
+    margin-top: 220px;
+    margin-left: 327px;
     font-size: 42px;
     }
 

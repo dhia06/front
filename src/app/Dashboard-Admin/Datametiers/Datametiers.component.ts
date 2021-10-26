@@ -1,5 +1,6 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 
 import { Gamme } from '../../Models/gamme';
@@ -44,24 +45,24 @@ lista5=[];
  @Output() item:Gamme[]
 // **************
  isLinear = false;
-
+ 
  identityFormGroup: FormGroup;
  addressFormGroup: FormGroup;
  thirdFormGroup: FormGroup;
- constructor(private formBuilder: FormBuilder, private myservice : AddServiceService, private travaildet:AddTravaildetService,
+ constructor(private formBuilder: FormBuilder, public router: Router,private myservice : AddServiceService, private travaildet:AddTravaildetService,
   private travail:AddTravailService, private article:ArticleService) {}
   
 
   ngOnInit() {
 
     this.retrieveGammes();
+    
     this.orderForm = this.formBuilder.group({
     items: this.formBuilder.array([ this.createItem() ]),  
     categorie: [],
 
     });
    this.retrieveServices();
-
     this.TaskForm = this.formBuilder.group({
       itemst: this.formBuilder.array([ this.createItemt() ]),
       serviceid:[],
@@ -76,10 +77,7 @@ lista5=[];
     this.ArticleForm = this.formBuilder.group({
       itemsa: this.formBuilder.array([ this.createItema() ]),
       travdetid:[],
-    });
- 
-   
-  }
+    });   }
   //Get la liste des Gammes
   retrieveGammes(): void {
     this.myservice.allGamme().subscribe(
@@ -146,10 +144,10 @@ lista5=[];
   }
   createItema(): FormGroup {
     return this.formBuilder.group({                     
-      articlename: ['', Validators.required],
+      name: ['', Validators.required],
       image:['', Validators.required],
       unite: ['', Validators.required],
-      prix:['', Validators.required],
+      // prix:['', Validators.required],
  
     });
   }
@@ -169,11 +167,7 @@ lista5=[];
       this.ngOnInit();
     },
       (erreur) => console.log(erreur)
-      
-    
     );
- 
-
   }
 
    // Cette fonction permet d'ajouter un travail/des travaux à partir du service sélectionnée(qui est juste ajouté) et des noms des travaux  insérés 
@@ -220,7 +214,9 @@ lista5=[];
     submit5ToServer(){
       this.lista5=[];
       this.ArticleForm.value.itemsa.forEach((element)=> {
-        const data={ articlename:element.articlename,image:element.image,unite:element.unite,prix:element.prix,travdetid:this.ArticleForm.value.travdetid};
+        const data={ name:element.name,image:element.image,unite:element.unite,
+  
+          travdetid:this.ArticleForm.value.travdetid};
         this.lista5.push(data);
       
       });
@@ -232,7 +228,9 @@ lista5=[];
         console.log(success)},
         (erreur) => console.log(erreur)
       );
-      Swal.fire('Great', 'You have just add an article !', 'success')
+      Swal.fire('Parfait', 'Vous avez ajouté un article avec succès!', 'success')
+      this.router.navigate(['/dashboard/default']);
+  
       }
  
       //ajouter une ligne pour inserer le nouveau nom de service:nameservice(items regroupe les nameservices)

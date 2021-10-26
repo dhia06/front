@@ -1,0 +1,215 @@
+
+
+ 
+ 
+
+  <div class="hm-gradient">
+    <header id="header" class="fixed-top">
+        <div class="container d-flex">
+    
+            <div class="logo mr-auto">
+                <h1 class="text-light"><a href="index.html"><span>B</span>TP Brain</a></h1>
+            </div>
+
+            <nav class="nav-menu d-none d-lg-block">
+                <ul>
+                    <li class="active"><a href="#header">Accueil</a></li>
+                    <li><a href="bloog">A propos</a></li>
+                    <li><a href="#team">Equipe</a></li>
+                    <!-- <li><a href="#services">Services</a></li> -->
+                    <!-- <li><a href="#team">Equipe</a></li> -->
+                    <!-- <li><a href="#portfolio">Portfolio</a></li> -->
+                    <li><a href="propos">Blog</a></li>
+                    <li class="drop-down"><a href=""> Services</a>
+                        <ul>
+                            <li class="drop-down"><a href="#">Devis Personalisé</a>
+                                <ul>
+                                    <li><a href="Devis">Devis Express</a></li>
+                                    <li><a href="#">Devis Detaillé</a></li>
+                                </ul>
+                            </li>
+                            <li class="drop-down"><a href="#">Construction </a>
+                                <ul>
+                                    <li><a href="#">Genie Civil</a></li>
+                                    <li><a href="#">Genie Fluides</a></li>
+                                    <li><a href="#">Finition</a></li>
+
+                                </ul>
+                            </li>
+                            <li><a href="#">Prise des Rendez-vous</a></li>
+                       
+                        </ul>
+                    </li>
+
+                   <li class="drop-down"><a href="#currentuser">{{userService.loggedUser}} {{userService.loggedUser2}}</a>
+                
+                    <ul>
+    
+                        <li> <a href="#" *ngIf="!userService.isloggedIn" class="dropdown-item"  [routerLink]="['/connexion']" routerLinkActive="router-link-active">Login</a></li>
+                      <li> <a href="#" *ngIf="userService.isloggedIn" class="dropdown-item" (click) = "OnLogout()">Déconnexion</a></li>
+                      
+                    </ul>           
+                </li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+             </ul>
+            </nav><!-- .nav-menu -->
+    
+        </div>
+    
+    </header><!-- End Header -->
+
+<br><br>
+  
+
+
+
+  <div class="hm-gradient">
+    <div class="home">
+    
+      <section class="sous">
+    
+        <div class="bottom">
+            <ul data-v-5915f69c="" class="glide__slides pointer-events-auto" style="transition: transform 0ms cubic-bezier(0.165, 0.84, 0.44, 1) 0s; width: 574px; transform: translate3d(9px, 0px, 0px);">
+              <li data-v-5915f69c="" class="glide__slide glide__slide--active" style="width: 106.8px; margin-right: 5px;">
+          
+                  <div class="kk">
+                      <div class="dt">
+                      <img src="../../assets/images/BTP/icons8-user-48.png"  [routerLink]="['/Interfaceclient']" routerLinkActive="router-link-active">
+                      </div>
+                      <div class="msgd">Profile</div>
+                      
+                      
+                      </div>
+                      
+                 
+          </li>
+          
+          <li data-v-5915f69c="" class="glide__slide glide__slide--active" style="width: 106.8px; margin-right: 5px;">
+          
+              <div class="kk">
+                  <div class="say">
+                  <img src="../../assets/images/BTP/rdv.PNG"  [routerLink]="['/prdv']" routerLinkActive="router-link-active">
+                  <!-- <img src="../../assets/images/BTP/icons8-new-message-48.png"> -->
+
+                  </div>
+                  <div class="msg">Rendez-vous</div>
+                  
+                  
+                  </div>
+                  
+             
+          </li>
+          
+          <li data-v-5915f69c="" class="glide__slide glide__slide--active" style="width: 106.8px; margin-right: 5px;">
+          
+              <div class="kk">
+                  <div class="dt">
+                  <img src="../../assets/images/BTP/icons8-expensive-price-48.png"  [routerLink]="['/accdevis']" routerLinkActive="router-link-active">
+                  </div>
+                  <div class="msgd">Devis</div>
+                  
+                  
+                  </div>
+                  
+             
+          </li>
+          
+          <li data-v-5915f69c="" class="glide__slide glide__slide--active" style="width: 106.8px; margin-right: 5px;">
+          
+              <div class="kk">
+                  <div class="dt">
+                  <img src="../../assets/images/BTP/icons8-city-buildings-48.png"  [routerLink]="['/projj']" routerLinkActive="router-link-active">
+                  </div>
+                  <div class="msgd">Projet</div>
+                  
+                  
+                  </div>
+                  
+             
+          </li>
+          
+          
+          <li data-v-5915f69c="" class="glide__slide glide__slide--active" style="width: 106.8px; margin-right: 5px;">
+          
+              <div class="kk">
+                  <div class="dt">
+                  <img src="../../assets/images/BTP/icons8-notepad-48.png">
+                  </div>
+                  <div class="msg">Blog</div>
+                  
+                  
+                  </div>
+                  
+             
+          </li>
+          
+          
+          
+          
+          </ul>
+          </div>
+
+          <br>
+      <div class="row">
+          <div class="col-md-4">
+       
+            <app-list (selectedProjet)="selectProjet($event)"></app-list>
+          </div>
+      
+          <div class="koko">
+
+
+            
+          <div class="col-md-8">
+       
+            <app-detail [projet]="selectedPerson"></app-detail>
+          </div>
+
+          
+        
+
+          </div>
+
+
+
+
+  
+    
+
+
+      </div>
+
+
+ 
+  
+
+  </section>  
+
+    </div>
+    </div>
+
+  
+
+     
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+

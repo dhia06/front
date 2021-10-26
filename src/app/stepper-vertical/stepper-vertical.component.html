@@ -1,0 +1,225 @@
+<div class="hm-gradient" *ngIf="projet"> 
+  
+    <header id="header" class="fixed-top">
+      <div class="container d-flex">
+  
+          <div class="logo mr-auto">
+              <h1 class="text-light"><a href="index.html"><span>B</span>TP Brain</a></h1>
+          </div>
+  
+          <nav class="nav-menu d-none d-lg-block">
+              <ul>
+                  <li class="active"><a href="#header">Accueil</a></li>
+                  <li><a href="bloog">A propos</a></li>
+                  <li><a href="#team">Equipe</a></li>
+                  <!-- <li><a href="#services">Services</a></li> -->
+                  <!-- <li><a href="#team">Equipe</a></li> -->
+                  <!-- <li><a href="#portfolio">Portfolio</a></li> -->
+                  <li><a href="propos">Blog</a></li>
+                  <li class="drop-down"><a href=""> Services</a>
+                      <ul>
+                          <li class="drop-down"><a href="#">Devis Personalisé</a>
+                              <ul>
+                                  <li><a href="Devis">Devis Express</a></li>
+                                  <li><a href="#">Devis Detaillé</a></li>
+                              </ul>
+                          </li>
+                          <li class="drop-down"><a href="#">Construction </a>
+                              <ul>
+                                  <li><a href="#">Genie Civil</a></li>
+                                  <li><a href="#">Genie Fluides</a></li>
+                                  <li><a href="#">Finition</a></li>
+  
+                              </ul>
+                          </li>
+                          <li><a href="#">Prise des Rendez-vous</a></li>
+                     
+                      </ul>
+                  </li>
+  
+                 <li class="drop-down"><a href="#currentuser">{{userService.loggedUser}} {{userService.loggedUser2}}</a>
+              
+                  <ul>
+  
+                      <li> <a href="#" *ngIf="!userService.isloggedIn" class="dropdown-item"  [routerLink]="['/connexion']" routerLinkActive="router-link-active">Login</a></li>
+                    <li> <a href="#" *ngIf="userService.isloggedIn" class="dropdown-item" (click) = "OnLogout()">Déconnexion</a></li>
+                    
+                  </ul>           
+              </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+           </ul>
+          </nav><!-- .nav-menu -->
+  
+      </div>
+  
+  </header><!-- End Header -->
+  
+  
+  
+  <div class="low">
+    <div class="header">
+      <!-- <h1>Angular ng-stepper </h1> -->
+    </div>
+  
+    <ng-stepper #cdkStepper [linear]="true">
+      <cdk-step [stepControl]="stepOne.stepOneForm" [optional]="false">
+        <ng-template cdkStepLabel>
+          <div class="step-bullet">1</div>
+          <div class="step-title">Cuisine
+            <span class="required"></span>
+          </div>
+        </ng-template>
+        <app-step-one #stepOne (sendRequest)="process($event)" (send)="funct($event)" id="table"></app-step-one>
+      </cdk-step>
+  
+      <cdk-step [stepControl]="stepTwo.stepTwoForm" [optional]="true">
+        <ng-template cdkStepLabel>
+          <div class="step-bullet">2</div>
+          <div class="step-title">Salle de bain</div>
+        </ng-template>
+        <app-step-two #stepTwo [FilsProperty2]="data" [Property2]="list" (send2)="funct2($event)" (sendRequest2)="process2($event)" id="table"></app-step-two>
+        <!-- [FilsProperty2]="data" -->
+      </cdk-step>
+  
+      <cdk-step [stepControl]="stepThree.stepThreeForm" [optional]="false">
+        <ng-template cdkStepLabel>
+          <div class="step-bullet">3</div>
+          <div class="step-title">Chambres
+             <span class="required"></span>
+            </div>
+        </ng-template>
+        <app-step-three #stepThree [FilsProperty3]="data2" [Property3]="list2" (send3)="funct3($event)" (sendRequest3)="process3($event)" id="table"></app-step-three>
+      </cdk-step>
+  
+      <cdk-step [stepControl]="stepFour.stepFourForm" [optional]="true">
+        <ng-template cdkStepLabel>
+          <div class="step-bullet">4</div>
+          <div class="step-title">Salon</div>
+        </ng-template>
+        <app-step-four #stepFour [FilsProperty4]="data3" [Property4]="list3" (send4)="funct4($event)" (sendRequest4)="process4($event)" id="table">
+          <!-- <button (click)="downloadPDF()">Export To PDF</button> -->
+  
+        </app-step-four>
+      </cdk-step>
+  
+  
+      <cdk-step [stepControl]="stepFive.stepFiveForm" [optional]="true">
+          <ng-template cdkStepLabel>
+            <div class="step-bullet">5</div>
+            <div class="step-title">Terrasse et exterieur</div>
+          </ng-template>
+          <app-step-five #stepFive [FilsProperty5]="data4" [Property5]="list4" (sendRequest5)="process5($event)" id="table">
+            <!-- <button (click)="downloadPDF()">Export To PDF</button> -->
+    
+          </app-step-five>
+        </cdk-step>
+  
+  
+  
+  
+  
+    </ng-stepper>
+  </div>
+  
+  
+  <footer>
+    <div class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="footer-content">
+                        <div class="footer-head">
+                            <div class="footer-logo">
+                                <h2><span>e</span>Business</h2>
+                            </div>
+  
+                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                                laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
+                            <div class="footer-icons">
+                                <ul>
+                                    <li>
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-google"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-pinterest"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end single footer -->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="footer-content">
+                        <div class="footer-head">
+                            <h4>information</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                            <div class="footer-contacts">
+                                <p><span>Tel:</span> +123 456 789</p>
+                                <p><span>Email:</span> contact@example.com</p>
+                                <p><span>Working Hours:</span> 9am-5pm</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end single footer -->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="footer-content">
+                        <div class="footer-head">
+                            <h4>Instagram</h4>
+                            <div class="flicker-img">
+                                <a href="#"><img src="assets/img/portfolio/1.jpg" alt=""></a>
+                                <a href="#"><img src="assets/img/portfolio/2.jpg" alt=""></a>
+                                <a href="#"><img src="assets/img/portfolio/3.jpg" alt=""></a>
+                                <a href="#"><img src="assets/img/portfolio/4.jpg" alt=""></a>
+                                <a href="#"><img src="assets/img/portfolio/5.jpg" alt=""></a>
+                                <a href="#"><img src="assets/img/portfolio/6.jpg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-area-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="copyright text-center">
+                        <p>
+                            &copy; Copyright <strong>eBusiness</strong>. Tous droits réservés
+                        </p>
+                    </div>
+                    <div class="credits">
+                        <!--
+            All the links in the footer should remain intact.
+            You can delete the links only if you purchased the pro version.
+            Licensing information: https://bootstrapmade.com/license/
+            Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eBusiness
+          -->
+                        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </footer><!-- End  Footer -->
+  
+  </div>
+  

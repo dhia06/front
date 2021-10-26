@@ -58,19 +58,29 @@
       </a>
       <div class="dropdown-menu dropdown-menu-right profile-notification" ngbDropdownMenu>
         <div class="pro-head">
-          <img src="assets/images/user/avatar-1.jpg" class="img-radius" alt="User-Profile-Image">
-          <span>John Doe</span>
-          <a href="javascript:" class="dud-logout" title="Logout">
+          <img src="assets/images/BTP/michel.jpg" class="img-radius" alt="User-Profile-Image">
+   <a class="nav-link">{{loginservice.loggedUser}} {{loginservice.loggedUser2}}</a>
+<!--          
+          <li> <a href="javascript:" class="dud-logout" title="Logout"  *ngIf="loginservice.isloggedIn" class="dropdown-item" (click) = "OnLogout()">
             <i class="feather icon-log-out"></i>
           </a>
+          </li> -->
         </div>
         <ul class="pro-body">
-          <li><a href="javascript:" class="dropdown-item"><i class="feather icon-settings"></i> Settings</a></li>
-          <li><a href="javascript:" class="dropdown-item"><i class="feather icon-user"></i> Profile</a></li>
-          <li><a href="javascript:" class="dropdown-item"><i class="feather icon-mail"></i> My Messages</a></li>
-          <li><a href="javascript:" class="dropdown-item"><i class="feather icon-lock"></i> Lock Screen</a></li>
+  
+          <li><a href="javascript:" class="dropdown-item"><i class="feather icon-user"></i> Profil</a></li>
+          <li><a href="javascript:" class="dropdown-item"><i class="feather icon-mail"></i> Mes Messages</a></li>
+          <li><a href="javascript:" class="dropdown-item"><i class="feather icon-lock"></i> Déverrouiller </a></li>
+          <!-- <li><a href="javascript:" *ngIf="loginservice.isloggedIn"  class="dropdown-item"  (click) = "OnLogout()"><i class="feather icon-power"></i>Deconnexion</a></li>  -->
         </ul>
       </div>
     </div>
+
+
+
   </li>
+
+
+
+  
 </ul>

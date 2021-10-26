@@ -1,0 +1,387 @@
+
+
+<!DOCTYPE html>
+<html>   
+    <div class="row">
+      <div class="col-6">
+        <div class="gauche">
+
+    <img src="https://tff-ama.imgix.net//assets/galleries/10/19_greenwich_ct_modern_architecture_15.jpg?w=1800&amp;q=70&amp;auto=compress"
+    class="gauche" width="100%" height="100%"/>
+  </div>
+  </div>
+
+
+  <div class="col-6">
+    <div class="droite">
+      <li class="list-group-item">
+  
+    <div class="card-text ">
+      <form [formGroup]="stepOneForm">
+          <div class="form-group ">
+            <div class="opop">
+            <label class="font-weight-bold" for="surfaceTotale">
+              <div class="cout">Cout estimatif /TND : </div>
+           
+            </label>
+          
+            <div class="input-group">
+                <input id="total" data-testid="total" class="sc-AxgMl AWIFW form-control text-dark text-right" 
+                    min="0" max="90071992547409" type="text" name="total"  class="form-control"                  
+                    value='{{FilsProperty2}}' >
+                    <!-- <button class='btn btn-primary' (click)="sendEvent2()">koukaaaaa</button> -->
+    
+            </div>
+            </div>
+    
+    
+          </div>
+    
+  
+  
+  
+  
+  
+  
+     
+  
+  
+        <!-- <div class="form-group ">
+          <label class="font-weight-bold" for="surfaceTotale">
+              <div class="h5 text-dark">Nombre de pièces :  </div>
+         
+          </label>
+          <div class="input-group">
+              <input id="surfaceTotale" data-testid="surfaceTotale"
+                  class="sc-AxgMl AWIFW form-control text-dark text-right" step="any"
+                  min="0" max="9007199254740991" type="text" name="surface" class="form-control" 
+                  formControlName="surface">
+  
+  
+          </div>
+  
+  
+        </div> -->
+
+
+
+        <div formArrayName="itemst" *ngFor="let item of formDatat.controls; let i = index; let c = count">
+          <div class="line" [formGroupName]="i">
+
+        <div class="form-group ">
+          <label class="surface">
+            Quelle est la surface totale concernée en m² ? (Facultatif)
+
+          </label>
+          <div class="input-group">
+              <input id="surfaceTotale" data-testid="surfaceTotale"
+                  class="sc-AxgMl AWIFW form-control text-dark text-right" step="any"
+                  min="0" max="9007199254740991" type="text" name="surface" class="form-control" 
+                  formControlName="surface">
+  
+              <div class="input-group-append">
+                  <span class="input-group-text ">
+                      <span class="font-weight-bold text-nowrap">m²
+  
+                      </span>
+                  </span>
+              </div>
+  
+          </div>
+    <br>
+  
+  </div>
+  
+  <label class="surface"> Combien de salles de bains aimeriez-vous avoir?</label>
+
+  <div class="alll">
+    <div id="main" ng-init="count=1">
+      <div class="InputField_input-text_3zBw5 InputField_stepper_3HPg0 undefined">
+        <div class="InputField_step-btn_15TbT">
+      <i class="material-icons" (click)="fctmoins()">remove_circle</i>
+      </div>
+      </div>
+     <div class="black" formControlName="count">{{count}}</div>
+     <div class="InputField_input-text_3zBw5 InputField_stepper_3HPg0 undefined">
+<!--khadhra -->  
+<div class="InputField_step-btn_15TbT">
+      <i class="material-icons" (click)="fctplus()" ng-click="count=count+1">add_circle</i>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <label class="surface">
+    Choisissez la gamme de votre Salle d'eau ?
+  
+  </label>
+        <mat-form-field>
+   
+          <mat-select (selectionChange)="GetCategoryDropdown($event)" formControlName="categorie">
+              <ng-container *ngFor="let cat of all">
+                  <mat-option value="{{cat.id}}">{{cat.name}}</mat-option>
+              </ng-container>
+  
+  
+             
+            
+          </mat-select>
+  
+  
+  
+  
+      </mat-form-field>
+  
+ 
+  
+  
+  
+      <div class="card-text ">
+  <div *ngFor="let pres of Prestation">
+    <div class="h5 text-dark">{{pres.nom}} </div>
+    <label class="surface">
+      Elément optionnel intérieur: </label>
+  
+      <div *ngIf="pres.nom=='Menuiserie'">
+     
+  
+      <div class="checkbox-items">
+       <label *ngFor="let cat of allaccessoires">
+         <input type="checkbox" formControlName="accessoires" [(ngModel)]="cat.checked" value="{{cat.Prix}}" 
+         
+         (change)="Calculate(cat);" (change)="CreateAccessoirepiece(cat)">
+         
+         <span class="h6"> {{cat.ArticleEntity.name}}</span>
+       </label>
+      </div>
+     
+     <!-- <pre>{{this.result | json}}</pre> -->
+  </div>
+  
+     <div *ngIf="pres.nom=='Electricité'">
+  
+     <div class="checkbox-items">
+        
+      <label *ngFor="let cat of allaccessoires1">
+        <input type="checkbox" formControlName="accessoires" [(ngModel)]="cat.checked"  value="{{cat.Prix}}"
+         (change)="Calculate(cat);" (change)="CreateAccessoirepiece(cat)">
+         <span class="h6"> {{cat.ArticleEntity.name}}</span>
+      </label>
+     </div>
+    <!-- <pre>{{this.result1 | json}}</pre> -->
+  </div>
+  
+  
+  
+  <div *ngIf="pres.nom=='peinture'">
+  
+    <div class="checkbox-items">
+       
+     <label *ngFor="let cat of allaccessoires2">
+       <input type="checkbox" formControlName="accessoires"  [(ngModel)]="cat.checked" value="{{cat.Prix}}" 
+       (change)="Calculate(cat);" (change)="CreateAccessoirepiece(cat)">
+       <span class="h6"> {{cat.ArticleEntity.name}}</span>
+     </label>
+    </div>
+   <!-- <pre>{{this.result2 | json}}</pre> -->
+  </div>
+  
+  
+  
+  
+  <div *ngIf="pres.nom=='Equipement'">
+    <div class="checkbox-items">
+     <label *ngFor="let cat of allaccessoires3">
+       <input type="checkbox" formControlName="accessoires"  [(ngModel)]="cat.checked" value="{{cat.Prix}}" (change)="Calculate(cat);"
+       (change)="CreateAccessoirepiece(cat)">
+       <span class="h6"> {{cat.ArticleEntity.name}}</span>
+     </label>
+    </div>
+   <!-- <pre>{{this.result3 | json}}</pre> -->
+  </div>
+  
+     
+      </div>
+      </div> 
+
+      <!-- <div class="addbutton">
+        <p class="btnm" (click)="addItemt()">
+        Ajouter une pièce <i class="fa fa-plus"></i>
+        </p>
+    </div> -->
+ 
+  <br> 
+  </div>
+  </div>
+   </form>
+   <div class="Suivant">
+    <button mat-button matStepperNext (click)="sendEvent2()"  (click)="sendlista2()"> Suivant </button> 
+
+    </div>
+
+  
+  
+  
+      
+  
+  
+    </div>
+  
+
+  
+  
+    </li>
+  
+    </div>
+    </div>
+  
+  
+    </div>
+  
+</html>
+  
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<div class="container">
+
+
+<div class="card-body">
+  <div class="card-text ">
+    <form [formGroup]="stepOneForm" (ngSubmit)="stepOneSubmit()" autocomplete="off" novalidate #formRef="ngForm">
+
+      <label class="font-weight-bold" for="surfaceTotale">
+      <div class="h5 text-dark"> categorie    :</div></label>
+
+      <mat-form-field>
+        <div class="kk">
+        <mat-select (selectionChange)="GetCategoryDropdown($event)" formControlName="categorie">
+            <ng-container *ngFor="let cat of all">
+                <mat-option value="{{cat.id}}">{{cat.nom}}</mat-option>
+            </ng-container>
+          
+        </mat-select>
+  </div>
+    </mat-form-field>
+
+
+<br>
+
+
+
+
+
+
+
+ <br>
+    <label class="font-weight-bold" for="surfaceTotale">
+      <div class="h5 text-dark"> Prestations    :</div></label>
+    <mat-form-field>
+      <div class="kk">
+      <mat-select (selectionChange)="GetCategoryDropdown3($event)" formControlName="prestation">
+          <ng-container *ngFor="let cat of Prestation">
+              <mat-option value="{{cat.id}}">{{cat.nom}}</mat-option>
+          </ng-container>
+        
+      </mat-select>
+</div>
+  </mat-form-field>  
+
+
+
+
+  <br>
+    <label class="font-weight-bold" for="surfaceTotale">
+      <div class="h5 text-dark"> Accessoires    :</div></label>
+    <mat-form-field>
+      <div class="kk">
+      <mat-select formControlName="accessoires">
+          <ng-container *ngFor="let cat of allaccessoires">
+              <mat-option value="{{cat.id}}">{{cat.nom}}</mat-option>
+          </ng-container>
+        
+      </mat-select>
+</div>
+  </mat-form-field>
+
+
+
+</form>
+</div>
+</div>
+
+
+  </div> -->

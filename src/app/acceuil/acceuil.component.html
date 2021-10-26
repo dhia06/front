@@ -1,3 +1,5 @@
+<html>
+
 <body data-spy="scroll" data-target="#navbar-example">
 
     <!-- ======= Header ======= -->
@@ -10,70 +12,134 @@
 
             <nav class="nav-menu d-none d-lg-block">
                 <ul>
-                    <li class="active"><a href="#header">Home</a></li>
-                    <li><a href="#aboutttt">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#team">Team</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li class="drop-down"><a href="">Drop Down</a>
+                    <li class="active"><a href="#header">Accueil</a></li>
+                    <li><a href="bloog">A propos</a></li>
+                    <!-- <li><a href="#services">Services</a></li> -->
+                    <li><a href="#team">Equipe</a></li>
+                    <!-- <li><a href="#portfolio">Portfolio</a></li> -->
+                    <li><a href="propos">Blog</a></li>
+                    <li class="drop-down"><a href=""> Services</a>
                         <ul>
-                            <li><a href="#">Drop Down 1</a></li>
-                            <li class="drop-down"><a href="#">Drop Down 2</a>
+                            <li class="drop-down"><a href="#">Devis Personalisé</a>
                                 <ul>
-                                    <li><a href="#">Deep Drop Down 1</a></li>
-                                    <li><a href="#">Deep Drop Down 2</a></li>
-                                    <li><a href="#">Deep Drop Down 3</a></li>
-                                    <li><a href="#">Deep Drop Down 4</a></li>
-                                    <li><a href="#">Deep Drop Down 5</a></li>
+                                    <li><a href="Devis">Devis Express</a></li>
+                                    <li><a href="#">Devis Detaillé</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">Drop Down 3</a></li>
-                            <li><a href="#">Drop Down 4</a></li>
-                            <li><a href="#">Drop Down 5</a></li>
+                            <li class="drop-down"><a href="#">Construction </a>
+                                <ul>
+                                    <li><a href="#">Genie Civil</a></li>
+                                    <li><a href="#">Genie Fluides</a></li>
+                                    <li><a href="#">Finition</a></li>
+
+                                </ul>
+                            </li>
+                            <li><a href="#">Prise des Rendez-vous</a></li>
+                       
                         </ul>
                     </li>
-                    <li><a href="#contact">Contact</a></li>
+
+
+                    <li><a [routerLink]="['/connexion']" routerLinkActive="router-link-active">Connexion</a> </li>
 
                 </ul>
             </nav><!-- .nav-menu -->
 
         </div>
+
     </header><!-- End Header -->
 
+
+
+
+
+
+
+
+
+    
     <!-- ======= Slider Section ======= -->
     <div id="home" class="slider-area">
+
         <ngb-carousel>
+
             <ng-template ngbSlide>
-              <div class="picsum-img-wrapper">
-                <img src="../../assets/img/slider/house3 (1).jpg" alt="Random first slide">
-              </div>
-              <div class="carousel-caption">
-                <h3>First slide label</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-              </div>
+                <div class="picsum-img-wrapper">
+                    <img src="../../assets/img/slider/house3 (1).jpg" alt="Random first slide">
+                </div>
+
+                <div class="carousel-caption">
+                    <div class="caption">
+                        <h2 class="mai">Votre maison de demain passe entre nos belles mains </h2>
+                        <div class="btpro"><button type="button" class="btn-round-lg btn-lg"
+                                [routerLink]="['/signuppro']" routerLinkActive="router-link-active">
+                                <div class="tt">Espace professionnel </div>
+                            </button></div>
+                    </div>
+
+
+
+                    <h2>Maison a Mahdia crée par notre groupe</h2>
+                </div>
             </ng-template>
             <ng-template ngbSlide>
-              <div class="picsum-img-wrapper">
-                <img src="../../assets/img/slider/house3 (2).jpg" alt="Random second slide">
-              </div>
-              <div class="carousel-caption">
-                <h3>Second slide label</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
+
+
+                <div class="picsum-img-wrapper">
+
+                    <img src="../../assets/images/BTP/waw.jpg" alt="Random second slide">
+                </div>
+
+                <div class="carousel-caption">
+                    <div class="caption">
+                        <h2 class="mai">Votre maison de demain passe entre nos belles mains </h2>
+                        <div class="btpro"><button type="button" class="btn-round-lg btn-lg"
+                                [routerLink]="['/extension']" routerLinkActive="router-link-active">
+                                <div class="tt">Espace professionnel </div>
+                            </button></div>
+                    </div>
+
+                    <h2>Chalet Sidi Dhrif</h2>
+                </div>
             </ng-template>
+
+            <!-- <ng-template ngbSlide>
+
+                <div class="picsum-img-wrapper">
+                  <img src="../../assets/images/BTP/acc.webp" alt="Random second slide">
+                </div>
+           
+                <div class="carousel-caption">
+                    <div class="caption"><h2 class="main2">Votre maison de demain passe entre nos belles mains </h2></div>
+                  <h3>Second slide label</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+              </ng-template>
+ -->
+
             <ng-template ngbSlide>
-              <div class="picsum-img-wrapper">
-                <img src="../../assets/img/slider/house3 (3).jpg" alt="Random third slide">
-              </div>
-              <div class="carousel-caption">
-                <h3>Third slide label</h3>
-                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-              </div>
+
+                <div class="picsum-img-wrapper">
+
+                    <img src="../../assets/images/BTP/mais.jpg" alt="Random third slide">
+                </div>
+                <div class="carousel-caption">
+                    <div class="caption">
+                        <h2 class="mai">Votre maison de demain passe entre nos belles mains </h2>
+                        <div class="btpro"><button type="button" class="btn-round-lg btn-lg"
+                                [routerLink]="['/extension']" routerLinkActive="router-link-active">
+                                <div class="tt">Espace professionnel </div>
+                            </button></div>
+                    </div>
+
+                    <h2>Maison d'hote Sidi Bousaid</h2>
+                </div>
             </ng-template>
-          </ngb-carousel>
-         
-          
+
+
+        </ngb-carousel>
+
+
     </div><!-- End Slider -->
 
     <main id="main">
@@ -84,7 +150,7 @@
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="section-headline text-center">
-                            <h2>About eBusiness</h2>
+                            <h2>A Propos BTP Brain</h2>
                         </div>
                     </div>
                 </div>
@@ -104,28 +170,31 @@
                         <div class="well-middle">
                             <div class="single-well">
                                 <a href="#">
-                                    <h4 class="sec-head">project Maintenance</h4>
+                                    <h4 class="sec-head">Construction des batiments</h4>
                                 </a>
                                 <p>
-                                    Redug Lagre dolor sit amet, consectetur adipisicing elit. Itaque quas officiis iure
-                                    aspernatur sit adipisci quaerat unde at nequeRedug Lagre dolor sit amet, consectetur
-                                    adipisicing elit. Itaque quas officiis iure
+                                    Avec une experience de plus de 20 ans dans le domaine de genie civil,et grace a des
+                                    expert bien choisi,
+                                    notre Societé vous offre l'apportuinité de participer a la conception,vivre avec
+                                    nous les etapes de construction de votre projet afin de vivre un luxe tout en
+                                    prenons en considerations les tarifs detaillées la possibilité de faciliter le
+                                    monatant par des tranches!
                                 </p>
                                 <ul>
                                     <li>
-                                        <i class="fa fa-check"></i> Interior design Package
+                                        <i class="fa fa-check"></i> Offrir des devis En temps reel
                                     </li>
                                     <li>
-                                        <i class="fa fa-check"></i> Building House
+                                        <i class="fa fa-check"></i> Des experts vous accompagne tout au long du projet
                                     </li>
                                     <li>
-                                        <i class="fa fa-check"></i> Reparing of Residentail Roof
+                                        <i class="fa fa-check"></i> Varieté des choix de chaque article
                                     </li>
                                     <li>
-                                        <i class="fa fa-check"></i> Renovaion of Commercial Office
+                                        <i class="fa fa-check"></i> Suivie de votre projets en temps reel
                                     </li>
                                     <li>
-                                        <i class="fa fa-check"></i> Make Quality Products
+                                        <i class="fa fa-check"></i>Des produit de qualité
                                     </li>
                                 </ul>
                             </div>
@@ -137,12 +206,15 @@
         </div><!-- End About Section -->
 
         <!-- ======= Services Section ======= -->
+
+
+
         <div id="services" class="services-area area-padding">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="section-headline services-head text-center">
-                            <h2>Our Services</h2>
+                            <h2>Nos Services</h2>
                         </div>
                     </div>
                 </div>
@@ -152,13 +224,15 @@
                         <div class="about-move">
                             <div class="services-details">
                                 <div class="single-services">
-                                    <a class="services-icon" href="#">
+                                    <a class="services-icon" >
                                         <i class="fa fa-code"></i>
                                     </a>
-                                    <h4>Expert Coder</h4>
+                                    <h4>Fondation profonde</h4>
                                     <p>
-                                        will have to make sure the prototype looks finished by inserting text or
-                                        photo.make sure the prototype looks finished by.
+                                        Les fondations profondes (fondations sur pieux, essentiellement) sont celles qui
+                                        permettent de reporter les charges dues à la construction qu'elles supportent
+                                        sur des couches situées depuis la surface jusqu'à une profondeur variant de
+                                        quelques mètres à plusieurs dizaines de mètres
                                     </p>
                                 </div>
                             </div>
@@ -169,13 +243,12 @@
                         <div class="about-move">
                             <div class="services-details">
                                 <div class="single-services">
-                                    <a class="services-icon" href="#">
+                                    <a class="services-icon" >
                                         <i class="fa fa-camera-retro"></i>
                                     </a>
-                                    <h4>Creative Designer</h4>
+                                    <h4>Peinture</h4>
                                     <p>
-                                        will have to make sure the prototype looks finished by inserting text or
-                                        photo.make sure the prototype looks finished by.
+                                        Terre d'Argile, couleur de l'année 2021 par Dulux Valentine, du rose sous diverses nuances, du bleu foncé, de l'orange ou du jaune, pour dynamiser l'ambiance, et même du noir pour le classique chic... On ose la couleur sur les murs de son salon : quelques coups de peinture suffiront à redonner bonne mine à cette pièce à vivre, tout en structurant les espaces. 
                                     </p>
                                 </div>
                             </div>
@@ -190,10 +263,10 @@
                                     <a class="services-icon" href="#">
                                         <i class="fa fa-wordpress"></i>
                                     </a>
-                                    <h4>Wordpress Developer</h4>
+                                    <h4>Carrelage</h4>
                                     <p>
-                                        will have to make sure the prototype looks finished by inserting text or
-                                        photo.make sure the prototype looks finished by.
+                                        Le carrelage mural et la faïence murale sont deux solutions idéales pour préserver
+                                         et embellir les pièces d'eau. Poser dans la salle de bains ou même dans ...
                                     </p>
                                 </div>
                             </div>
@@ -208,10 +281,9 @@
                                     <a class="services-icon" href="#">
                                         <i class="fa fa-camera-retro"></i>
                                     </a>
-                                    <h4>Social Marketer </h4>
+                                    <h4>Climatisation </h4>
                                     <p>
-                                        will have to make sure the prototype looks finished by inserting text or
-                                        photo.make sure the prototype looks finished by.
+                                        La climatisation permet de maintenir le confort et les caractéristiques de l'air ambiant dans des valeurs de température, d'humidité et de qualité de l'air pour le ressenti humain ou pour maintenir un process (exemple climatisation de datacenters). Dans des conditions plus simple de confort où seul un abaissement de la température ambiante est requis, sans traitement de l'humidité ambiante, nous parlerons plus de « rafraîchissement ».
                                     </p>
                                 </div>
                             </div>
@@ -227,10 +299,10 @@
                                     <a class="services-icon" href="#">
                                         <i class="fa fa-bar-chart"></i>
                                     </a>
-                                    <h4>Seo Expart</h4>
+                                    <h4>Securité</h4>
                                     <p>
-                                        will have to make sure the prototype looks finished by inserting text or
-                                        photo.make sure the prototype looks finished by.
+                                        Vous trouverez ici un large choix de caméra de vidéosurveillance.
+Nos caméras sont de qualité professionnelle. Les marques que nous vous proposons figurent parmi les leaders en vidéosurveillance.
                                     </p>
                                 </div>
                             </div>
@@ -248,8 +320,7 @@
                                     </a>
                                     <h4>24/7 Support</h4>
                                     <p>
-                                        will have to make sure the prototype looks finished by inserting text or
-                                        photo.make sure the prototype looks finished by.
+                                        Chez BTP Brain, nous sommes à la hauteur de notre nom. Que ce soit pour une assistance sur site, un support technique ou une assistance à distance, Source est là pour assurer le succès de nos clients et la productivité commerciale des utilisateurs finaux. Nous proposons des options d'assistance à la demande fiables, notamment une assistance technique et à distance 24h/24 et 7j/7 et une assistance mondiale sur site dans les 4 heures et le jour ouvrable suivant
                                     </p>
                                 </div>
                             </div>
@@ -261,14 +332,14 @@
         </div><!-- End Services Section -->
 
         <!-- ======= Skills Section ======= -->
-        <div class="our-skill-area fix hidden-sm">
+        <!-- <div class="our-skill-area fix hidden-sm">
             <div class="test-overly"></div>
             <div class="skill-bg area-padding-2">
-                <div class="container">
-                    <!-- section-heading end -->
-                    <div class="row">
-                        <!-- single-skill start -->
-                        <div class="col-xs-12 col-sm-3 col-md-3 text-center">
+                <div class="container"> -->
+        <!-- section-heading end -->
+        <!-- <div class="row"> -->
+        <!-- single-skill start -->
+        <!-- <div class="col-xs-12 col-sm-3 col-md-3 text-center">
                             <div class="single-skill">
                                 <div class="progress-circular">
                                     <input type="text" class="knob" value="0" data-rel="95" data-linecap="round"
@@ -277,10 +348,10 @@
                                     <h3 class="progress-h4">Web Design</h3>
                                 </div>
                             </div>
-                        </div>
-                        <!-- single-skill end -->
-                        <!-- single-skill start -->
-                        <div class="col-xs-12 col-sm-3 col-md-3 text-center">
+                        </div> -->
+        <!-- single-skill end -->
+        <!-- single-skill start -->
+        <!-- <div class="col-xs-12 col-sm-3 col-md-3 text-center">
                             <div class="single-skill">
                                 <div class="progress-circular">
                                     <input type="text" class="knob" value="0" data-rel="85" data-linecap="round"
@@ -289,10 +360,10 @@
                                     <h3 class="progress-h4">Graphics Design</h3>
                                 </div>
                             </div>
-                        </div>
-                        <!-- single-skill end -->
-                        <!-- single-skill start -->
-                        <div class="col-xs-12 col-sm-3 col-md-3 text-center">
+                        </div> -->
+        <!-- single-skill end -->
+        <!-- single-skill start -->
+        <!-- <div class="col-xs-12 col-sm-3 col-md-3 text-center">
                             <div class="single-skill">
                                 <div class="progress-circular">
                                     <input type="text" class="knob" value="0" data-rel="75" data-linecap="round"
@@ -301,10 +372,10 @@
                                     <h3 class="progress-h4">Php Developer</h3>
                                 </div>
                             </div>
-                        </div>
-                        <!-- single-skill end -->
-                        <!-- single-skill start -->
-                        <div class="col-xs-12 col-sm-3 col-md-3 text-center">
+                        </div> -->
+        <!-- single-skill end -->
+        <!-- single-skill start -->
+        <!-- <div class="col-xs-12 col-sm-3 col-md-3 text-center">
                             <div class="single-skill">
                                 <div class="progress-circular">
                                     <input type="text" class="knob" value="0" data-rel="65" data-linecap="round"
@@ -313,20 +384,21 @@
                                     <h3 class="progress-h4">Java Script</h3>
                                 </div>
                             </div>
-                        </div>
-                        <!-- single-skill end -->
-                    </div>
+                        </div> -->
+        <!-- single-skill end -->
+        <!-- </div>
                 </div>
             </div>
-        </div><!-- End Skills Section -->
+        </div> -->
+        <!-- End Skills Section -->
 
         <!-- ======= Team Section ======= -->
-        <div id="team" class="our-team-area area-padding">
+        <!-- <div id="team" class="our-team-area area-padding">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="section-headline text-center">
-                            <h2>Our special Team</h2>
+                            <h2>Notre Team</h2>
                         </div>
                     </div>
                 </div>
@@ -362,9 +434,9 @@
                                 <p>Seo</p>
                             </div>
                         </div>
-                    </div>
-                    <!-- End column -->
-                    <div class="col-md-3 col-sm-3 col-xs-12">
+                    </div> -->
+        <!-- End column -->
+        <!-- <div class="col-md-3 col-sm-3 col-xs-12">
                         <div class="single-team-member">
                             <div class="team-img">
                                 <a href="#">
@@ -395,9 +467,9 @@
                                 <p>Web Developer</p>
                             </div>
                         </div>
-                    </div>
-                    <!-- End column -->
-                    <div class="col-md-3 col-sm-3 col-xs-12">
+                    </div> -->
+        <!-- End column -->
+        <!-- <div class="col-md-3 col-sm-3 col-xs-12">
                         <div class="single-team-member">
                             <div class="team-img">
                                 <a href="#">
@@ -428,9 +500,9 @@
                                 <p>Web Design</p>
                             </div>
                         </div>
-                    </div>
-                    <!-- End column -->
-                    <div class="col-md-3 col-sm-3 col-xs-12">
+                    </div> -->
+        <!-- End column -->
+        <!-- <div class="col-md-3 col-sm-3 col-xs-12">
                         <div class="single-team-member">
                             <div class="team-img">
                                 <a href="#">
@@ -461,11 +533,12 @@
                                 <p>Seo Expert</p>
                             </div>
                         </div>
-                    </div>
-                    <!-- End column -->
-                </div>
-            </div>
-        </div><!-- End Team Section -->
+                    </div> -->
+        <!-- End column -->
+        <!-- </div>
+            </div> -->
+        <!-- </div> -->
+        <!-- End Team Section -->
 
         <!-- ======= Rviews Section ======= -->
         <div class="reviews-area">
@@ -477,12 +550,15 @@
                     <div class="px-5 py-5 py-lg-0">
                         <!-- <h2>working with us</h2> -->
                         <h2>Vous envisagez de devenir propriétaires de votre résidence principale !!</h2>
-                        <br>   <h5> Pour vous donner une idée du budget que vous devez prévoir pour une maison neuve, 
+                        <br>
+                        <h5> Pour vous donner une idée du budget que vous devez prévoir pour une maison neuve,
                             <!-- retrouvez ci-dessous un exemple de devis pour la construction d’une maison individuelle. </h5> -->
-                     
-                     Cliquez-içi</h5>
-                            <a  class="ready-btn scrollto" [routerLink]="['/travail']" routerLinkActive="router-link-active" >Vite un devis </a>
-                   
+
+                            Cliquez-içi
+                        </h5>
+                        <a class="ready-btn scrollto" [routerLink]="['/Devis']"
+                            routerLinkActive="router-link-active">Vite un devis </a>
+
                     </div>
                 </div>
             </div>
@@ -494,7 +570,7 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="section-headline text-center">
-                            <h2>Our Portfolio</h2>
+                            <h2>Notre Portfolio</h2>
                         </div>
                     </div>
                 </div>
@@ -507,13 +583,13 @@
                                     <a href="#" class="active" data-filter="*">All</a>
                                 </li>
                                 <li>
-                                    <a href="#" data-filter=".development">Development</a>
+                                    <a href="#" data-filter=".development">Beton armé</a>
                                 </li>
                                 <li>
-                                    <a href="#" data-filter=".design">Design</a>
+                                    <a href="#" data-filter=".design">Menuiserie</a>
                                 </li>
                                 <li>
-                                    <a href="#" data-filter=".photo">Photoshop</a>
+                                    <a href="#" data-filter=".photo">Finition</a>
                                 </li>
                             </ul>
                         </div>
@@ -525,12 +601,12 @@
                     <div class="col-md-4 col-sm-4 col-xs-12 design development">
                         <div class="single-awesome-project">
                             <div class="awesome-img">
-                                <a href="#"><img src="assets/img/portfolio/1.jpg" alt="" /></a>
+                                <a href="#"><img src="assets/img/portfolio/7.jpg" alt="" /></a>
                                 <div class="add-actions text-center">
                                     <div class="project-dec">
-                                        <a class="venobox" data-gall="myGallery" href="assets/img/portfolio/1.jpg">
-                                            <h4>Business City</h4>
-                                            <span>Web Development</span>
+                                        <a class="venobox" data-gall="myGallery" href="assets/img/portfolio/7.jpg">
+                                            <h4>Fondation</h4>
+                                            <span>Enduit</span>
                                         </a>
                                     </div>
                                 </div>
@@ -546,8 +622,8 @@
                                 <div class="add-actions text-center">
                                     <div class="project-dec">
                                         <a class="venobox" data-gall="myGallery" href="assets/img/portfolio/2.jpg">
-                                            <h4>Blue Sea</h4>
-                                            <span>Photosho</span>
+                                            <h4>Menuiserie</h4>
+                                            <span>Bois Rouge</span>
                                         </a>
                                     </div>
                                 </div>
@@ -563,8 +639,8 @@
                                 <div class="add-actions text-center">
                                     <div class="project-dec">
                                         <a class="venobox" data-gall="myGallery" href="assets/img/portfolio/3.jpg">
-                                            <h4>Beautiful Nature</h4>
-                                            <span>Web Design</span>
+                                            <h4>Carrelage</h4>
+                                            <span>Marbre</span>
                                         </a>
                                     </div>
                                 </div>
@@ -580,8 +656,8 @@
                                 <div class="add-actions text-center">
                                     <div class="project-dec">
                                         <a class="venobox" data-gall="myGallery" href="assets/img/portfolio/4.jpg">
-                                            <h4>Creative Team</h4>
-                                            <span>Web design</span>
+                                            <h4>Finition</h4>
+                                            <span>piscine</span>
                                         </a>
                                     </div>
                                 </div>
@@ -597,8 +673,8 @@
                                 <div class="add-actions text-center text-center">
                                     <div class="project-dec">
                                         <a class="venobox" data-gall="myGallery" href="assets/img/portfolio/5.jpg">
-                                            <h4>Beautiful Flower</h4>
-                                            <span>Web Development</span>
+                                            <h4>Electricité</h4>
+                                            <span>Surveillance generale</span>
                                         </a>
                                     </div>
                                 </div>
@@ -614,8 +690,8 @@
                                 <div class="add-actions text-center">
                                     <div class="project-dec">
                                         <a class="venobox" data-gall="myGallery" href="assets/img/portfolio/6.jpg">
-                                            <h4>Night Hill</h4>
-                                            <span>Photoshop</span>
+                                            <h4>Peinture</h4>
+                                            <span>teinte a l'eau</span>
                                         </a>
                                     </div>
                                 </div>
@@ -628,7 +704,7 @@
         </div><!-- End Portfolio Section -->
 
         <!-- ======= Pricing Section ======= -->
-        <div id="pricing" class="pricing-area area-padding">
+        <!-- <div id="pricing" class="pricing-area area-padding">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12">
@@ -689,7 +765,8 @@
                     </div>
                 </div>
             </div>
-        </div><!-- End Pricing Section -->
+        </div> -->
+        <!-- End Pricing Section -->
 
         <!-- ======= Testimonials Section ======= -->
         <div class="testimonials-area">
@@ -746,124 +823,7 @@
             </div>
         </div><!-- End Testimonials Section -->
 
-        <!-- ======= Blog Section ======= -->
-        <div id="blog" class="blog-area">
-            <div class="blog-inner area-padding">
-                <div class="blog-overly"></div>
-                <div class="container ">
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12 col-xs-12">
-                            <div class="section-headline text-center">
-                                <h2>Latest News</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <!-- Start Left Blog -->
-                        <div class="col-md-4 col-sm-4 col-xs-12">
-                            <div class="single-blog">
-                                <div class="single-blog-img">
-                                    <a href="blog.html">
-                                        <img src="assets/img/blog/1.jpg" alt="">
-                                    </a>
-                                </div>
-                                <div class="blog-meta">
-                                    <span class="comments-type">
-                                        <i class="fa fa-comment-o"></i>
-                                        <a href="#">13 comments</a>
-                                    </span>
-                                    <span class="date-type">
-                                        <i class="fa fa-calendar"></i>2016-03-05 / 09:10:16
-                                    </span>
-                                </div>
-                                <div class="blog-text">
-                                    <h4>
-                                        <a href="blog.html">Assumenda repud eum veniam</a>
-                                    </h4>
-                                    <p>
-                                        Lorem ipsum dolor sit amet conse adipis elit Assumenda repud eum veniam optio
-                                        modi sit explicabo nisi magnam quibusdam.sit amet conse adipis elit Assumenda
-                                        repud eum veniam optio modi sit explicabo nisi magnam quibusdam.
-                                    </p>
-                                </div>
-                                <span>
-                                    <a href="blog.html" class="ready-btn">Read more</a>
-                                </span>
-                            </div>
-                            <!-- Start single blog -->
-                        </div>
-                        <!-- End Left Blog-->
-                        <!-- Start Left Blog -->
-                        <div class="col-md-4 col-sm-4 col-xs-12">
-                            <div class="single-blog">
-                                <div class="single-blog-img">
-                                    <a href="blog.html">
-                                        <img src="assets/img/blog/2.jpg" alt="">
-                                    </a>
-                                </div>
-                                <div class="blog-meta">
-                                    <span class="comments-type">
-                                        <i class="fa fa-comment-o"></i>
-                                        <a href="#">130 comments</a>
-                                    </span>
-                                    <span class="date-type">
-                                        <i class="fa fa-calendar"></i>2016-03-05 / 09:10:16
-                                    </span>
-                                </div>
-                                <div class="blog-text">
-                                    <h4>
-                                        <a href="blog.html">Explicabo magnam quibusdam.</a>
-                                    </h4>
-                                    <p>
-                                        Lorem ipsum dolor sit amet conse adipis elit Assumenda repud eum veniam optio
-                                        modi sit explicabo nisi magnam quibusdam.sit amet conse adipis elit Assumenda
-                                        repud eum veniam optio modi sit explicabo nisi magnam quibusdam.
-                                    </p>
-                                </div>
-                                <span>
-                                    <a href="blog.html" class="ready-btn">Read more</a>
-                                </span>
-                            </div>
-                            <!-- Start single blog -->
-                        </div>
-                        <!-- End Left Blog-->
-                        <!-- Start Right Blog-->
-                        <div class="col-md-4 col-sm-4 col-xs-12">
-                            <div class="single-blog">
-                                <div class="single-blog-img">
-                                    <a href="blog.html">
-                                        <img src="assets/img/blog/3.jpg" alt="">
-                                    </a>
-                                </div>
-                                <div class="blog-meta">
-                                    <span class="comments-type">
-                                        <i class="fa fa-comment-o"></i>
-                                        <a href="#">10 comments</a>
-                                    </span>
-                                    <span class="date-type">
-                                        <i class="fa fa-calendar"></i>2016-03-05 / 09:10:16
-                                    </span>
-                                </div>
-                                <div class="blog-text">
-                                    <h4>
-                                        <a href="blog.html">Lorem ipsum dolor sit amet</a>
-                                    </h4>
-                                    <p>
-                                        Lorem ipsum dolor sit amet conse adipis elit Assumenda repud eum veniam optio
-                                        modi sit explicabo nisi magnam quibusdam.sit amet conse adipis elit Assumenda
-                                        repud eum veniam optio modi sit explicabo nisi magnam quibusdam.
-                                    </p>
-                                </div>
-                                <span>
-                                    <a href="blog.html" class="ready-btn">Read more</a>
-                                </span>
-                            </div>
-                        </div>
-                        <!-- End Right Blog-->
-                    </div>
-                </div>
-            </div>
-        </div><!-- End Blog Section -->
+       
 
         <!-- ======= Suscribe Section ======= -->
         <div class="suscribe-area">
@@ -871,13 +831,15 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs=12">
                         <div class="suscribe-text text-center">
-                            <h3>Welcome to our eBusiness company</h3>
-                            <a class="sus-btn" href="#">Get A quate</a>
+                            <div class="section-headline text-center">
+                                <h2> <a routerLinkActive="router-link-active">Nous Contacter</a></h2>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div><!-- End Suscribe Section -->
+        </div>
+        <!-- End Suscribe Section -->
 
         <!-- ======= Contact Section ======= -->
         <div id="contact" class="contact-area">
@@ -887,7 +849,7 @@
                     <div class="row">
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             <div class="section-headline text-center">
-                                <h2>  <a  [routerLink]="['/signuppro']" routerLinkActive="router-link-active" >Sign up as a pro </a></h2>
+                                <!-- <h2>  <a   routerLinkActive="router-link-active" >Nous Contacter</a></h2>  -->
                             </div>
                         </div>
                     </div>
@@ -898,8 +860,8 @@
                                 <div class="single-icon">
                                     <i class="fa fa-mobile"></i>
                                     <p>
-                                        Call: +1 5589 55488 55<br>
-                                        <span>Monday-Friday (9am-5pm)</span>
+                                        Tel: +216 36 548 765<br>
+                                        <span>Lundi-Jeudi (9am-5pm)</span>
                                     </p>
                                 </div>
                             </div>
@@ -910,8 +872,8 @@
                                 <div class="single-icon">
                                     <i class="fa fa-envelope-o"></i>
                                     <p>
-                                        Email: info@example.com<br>
-                                        <span>Web: www.example.com</span>
+                                        Email: Btp@gmail.com<br>
+                                        <span>Web: www.brainconsulting.com</span>
                                     </p>
                                 </div>
                             </div>
@@ -922,8 +884,8 @@
                                 <div class="single-icon">
                                     <i class="fa fa-map-marker"></i>
                                     <p>
-                                        Location: A108 Adam Street<br>
-                                        <span>NY 535022, USA</span>
+                                        Location: 1915 Rue Huron Lac1<br>
+                                        <span>Berges de lac, Tunisie</span>
                                     </p>
                                 </div>
                             </div>
@@ -947,19 +909,19 @@
                                 <form action="forms/contact.php" method="post" role="form" class="php-email-form">
                                     <div class="form-group">
                                         <input type="text" name="name" class="form-control" id="name"
-                                            placeholder="Your Name" data-rule="minlen:4"
+                                            placeholder="Votre Nom" data-rule="minlen:4"
                                             data-msg="Please enter at least 4 chars" />
                                         <div class="validate"></div>
                                     </div>
                                     <div class="form-group">
                                         <input type="email" class="form-control" name="email" id="email"
-                                            placeholder="Your Email" data-rule="email"
+                                            placeholder="Votre Email" data-rule="email"
                                             data-msg="Please enter a valid email" />
                                         <div class="validate"></div>
                                     </div>
                                     <div class="form-group">
                                         <input type="text" class="form-control" name="subject" id="subject"
-                                            placeholder="Subject" data-rule="minlen:4"
+                                            placeholder="Sujet" data-rule="minlen:4"
                                             data-msg="Please enter at least 8 chars of subject" />
                                         <div class="validate"></div>
                                     </div>
@@ -973,7 +935,8 @@
                                         <div class="error-message"></div>
                                         <div class="sent-message">Your message has been sent. Thank you!</div>
                                     </div>
-                                    <div class="text-center"><button type="submit">Send Message</button></div>
+                                    <div class="text-center"><button clic=dhia() type="submit">Envoyez le Message</button>
+                                    </div>
                                 </form>
                             </div>
                         </div>
@@ -994,7 +957,7 @@
                         <div class="footer-content">
                             <div class="footer-head">
                                 <div class="footer-logo">
-                                    <h2><span>e</span>Business</h2>
+                                    <h2><span>BTP</span>Brain</h2>
                                 </div>
 
                                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
@@ -1022,14 +985,14 @@
                     <div class="col-md-4 col-sm-4 col-xs-12">
                         <div class="footer-content">
                             <div class="footer-head">
-                                <h4>information</h4>
+                                <h4>Informations</h4>
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
                                 </p>
                                 <div class="footer-contacts">
-                                    <p><span>Tel:</span> +123 456 789</p>
-                                    <p><span>Email:</span> contact@example.com</p>
-                                    <p><span>Working Hours:</span> 9am-5pm</p>
+                                    <p><span>Tel:</span> +216 456 789 57</p>
+                                    <p><span>Email:</span> BTP@gmail.com</p>
+                                    <p><span>Heures de Travail:</span> 9am-5pm</p>
                                 </div>
                             </div>
                         </div>
@@ -1059,7 +1022,7 @@
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="copyright text-center">
                             <p>
-                                &copy; Copyright <strong>eBusiness</strong>. All Rights Reserved
+                                &copy; Copyright <strong>Sassi Dhia & Sahli Lina</strong>. Tous droits réservés
                             </p>
                         </div>
                         <div class="credits">
@@ -1069,7 +1032,7 @@
                 Licensing information: https://bootstrapmade.com/license/
                 Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eBusiness
               -->
-                            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                            Designed by <a href="https://bootstrapmade.com/">Brain Consulting</a>
                         </div>
                     </div>
                 </div>
@@ -1079,3 +1042,7 @@
 
     <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 </body>
+<!-- <app-new></app-new> -->
+
+
+</html>

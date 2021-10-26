@@ -7,7 +7,7 @@
 
                 <ng-template matStepLabel>
 
-                    <h3 class="h3"> <img src="../../assets/stepper/serv.png">Create a service</h3>
+                    <h3 class="h3"> <img src="../../assets/stepper/serv.png">Service</h3>
                 </ng-template>
                 <br>
                 <mat-form-field>
@@ -25,7 +25,7 @@
                 </mat-form-field>
                 <br>
                 <mat-form-field>
-                    <mat-label class="title">Nameservice
+                    <mat-label class="title">Nom de service
                     </mat-label>
                     <div formArrayName="items" *ngFor="let item of formData.controls; let i = index; let c = count">
                         <div class="line" [formGroupName]="i">
@@ -40,7 +40,7 @@
                 </div>
                 <hr>
                 <a><button mat-button matStepperNext (click)="submit2ToServer()">
-                        <mat-label class="title">Next
+                        <mat-label class="title">Suivant
                         </mat-label>
                     </button></a>
 
@@ -52,11 +52,11 @@
         <mat-step>
             <form [formGroup]='TaskForm'>
                 <ng-template matStepLabel>
-                    <h3 class="h3"> <img src="../../assets/stepper/pp.jpg">Create a Task</h3>
+                    <h3 class="h3"> <img src="../../assets/stepper/pp.jpg">Travail</h3>
                 </ng-template>
                 <br>
                 <mat-form-field>
-                    <mat-label class="title">Nameservice</mat-label>
+                    <mat-label class="title">Nom de service</mat-label>
 
                     <mat-select formControlName="serviceid">
                         <ng-container *ngFor="let cat of services">
@@ -66,7 +66,7 @@
                 </mat-form-field>
                 <br>
                 <mat-form-field>
-                    <mat-label class="title">Taskname</mat-label>
+                    <mat-label class="title">Nom de travail</mat-label>
                     <div formArrayName="itemst" *ngFor="let item of formDatat.controls; let i = index; let c = count">
                         <div class="line" [formGroupName]="i">
                             <input matInput type="textp" name="travailname" formControlName="travailname"
@@ -84,7 +84,7 @@
 
                 <hr>
                 <a><button mat-button matStepperNext (click)="submit3ToServer()">
-                        <mat-label class="title">Next
+                        <mat-label class="title">Suivant
                         </mat-label>
                     </button></a>
 
@@ -99,11 +99,11 @@
             <form [formGroup]="TaskFormGroup">
                 <ng-template matStepLabel>
                     <h2 class="h2"> <img src="../../assets/stepper/oo.png">
-                        Create a detailed task</h2>
+                        Travail détaillé</h2>
                 </ng-template>
                 <mat-form-field>
                     <br>
-                    <mat-label class="title">Tasks</mat-label>
+                    <mat-label class="title">Travaux</mat-label>
                     <mat-select formControlName="travailid">
                         <ng-container *ngFor="let item of travaux">
                             <mat-option value="{{item.id}}">{{item.travailname}}</mat-option>
@@ -115,12 +115,12 @@
                 <br>
 
                 <mat-form-field>
-                    <mat-label class="title">Detailed Task</mat-label>
+                    <mat-label class="title">Travail détaillé</mat-label>
                     <div formArrayName="itemstd" *ngFor="let item of formDatatd.controls; let i = index; let c = count">
                         <div class="line" [formGroupName]="i">
 
                             <input matInput class="tdt" name="dtname" formControlName="dtname"
-                                placeholder="Put your detailed task" type="textp">
+                                placeholder="Entrer Votre travail detaillé" type="textp">
 
                         </div>
                     </div>
@@ -134,7 +134,7 @@
                         <div class="line" [formGroupName]="i">
 
                             <input matInput class="desc" ROWS=4 COLS=40 name="description" type="textp"
-                                formControlName="description" placeholder="describe your detailed task">
+                                formControlName="description" placeholder="Entrez votre travail">
 
                         </div>
                     </div>
@@ -147,7 +147,7 @@
                 </div>
                 <br>
                 <a><button mat-button matStepperNext (click)="submit4ToServer()">
-                        <mat-label class="title">Next
+                        <mat-label class="title">Suivant
                         </mat-label>
                     </button></a>
 
@@ -163,11 +163,11 @@
             <form [formGroup]="ArticleForm">
                 <ng-template matStepLabel>
                     <h2 class="h2"> <img src="../../assets/stepper/uu.jpg">
-                        Create an an article</h2>
+                        Article</h2>
                 </ng-template>
                 <mat-form-field>
 
-                    <mat-label class="title">Tasks</mat-label>
+                    <mat-label class="title">Travaux</mat-label>
                     <mat-select formControlName="travdetid">
                         <ng-container *ngFor="let t of tous">
                             <mat-option value="{{t.id}}">{{t.dtname}}</mat-option>
@@ -183,43 +183,43 @@
                     <mat-label class="title">Article</mat-label>
                     <div formArrayName="itemsa" *ngFor="let item of formDataa.controls; let i = index; let c = count">
                         <div class="line" [formGroupName]="i">
-                            <input matInput type="textp" name="articlename" formControlName="articlename"
-                                placeholder="tipe your article....">
+                            <input matInput type="textp" name="name" formControlName="name"
+                                placeholder="Entrez votre article">
 
 
                         </div>
                     </div>
                 </mat-form-field>
 
-
+<!-- 
                 <br>
                 <mat-form-field>
                     <mat-label class="title">Image</mat-label>
                     <div formArrayName="itemsa" *ngFor="let item of formDataa.controls; let i = index; let c = count">
                         <div class="line" [formGroupName]="i">
                             <input matInput type="textp" name="image" formControlName="image"
-                                placeholder="Put your image....">
+                                placeholder="Entrez l'image correspondante!">
 
 
                         </div>
                     </div>
-                </mat-form-field>
+                </mat-form-field> -->
 
                 <br>
                 <mat-form-field>
-                    <mat-label class="title">Unity</mat-label>
+                    <mat-label class="title">Unité</mat-label>
                     <div formArrayName="itemsa" *ngFor="let item of formDataa.controls; let i = index; let c = count">
                         <div class="line" [formGroupName]="i">
-                            <input matInput type="textp" name="unite" formControlName="unite" placeholder="Unity...">
+                            <input matInput type="textp" name="unite" formControlName="unite" placeholder="Entrez l'unité">
 
 
 
                         </div>
                     </div>
                 </mat-form-field>
-                <br>
+                <!-- <br>
                 <mat-form-field>
-                    <mat-label class="title">Price</mat-label>
+                    <mat-label class="title">Prix</mat-label>
                     <div formArrayName="itemsa" *ngFor="let item of formDataa.controls; let i = index; let c = count">
                         <div class="line" [formGroupName]="i">
                             <input matInput type="textp" name="prix" formControlName="prix"
@@ -228,7 +228,7 @@
 
                         </div>
                     </div>
-                </mat-form-field>
+                </mat-form-field> -->
 
                 <br>
                 <div class="addbutton">
@@ -236,7 +236,7 @@
                 </div>
                 <br>
                 <a><button mat-button matStepperNext (click)="submit5ToServer()">
-                        <mat-label class="title">Add an article
+                        <mat-label class="title">Ajouter un article
                         </mat-label>
                     </button></a>
 
@@ -252,30 +252,22 @@
 
 
 
-
 <style>
     img {
         font-size: 20px;
         height: 27px;
         width: 28px;
         padding-top: 2px;
-
     }
-
     .next {
         padding: 11px 55px;
     }
-
     .title {
         color: rgb(206, 87, 196);
         position: -ms-page;
-        right: 15px;
-        size: 5px;
-        height: 3px;
-        width: 9px;
-
+        font-size: 1.3em;
+        font-weight: bold;
     }
-
     input[type=texto] {
         width: 100%;
         padding: 9px 13px;
@@ -284,12 +276,7 @@
         border: 1px solid rgb(57, 76, 131);
         box-sizing: border-box;
     }
-
-
-
-
     a {
-        
         position: relative;
         display: inline-block;
         padding: 1.2em 2em;
@@ -299,42 +286,30 @@
         user-select: none;
         color: rgb(248, 248, 248);
         padding: 7px 15px;
-
     }
-
-
     .h3 {
         font-weight: bold;
         font-size: 1.3em;
         padding-top: 10%;
     }
-
     .h2 {
         font-weight: bold;
         font-size: 1.3em;
         padding-top: 7%;
     }
-
-
     .p {
         color: bisque;
     }
-
-
     .yaa {
         padding-left: 9%;
         padding-top: 3%;
     }
-
     .active {
         border-width: 1em;
         border: 3.8px outset rgb(206, 87, 196);
-
         height: 90%;
         width: 90%;
-
     }
-
     input[type=textp] {
         width: 100%;
         padding: 9px 13px;

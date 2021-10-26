@@ -1,3 +1,4 @@
+
 <perfect-scrollbar *ngIf="this.dattaConfig['layout'] === 'vertical'" [exclude]="'#mobile-collapse1'" (clickOutside)="navMob()" id="nav-ps-datta" ngClass="datta-scroll" [style.max-width]="'300px'" [style.max-height]="'calc(100vh - 70px)'" [usePSClass]="'datta'" [disabled]="null" [autoPropagation] ="true">
   <div class="navbar-content">
     <ul class="nav pcoded-inner-navbar" (clickOutside)="fireOutClick()" (mouseleave)="navMob()">
@@ -22,3 +23,4 @@
   </div>
   <a href="javascript:" class="sidenav-horizontal-next" [ngClass]="nextDisabled" (click)="scrollPlus()"></a>
 </div>
+

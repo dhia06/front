@@ -1,0 +1,39 @@
+.hm-gradient {
+    background-image: linear-gradient(to top, #ecc0c8 0%, #e3eeff 45%, #b9c8df 65%);
+    background-size: cover;
+    width: 150%;
+    height: 150%;
+   
+}
+input[type="checkbox"][id^="myCheckbox"] {
+    display: none;
+  }
+                                        
+
+  
+.opack [type='radio'] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .btn-round-lg{
+    border-radius: 22.5px;
+    
+    background: linear-gradient(rgb(175,117,102), rgb(255,207,179), rgb(175,117,102));
+    }
+.titreprojet{
+    padding-left: 6px;
+    font-size: 19px;
+    color: black;
+
+}
+// .emplacement{
+//     padding-left: 40%;
+// }
+
+.bottom{
+
+    padding-left: 29%;
+    padding-top: 600px;
+   }

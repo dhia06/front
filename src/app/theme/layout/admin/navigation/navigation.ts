@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-
+import {MatIconModule} from '@angular/material/icon';
 export interface NavigationItem {
   id: string;
   title: string;
@@ -34,62 +34,120 @@ const NavigationItems = [
     children: [
       {
         id: 'dashboard',
-        title: 'Dashboard',
+        title: 'Tableau de bord',
         type: 'item',
         url: '/dashboard/default',
-        icon: 'feather icon-home',
+
+        icon: 'feather icon-pie-chart',
         classes: 'nav-item',
       },
 
       {
-        id: 'dashboard',
-        title: 'Article management',
+        id: 'lllll',
+        title: 'Disponibilité',
         type: 'item',
-        url: '/dashboard/articlemg',
-        icon: 'feather icon-home',
+        url: '/dashboard/calendar',
+        icon: 'feather icon-calendar',
         classes: 'nav-item',
       },
-      {
-        id: 'dashboardoo',
-        title: 'Task management',
-        type: 'item',
-        url: 'dashboard/taskmg',
-        icon: 'feather icon-home',
-        classes: 'nav-item',
-      },
-      {
-        id: 'da',
-        title: 'Service management',
-        type: 'item',
-        url: 'dashboard/servmg',
-        icon: 'feather icon-home',
-        classes: 'nav-item',
-      },
-      {
-        id: 'day',
-        title: 'Detailed Task management',
-        type: 'item',
-        url: 'dashboard/taskdmg',
-        icon: 'feather icon-home',
-        classes: 'nav-item',
-      },
+   
+      // {
+      //   id: 'dashboard',
+      //   title: 'Gestion des articles',
+      //   type: 'item',
+      //   url: '/dashboard/articlemg',
+      //   icon: 'feather icon-home',
+      //   classes: 'nav-item',
+      // },
+      // {
+      //   id: 'dashboardoo',
+      //   title: 'Gestion des travaux',
+      //   type: 'item',
+      //   url: '/dashboard/taskmg',
+      //   icon: 'feather icon-home',
+      //   classes: 'nav-item',
+      // },
+      // {
+      //   id: 'da',
+      //   title: 'Gestion des services',
+      //   type: 'item',
+      //   url: '/dashboard/servmg',
+      //   icon: 'feather icon-home',
+      //   classes: 'nav-item',
+      // },
+      // {
+      //   id: 'day',
+      //   title: 'Gestion des travaux détaillés',
+      //   type: 'item',
+      //   url: '/dashboard/taskdmg',
+      //   icon: 'feather icon-home',
+      //   classes: 'nav-item',
+      // },
   
       {
         id: 'pmmmp',
-        title: 'Professionals',
+        title: 'Professionnels',
         type: 'item',
         url: '/dashboard/liste-pro',
-        icon: 'feather icon-home',
+        icon: 'feather icon-user-plus',
+        classes: 'nav-item',
+      },
+ 
+      {
+        id: 'heuu',
+        title: 'Appels d offres',
+        type: 'item',
+        url: '/dashboard/app-doffres',
+        icon: 'feather icon-clipboard',
+      
+        classes: 'nav-item',
+      
+      },
+      {
+        id: 'pp',
+        title: 'Tableau de données',
+        type: 'item',
+        url: '/dashboard/tab-données',
+        icon: 'feather icon-folder',
+        classes: 'nav-item',
+      },
+  
+
+
+     
+
+      {
+        id: 'kk',
+        title: 'Data metiers',
+        type: 'item',
+        url: '/dashboard/Datametiers',
+        icon: 'feather icon-server',
+        classes: 'nav-item',
+      },
+      // {
+      //   id: 'vf',
+      //   title: 'Gestion des projets',
+      //   type: 'item',
+      //   url: '/dashboard/gestion-projet',
+      //   icon: 'feather icon-home',
+      //   classes: 'nav-item',
+      // },
+      {
+        id: 'vb',
+        title: 'Repondre aux Rendez-vous',
+        type: 'item',
+        url: '/dashboard/rdv',
+        icon: 'feather icon-bell',
         classes: 'nav-item',
       },
       {
-        id: 'kk',
-        title: 'Data jobs',
+        id: 'vt',
+        title: 'Reclamations',
         type: 'item',
-        url: '/dashboard/Datametiers',
-        icon: 'feather icon-home',
+        url: '/dashboard/reclamation',
+        icon: 'feather icon-book',
         classes: 'nav-item',
-      },
+      }
      
     ]
   },

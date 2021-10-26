@@ -8,7 +8,7 @@ import { Travaildetailleemodel } from '../../Models/Travaildetailleemodel';
 })
 export class ApitaskdService {
 
-  API_SERVER = "http://localhost:3000/travail-detaille";
+  API_SERVER = "http://localhost:3000/taskd";
   constructor(private httpClient: HttpClient) { }
   public readTravauxd(){
     return this.httpClient.get<Travaildetailleemodel[]>(`${this.API_SERVER}`);
@@ -18,7 +18,7 @@ public createTravauxd(travauxd: Travaildetailleemodel){
 }
 
 public updatetaskd(travauxd: Travaildetailleemodel){
-  return this.httpClient.put<Travaildetailleemodel>(`http://localhost:3000/travail-detaille/update/`+travauxd.id, travauxd);
+  return this.httpClient.put<Travaildetailleemodel>(`http://localhost:3000/taskd/update/`+travauxd.id, travauxd);
 }
 update(id, data): Observable<any> {
   return this.httpClient.put(`${'http://localhost:3000/update'}/${id}`, data);
@@ -27,7 +27,7 @@ public deletetaskd(id: number){
   return this.httpClient.delete(`${this.API_SERVER}/delete/${id}`);
 }
 deleteserv(travauxd:Travaildetailleemodel){
-  return this.httpClient.delete<Travaildetailleemodel>('http://localhost:3000/travail-detaille/'+travauxd.id+'/delete');
+  return this.httpClient.delete<Travaildetailleemodel>('http://localhost:3000/taskd/'+travauxd.id+'/delete');
 }
 
 

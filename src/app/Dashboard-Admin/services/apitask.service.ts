@@ -11,7 +11,7 @@ import { Travailmodel } from '../../Models/Travailmodel';
 export class ApitaskService {
   
   
-  API_SERVER = "http://localhost:3000/travail";
+  API_SERVER = "http://localhost:3000/task";
   URL= "http://localhost:3000/servicess"
 
   constructor(private httpClient: HttpClient) { }
@@ -28,7 +28,7 @@ export class ApitaskService {
   }
   
   public updatetask(travaux: Travailmodel){
-    return this.httpClient.put<Travailmodel>(`http://localhost:3000/travail/update/`+travaux.id, travaux);
+    return this.httpClient.put<Travailmodel>(`http://localhost:3000/task/update/`+travaux.id, travaux);
   }
   update(id, data): Observable<any> {
     return this.httpClient.put(`${'http://localhost:3000/update'}/${id}`, data);

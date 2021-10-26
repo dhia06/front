@@ -1,0 +1,417 @@
+<html>
+
+
+  
+            <div class="droite"  *ngIf="projet"> 
+            <li class="list-group-item">
+    <form [formGroup]="stepFiveForm">
+
+    <div class="form-group ">
+      <div class="opop">
+        <label class="font-weight-bold" for="surfaceTotale">
+          <div class="cout">Cout estimatif /TND : </div>
+
+        </label>
+
+        <div class="input-group">
+          <input id="total" data-testid="total" class="sc-AxgMl AWIFW form-control text-dark text-right" min="0"
+            max="9007199254740991" type="text" name="total" value='{{FilsProperty5}}' class="form-control">
+
+        </div>
+      </div>
+    </div>
+
+<!-- 
+    <div class="alll">
+      <div id="main" ng-init="count=1">
+        <div class="InputField_input-text_3zBw5 InputField_stepper_3HPg0 undefined">
+          <div class="InputField_step-btn_15TbT">
+        <i class="material-icons" (click)="fctmoins()">remove_circle</i>
+        </div>
+        </div>
+       <div class="black" formControlName="count">{{count}}</div>
+       <div class="InputField_input-text_3zBw5 InputField_stepper_3HPg0 undefined">
+khadhra   
+<div class="InputField_step-btn_15TbT">
+        <i class="material-icons" (click)="fctplus()" ng-click="count=count+1">add_circle</i>
+        </div>
+        </div>
+      </div>
+    </div> -->
+
+
+
+
+    <div formArrayName="itemst" *ngFor="let item of formDatat.controls; let i = index; let c = count">
+      <div class="line" [formGroupName]="i">
+
+        <label class="surface">
+          Choisissez la gamme de votre exterieur ?
+
+        </label>
+
+    
+        <mat-form-field> 
+
+          <mat-select (selectionChange)="GetCategoryDropdown($event)" formControlName="categorie">
+            <ng-container *ngFor="let cat of all">
+              <mat-option value="{{cat.id}}">{{cat.name}}</mat-option>
+            </ng-container>
+          </mat-select>
+
+        </mat-form-field>
+
+
+        <label class="surface">
+          Quel type de travaux d’aménagement extérieur
+          souhaitez-vous réaliser ?
+      </label>
+
+        
+        <div class="card-text ">
+          <div *ngFor="let pres of Prestation">
+
+            <!-- <input type="checkbox" formControlName="prestation" [(ngModel)]="pres.checked"
+            value="{{pres.checked}}"  id="input_checkbox" (change)="see(pres)"> -->
+
+            <div class="h5 text-dark">{{pres.nom}} </div>
+
+        
+
+             <div *ngIf="pres.nom=='Terrasse'">
+              <div class="checkbox-items">
+            
+                <label *ngFor="let cat of allaccessoires1">
+                      <div class="opack">
+                                  <input type="checkbox"  formControlName="accessoires" [(ngModel)]="cat.checked"
+                                   value="{{cat.Prix}}"
+                                   id="myCheckbox1" 
+                                    (change)="Calculate(cat)" (change)="CreateAccessoirepiece(cat)">
+                          
+                                 
+                         
+
+                              <!-- <div>  <img alt="{{cat.ArticleEntity.name}}" 
+                                     src="../../assets/images/BTP/terrcarrelage.PNG"
+                                     style="width:80%;height: 80%" > </div>  -->
+                              
+                             <div class="popo" >   <img src="assets/images/BTP/{{cat.ArticleEntity.image  | defaultImage}}" 
+                              width="150px"
+                              height="150px"
+                              class="rounded-lg"> </div>  
+
+
+                            <br>    <div class="popoo" > {{cat.ArticleEntity.name}}</div>   
+
+                           
+
+                                 
+                                  </div>     
+                                </label> 
+                                </div>
+            </div> 
+          
+            <div *ngIf="pres.nom=='Allée'"> 
+              <div class="checkbox-items">       
+              <label *ngFor="let cat of allaccessoires2">                           
+                    <div class="opack">
+                      <input type="checkbox"  formControlName="accessoires" [(ngModel)]="cat.checked"
+                      value="{{cat.Prix}}"
+                      id="myCheckbox2" 
+                       (change)="Calculate(cat)" (change)="CreateAccessoirepiece(cat)">
+   
+                      <!-- <div> <img alt="{{cat.ArticleEntity.name}}"
+                                   style="width:80%;height: 80%"  src="../../assets/images/BTP/pietonnne.PNG"> </div> -->
+
+                                   <div class="popo" >   <img src="../../assets/images/BTP/{{cat.ArticleEntity.image  | defaultImage}}" 
+                                    width="150px"
+                                    height="150px"
+                                    class="rounded-lg"
+                                  > </div>  
+                                  <br>    <div class="popoo" >  {{cat.ArticleEntity.name}}
+
+
+                                   </div>   
+
+                                  </div>              
+                              </label> 
+                              </div>
+          </div> 
+        
+
+
+          <div *ngIf="pres.nom=='Cloture'"> 
+            <div class="checkbox-items">       
+            <label *ngFor="let cat of allaccessoires3">                           
+                  <div class="opack">
+                    <input type="checkbox"  formControlName="accessoires" [(ngModel)]="cat.checked"
+                    value="{{cat.Prix}}"
+                    id="myCheckbox3" 
+                     (change)="Calculate(cat)" (change)="CreateAccessoirepiece(cat)">
+                       
+                              <!-- <div for="myCheckbox1" class="styler"> -->
+                                <div class="popo" >   <img src="../../assets/images/BTP/{{cat.ArticleEntity.image  | defaultImage}}" 
+                                  width="150px"
+                                  height="150px"
+                                  class="rounded-lg"> </div>  
+    
+    
+                                <br>    <div class="popoo" >{{ cat.ArticleEntity.name}}</div>   
+
+                                 <!-- </div> -->
+                                </div>      
+                            </label> 
+                            </div>
+        </div> 
+
+
+        <div *ngIf="pres.nom=='Portail'"> 
+          <div class="checkbox-items">       
+          <label *ngFor="let cat of allaccessoires4">                           
+                <div class="opack">
+                  <input type="checkbox"  formControlName="accessoires" [(ngModel)]="cat.checked"
+                  value="{{cat.Prix}}"
+                  id="myCheckbox3" 
+                   (change)="Calculate(cat)" (change)="CreateAccessoirepiece(cat)">
+                     
+                            <!-- <div for="myCheckbox1" class="styler"> -->
+                              <div class="popo" >   <img src="../../assets/images/BTP/{{cat.ArticleEntity.image  | defaultImage}}" 
+                                width="150px"
+                                height="150px"
+                                class="rounded-lg"> </div>  
+  
+  
+                              <br>    <div class="popoo" >{{cat.ArticleEntity.name}}</div>   
+
+                               <!-- </div> -->
+                              </div>      
+                          </label> 
+                          </div>
+      </div> 
+
+        
+
+
+        </div>
+        </div>
+    
+ 
+    </div>
+    </div>
+  
+</form>
+
+
+<div class="Suivant">
+  <button mat-button (click)="test()" (click)="sendEvent5(projet)" (click)="sendlista4()">
+     Exporter en PDF </button>
+  </div>
+</li>
+</div>
+
+
+
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+
+
+
+
+</html>
+
+
+
+<div style="color: black;">
+
+  <table>  
+    <li>
+<div id="pdfTable" #pdfTable class="iuiu">
+
+  <!-- <div class="center">Projet {{projet.titre}}</div> -->
+<br>
+<div class="plz"> Devis </div>
+<br>
+  <div class="plz"> estimatif et quantitatif </div>
+<!-- des travaux de construction
+d une maison d habitation </div> -->
+<br>
+<br>
+<h4 style="color: rgb(243, 87, 30);padding-left: 390px;">Devis N° 01/2021</h4>
+  <h5 style=" padding-left: 390px;">Edité le {{date|date|uppercase}} </h5>
+   
+
+
+
+<div style="font-weight: bold; color: rgb(86, 86, 224); padding-left: 30px; text-decoration: underline;">Entreprise:</div>
+<br>
+<h5 style=" padding-left: 30px;"> Email: Brainconsulting21@gmail.com </h5>
+  <h5 style=" padding-left: 30px;"> Adresse : Rue Lac Leman 1053 Berges du lac </h5>
+    <h5 style=" padding-left: 30px;"> Telephone: (+216)52884352 (+33)0699942007 </h5>
+
+    <div style="font-weight: bold; color: rgb(86, 86, 224); padding-left: 390px; text-decoration: underline;">Destinataire:</div>
+<br>
+
+      <h5 style=" padding-left: 390px;"> Nom: Sassi Dhia</h5>
+      <h5 style=" padding-left: 390px;"> Email: sassi.dhiaelhak@gmail.com </h5>
+      <h5 style=" padding-left: 390px;"> Adresse:  Avenue des Nations
+        <br> Unies - Hammamet 8050 - Tunisie</h5>
+  
+
+
+ <!-- <div style="font-weight: bold; color: black; padding-left: 20px;">Nom:</div><h4 style=" padding-left: 20px;"> Lina Sahli</h4> -->
+ <!-- {{projet.UserEntity.role}} -->
+
+<div style="font-weight: bold;   color: orangered;text-decoration: underline;padding-left: 30px;">Dénomination :</div>
+<br>
+<!--<h5 style=" padding-left: 30px;"> Projet de construction d'un(e) {{projet.typebien}} de gamme :{{projet.gamme}} composé(e)
+  <br> de {{projet.extension}} qui doit être réalisé(e)
+{{projet.delai}}. </h5>-->
+
+<h5 style=" padding-left: 30px;"> Projet de construction d'un(e) maison de gamme :très haut de gamme composé(e)
+  <br> de deux étages qui doit être réalisé(e)
+dans les six prochains mois. </h5>
+
+<div style="font-weight: bold;   color: orangered;; padding-left: 30px;text-decoration: underline;">Surface Habitable  :</div>
+<br>
+<h5 style=" padding-left: 30px;"> {{projet.surface}} m²</h5> 
+
+<hr color="blue" size="2">
+<li>
+<table class="table" style=" padding-left: 20px;">
+  
+  <thead>
+    <tr>
+      <!-- <th colspan="1"></th>
+      <th colspan="1"></th> -->
+      <th>Nom de l'accessoire</th>
+      <th>Prix unitaire</th>
+      <th>Quantité</th>
+ 
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-name="Product Name :"> {{Property5[1]}}</td>
+      <td data-name="price :"> {{Property5[2]}}</td>
+      <td data-name="Quantity :">{{Property5[3]}}</td>
+    </tr>
+    <tr>
+    
+      <td data-name="Product Name :">{{Property5[4]}}</td>
+      <td data-name="price :"> {{Property5[5]}}</td>
+      <td data-name="Quantity :">{{Property5[6]}}</td>
+    <!-- <td data-name="Total :">{{Property5[5]}}*{{Property5[6]}}</td>  -->
+    </tr>
+
+    <tr>
+    
+      <td data-name="Product Name :">{{Property5[7]}}</td>
+      <td data-name="price :"> {{Property5[8]}}</td>
+      <td data-name="Quantity :">{{Property5[9]}}</td>
+
+    </tr>
+
+    
+    <tr>
+    
+      <td data-name="Product Name :">{{Property5[10]}}</td>
+      <td data-name="price :"> {{Property5[11]}}</td>
+      <td data-name="Quantity :">{{Property5[12]}}</td>
+
+    </tr>
+
+    <tr>
+    
+      <td data-name="Product Name :">{{Property5[13]}}</td>
+      <td data-name="price :"> {{Property5[14]}}</td>
+      <td data-name="Quantity :">{{Property5[15]}}</td>
+
+    </tr>
+
+
+
+    <tr>
+    
+      <td data-name="Product Name :">{{Property5[16]}}</td>
+      <td data-name="price :"> {{Property5[17]}}</td>
+      <td data-name="Quantity :">{{Property5[18]}}</td>
+
+    </tr>
+
+    <tr>
+    
+      <td data-name="Product Name :">{{Property5[19]}}</td>
+      <td data-name="price :"> {{Property5[20]}}</td>
+      <td data-name="Quantity :">{{Property5[21]}}</td>
+
+    </tr>
+
+    <tr>
+    
+      <td data-name="Product Name :">{{Property5[22]}}</td>
+      <td data-name="price :"> {{Property5[23]}}</td>
+      <td data-name="Quantity :">{{Property5[24]}}</td>
+
+    </tr>
+
+    <tr>
+    
+      <td data-name="Product Name :">{{Property5[25]}}</td>
+      <td data-name="price :"> {{Property5[26]}}</td>
+      <td data-name="Quantity :">{{Property5[27]}}</td>
+
+    </tr>
+
+    <tr>
+    
+      <td data-name="Product Name :">{{Property5[28]}}</td>
+      <td data-name="price :"> {{Property5[29]}}</td>
+      <td data-name="Quantity :">{{Property5[30]}}</td>
+
+    </tr>
+
+ 
+
+
+
+
+
+
+
+
+
+
+  <!-- {{FilsProperty5}} -->
+    
+    <tr>
+   <th>Total/TND</th>
+   <td colspan=4 rowspan=3>{{FilsProperty5}} </td>
+</tr>
+
+    
+
+
+  </tbody>
+
+</table>
+</li>
+
+</div> 
+</li>
+</table>
+
+</div>

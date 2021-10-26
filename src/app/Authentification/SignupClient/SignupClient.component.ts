@@ -1,8 +1,10 @@
 
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { SignupClientService } from './SignupClient.service';
+
 import { User } from '../../Models/user';
+import { Guser } from 'src/app/Models/guser';
+import { SignupClientService } from '../signuppro/SignupClient.service';
 
 
 @Component({
@@ -82,12 +84,12 @@ public salt:string='1'
       profesionalInfo.address = this.address;
       profesionalInfo.registration = this.registration;
       profesionalInfo.postal = this.postal;
-     profesionalInfo.company = this.company;
+      profesionalInfo.company = this.company;
       profesionalInfo.bic=this.bic;
       profesionalInfo.email=this.email;
       profesionalInfo.password=this.password;
       profesionalInfo.plainTextPassword=this.plainTextPassword;
-      profesionalInfo.salt=this.salt;
+    //  profesionalInfo.salt=this.salt;
   
     this.signup.addPersonne(profesionalInfo).subscribe(
      

@@ -7,7 +7,7 @@ import { Servicemodel } from '../../Models/Servicemodel';
 
 
 
-const API_LINK1 = 'http://localhost:3000/Servicet/create';
+const API_LINK1 = 'http://localhost:3000/servicess/create';
 
 
 

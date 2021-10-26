@@ -1,0 +1,586 @@
+<html>
+    
+
+    <header id="header" class="fixed-top">
+        <div class="container d-flex">
+      
+            <div class="logo mr-auto">
+                <h1 class="text-light"><a href="index.html"><span>B</span>TP Brain</a></h1>
+            </div>
+      
+            <nav class="nav-menu d-none d-lg-block">
+                <ul>
+                    <li class="active"><a href="#header">Accueil</a></li>
+                    <li><a href="bloog">A propos</a></li>
+                    <li><a href="#team">Equipe</a></li>
+                    <!-- <li><a href="#services">Services</a></li> -->
+                    <!-- <li><a href="#team">Equipe</a></li> -->
+                    <!-- <li><a href="#portfolio">Portfolio</a></li> -->
+                    <li><a href="propos">Blog</a></li>
+                    <li class="drop-down"><a href="feather icon-pie-chart"> Services</a>
+                        <ul>
+                            <li class="drop-down"><a href="#">Devis Personalisé</a>
+                                <ul>
+                                    <li><a href="Devis">Devis Express</a></li>
+                                    <li><a href="#">Devis Detaillé</a></li>
+                                </ul>
+                            </li>
+                            <li class="drop-down"><a href="#">Construction </a>
+                                <ul>
+                                    <li><a href="#">Genie Civil</a></li>
+                                    <li><a href="#">Genie Fluides</a></li>
+                                    <li><a href="#">Finition</a></li>
+      
+                                </ul>
+                            </li>
+                            <li><a href="#">Prise des Rendez-vous</a></li>
+                       
+                        </ul>
+                    </li>
+      
+                   <li class="drop-down"><a href="#currentuser">{{userService.loggedUser}} {{userService.loggedUser2}}</a>
+                
+                    <ul>
+      
+                        <li> <a href="#" *ngIf="!userService.isloggedIn" class="dropdown-item"  [routerLink]="['/connexion']" routerLinkActive="router-link-active">Login</a></li>
+                      <li> <a href="#" *ngIf="userService.isloggedIn" class="dropdown-item" (click) = "OnLogout()">Déconnexion</a></li>
+                      
+                    </ul>           
+                </li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+             </ul>
+            </nav><!-- .nav-menu -->
+      
+        </div>
+      
+      </header><!-- End Header -->
+
+    <div class="hm-gradient">
+        <div class="bx" *ngIf="quest1">
+
+
+                        <!-- <form #loginForm="ngForm"> -->
+
+                            <div class="center">
+                                   
+                                <div class="h3 text-dark">Qu'aimeriez vous appeler votre projet ?</div>
+                            </div>
+                            <br>
+                            <div class="title"></div>
+                            <br>
+                           
+                            <form [formGroup]="firstgrp" >
+                               
+
+
+                                 <!-- <label class="iuiu">Titre :</label> -->
+                                 <div class="iuiu">
+                                 <input type="text" name="titre" class="form-control" formControlName="titre" placeholder="titre...">
+                             </div> 
+                           
+
+                          <br>
+                          <div class="btpro1">
+
+                                <button type="button" (click)="add1()" class="btn-round-lg btn-lg">
+                                    <div class="cont">
+                                    Continuer</div>
+                 </button>
+                            
+                            </div>
+
+
+                            </form>
+
+
+                        
+                    </div>
+
+        <div  class="b2" *ngIf="quest2">
+
+                <div>
+                    <form [formGroup]="secondgrp">
+            
+                        <div class="center2">
+                                   
+                            <div class="h2 text-dark">Quel est le type de bien concerné par les travaux ?</div>
+                        </div>
+                        <br>
+                            
+                <div class="btn-group" role="group">
+            
+                          
+                            <ul>
+                            
+                                <li>
+                                    <button type="button" data-testid="horizontal-select-maison" class="btn btn-badge-primarylight" >
+                                        <div class="opack">
+                                  <input type="radio" value="Maison" id="myCheckbox4" name="typebien" class="form-control" formControlName="typebien" />
+                                  
+                                  <label for="myCheckbox4" class="paint">
+                                    <img alt=""  src="../../assets/images/BTP/icons8-german-house-48.png">
+                                    <div class="kouka">Maison</div>
+                                 </label>
+                                 
+                                 </div>
+                                 </button>
+                                </li>
+                                    <li>
+                                        <button type="button" data-testid="horizontal-select-maison" class="btn btn-badge-primarylight" >
+                                            <div class="opack">
+                                      <input type="radio" value="Maison en bois" id="myCheckbox1" name="typebien" class="form-control" formControlName="typebien" />
+                                      
+                                      <label for="myCheckbox1" class="paint">
+                                     <div class="pp" ><img alt=""  src="../../assets/images/BTP/icons8-warehouse-64.png">
+                                        <div class="kouka2">Maison en bois</div>
+                                        </div>
+                                     </label>
+                                     
+                                     </div>
+                                     </button>
+                                    </li>
+
+                                    <li>
+                                        <button type="button" data-testid="horizontal-select-maison" class="btn btn-badge-primarylight" >
+                                            <div class="opack">
+                                      <input type="radio" value="Appartement" id="myCheckbox2" name="typebien" class="form-control" formControlName="typebien" />
+                                      
+                                      <label for="myCheckbox2" class="paint">
+                                        <div class="pp"> 
+                                            <img alt="" src="../../assets/images/BTP/typeb1.png">
+                                        <div class="kouka3">Appartement</div>
+                                    </div>
+                                     </label>
+                                     
+                                     </div>
+                                     </button>
+                                    </li>
+
+
+                                    <li>
+                                        <button type="button" data-testid="horizontal-select-maison" class="btn btn-badge-primarylight" >
+                                            <div class="opack">
+                                      <input type="radio" value="Bien commercial" id="myCheckbox3" name="typebien" class="form-control" formControlName="typebien" />
+                                      
+                                      <label for="myCheckbox3" class="paint">
+                                        <img alt=" " src="../../assets/images/BTP/icons8-business-building-64.png">
+                                        <div class="kouka4
+                                        ">Bien commercial</div>
+                                     </label>
+                                     
+                                     </div>
+                                     </button>
+                                    </li>
+
+
+                              </ul>
+   </div>
+
+
+   <br>
+
+   
+
+
+
+    <!-- <button type="button" (click)="add2()" class="btn-round-lg btn-lg"> <div class="buttcent"></div>Continuer</button> -->
+
+                              <!-- <div class="row justify-content-md-center">
+                                <button type="button" (click)="add2()" class="btn btn-success">Next</button>
+                            </div> -->
+           
+            </form>
+
+
+            <div class="btpro">
+                <button type="button" (click)="add2()" class="btn-round-lg btn-lg">
+                    <div class="cont2">Continuer</div>   
+            </button>
+            </div>
+
+
+            </div>
+
+
+
+
+            </div>
+
+
+<div class="bx5" *ngIf="quest3">            
+     <div class="justifier">
+                <form [formGroup]="thirdgrp">
+
+
+                    <div class="center3">
+                                   
+                        <div class="h2 text-dark">De quelle gamme avez-vous besoin ?</div>
+                    </div>
+              
+
+                    <br>
+                       <div id="" class="margin_top devistap_choix_container">
+                             <div class="containerr">     
+                                 
+                                <div class="row">
+                                    <div class="col-md-4">
+
+
+                                <li>
+                                    <button type="button" data-testid="horizontal-select-maison" class="btn btn-badge-primarylight" >
+                                        <div class="opack">
+                                  <input type="radio" value="Très Haut de gamme" id="myCheckbox1" name="gamme" class="form-control" formControlName="gamme" />
+                                  
+                                  <label for="myCheckbox1" class="styler">
+                                    <img alt="" class="imo" src="../../assets/images/BTP/mr1.PNG">
+                                    <div class="kouka">Très Haut de gamme</div>
+                                 </label>
+                                 
+                                 </div>
+                                 </button>
+                                </li>
+
+                                </div>
+
+
+                                <div class="col-md-4">
+                                <li>
+                                    <button type="button" data-testid="horizontal-select-maison" class="btn btn-badge-primarylight" >
+                                        <div class="opack">
+                                  <input type="radio" value="Haut de gamme" id="myCheckbox2" name="gamme" class="form-control" formControlName="gamme" />
+                                  
+                                  <label for="myCheckbox2" class="styler">
+                                    <img alt="" class="imo" src="../../assets/images/BTP/mr3.png">
+                                    <div class="kouka">Haut de gamme</div>
+                                 </label>
+                                 
+                                 </div>
+                                 </button>
+                                </li>
+                                </div>
+
+                                
+                                <div class="col-md-4">
+                                <li>
+                                    <button type="button" data-testid="horizontal-select-maison" class="btn btn-badge-primarylight" >
+                                        <div class="opack">
+                                  <input type="radio" value="Gamme normale" id="myCheckbox3" name="gamme" class="form-control" formControlName="gamme" />
+                                  
+                                  <label for="myCheckbox3" class="styler">
+                                    <img alt="" class="imo" src="../../assets/images/BTP/mr2.PNG">
+                                    <div class="kouka">Gamme normale</div>
+                                 </label>
+                                 
+                                 </div>
+                                 </button>
+                                </li>
+                                </div>
+
+                                </div>
+
+
+
+
+
+                </div>
+
+            </div>
+
+
+            <div class="btpro3">
+                <button type="button" (click)="add3()" class="btn-round-lg btn-lg">
+                    <div class="cont2">Continuer</div>   
+            </button>
+            </div>
+
+
+</form>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="bx4" *ngIf="quest4">
+
+    <div class="card shadow h-100">
+        <div class="card-body">
+            <div class="card-text ">
+                <form [formGroup]="fourthgrp">
+                    
+                            <div class="form-group ">
+                                <label class="font-weight-bold" for="surfaceTotale">
+                                    <div class="h4 text-dark">Surface totale au sol de ces pièces</div>
+                                    <small class="form-text text-muted">
+                                        Attention : indiquez la surface plancher, pas la surface
+                                        Carrez
+                                    </small>
+                                </label>
+                                <div class="input-group">
+                                    <input id="surfaceTotale" data-testid="surfaceTotale"
+                                        class="sc-AxgMl AWIFW form-control text-dark text-right" step="any"
+                                        min="0" max="9007199254740991" type="text" name="surface" class="form-control" 
+                                        formControlName="surface">
+
+                                    <div class="input-group-append">
+                                        <span class="input-group-text ">
+                                            <span class="font-weight-bold text-nowrap">m²
+
+                                            </span>
+                                        </span>
+                                    </div>
+
+                                </div>
+                          <br>
+                          <div class="btpro4">
+                            <button type="button" (click)="add4()" class="btn-round-lg btn-lg">
+                                <div class="cont2">Continuer</div>   
+                        </button>
+                        </div>
+                        </div>
+
+                    </form>
+               
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="bx5" *ngIf="quest5">            
+    <div class="justifier">
+               <form [formGroup]="fifthgrp">
+
+
+                <div class="center3">
+                                   
+                    <div class="h2 text-dark">Quel Type d'extension aimeriez-vous ?</div>
+                </div>
+            
+
+                   <br>
+                      <div id="" class="margin_top devistap_choix_container">
+                            <div class="containerr">     
+                                
+                               <div class="row">
+
+
+                                   <div class="col-md-4">
+
+
+                               <li>
+                                   <button type="button" data-testid="horizontal-select-maison" class="btn btn-badge-primarylight" >
+                                       <div class="opack">
+                                 <input type="radio" value="Une maison en rez de chaussée" id="myCheckbox1" name="extension" class="form-control" formControlName="extension" />
+                                 
+                                 <label for="myCheckbox1" class="styler">
+                                   <img alt="" class="imo" src="../../assets/images/BTP/mr1.PNG">
+                                   <div class="kouka">Rez de chaussée</div>
+                                </label>
+                                
+                                </div>
+                                </button>
+                               </li>
+
+                               </div>
+
+
+                               <div class="col-md-4">
+                               <li>
+                                   <button type="button" data-testid="horizontal-select-maison" class="btn btn-badge-primarylight" >
+                                       <div class="opack">
+                                 <input type="radio" value="Une maison à un étage" id="myCheckbox2" name="extension" class="form-control" formControlName="extension" />
+                                 
+                                 <label for="myCheckbox2" class="styler">
+                                   <img alt="" class="imo" src="../../assets/images/BTP/mr3.png">
+                                   <div class="kouka">Une maison à un étage</div>
+                                </label>
+                                
+                                </div>
+                                </button>
+                               </li>
+                               </div>
+
+                               
+                               <div class="col-md-4">
+                               <li>
+                                   <button type="button" data-testid="horizontal-select-maison" class="btn btn-badge-primarylight" >
+                                       <div class="opack">
+                                 <input type="radio" value="Une maison à deux étages" id="myCheckbox3" name="extension" class="form-control" formControlName="extension" />
+                                 
+                                 <label for="myCheckbox3" class="styler">
+                                   <img alt="" class="imo" src="../../assets/images/BTP/mr2.PNG">
+                                   <div class="kouka">Une maison à deux étages</div>
+                                </label>
+                                
+                                </div>
+                                </button>
+                               </li>
+                               </div>
+
+                               </div>
+
+
+
+
+
+               </div>
+
+           </div>
+
+
+           <div class="btpro5">
+            <button type="button" (click)="add5()" class="btn-round-lg btn-lg">
+                <div class="cont2">Continuer</div>   
+        </button>
+        </div>
+
+
+</form>
+</div>
+
+</div>
+
+
+<div class="bx6"  *ngIf="quest6">            
+    <div class="justifier">
+               <form [formGroup]="sixthgrp">
+
+                <div class="center2">
+                                   
+                    <div class="h2 text-dark">Quand pensez-vous réaliser les travaux ?</div>
+                </div>
+            
+
+
+                   <br>
+                      <div id="" class="margin_top devistap_choix_container">
+                            <div class="containerr">  
+
+                             
+                               <div class="row">
+
+                                <div class="col-md-3">
+
+
+                                    <li>
+                                        <button type="button" data-testid="horizontal-select-maison" class="btn btn-badge-primarylight" >
+                                            <div class="opack">
+                                      <input type="radio" value="Le plus rapidement possible" id="myCheckbox1" name="delai" class="form-control" formControlName="delai" />
+                                      
+                                      <label for="myCheckbox1" class="styler">
+                                        <img alt="" class="imos" src="../../assets/images/BTP/kok1.PNG">
+                                        <!-- <div class="kouka">Le plus rapidement possible</div> -->
+                                     </label>
+                                     
+                                     </div>
+                                     </button>
+                                    </li>
+     
+                                    </div>
+                                   <div class="col-md-3">
+
+
+                               <li>
+                                   <button type="button" data-testid="horizontal-select-maison" class="btn btn-badge-primarylight" >
+                                       <div class="opack">
+                                 <input type="radio" value="Dans les 6 prochains mois" id="myCheckbox2" name="delai" class="form-control" formControlName="delai" />
+                                 
+                                 <label for="myCheckbox2" class="styler">
+                                   <img alt="" class="imos" src="../../assets/images/BTP/kok2.PNG">
+                                   <!-- <div class="kouka">"Dans les 6 prochains mois</div> -->
+                                </label>
+                                
+                                </div>
+                                </button>
+                               </li>
+
+                               </div>
+
+                               <div class="col-md-3">
+
+
+                                <li>
+                                    <button type="button" data-testid="horizontal-select-maison" class="btn btn-badge-primarylight" >
+                                        <div class="opack">
+                                  <input type="radio" value="Plus tard" id="myCheckbox3" name="delai" class="form-control" formControlName="delai" />
+                                  
+                                  <label for="myCheckbox3" class="styler">
+                                    <img alt="" class="imos" src="../../assets/images/BTP/kok3.PNG">
+                                   
+                                 </label>
+                                 
+                                 </div>
+                                 </button>
+                                </li>
+ 
+                                </div>
+
+                                <div class="col-md-3">
+
+
+                                    <li>
+                                        <button type="button" data-testid="horizontal-select-maison" class="btn btn-badge-primarylight" >
+                                            <div class="opack">
+                                      <input type="radio" value="Je ne sais pas encore" id="myCheckbox4" name="delai" class="form-control" formControlName="delai" />
+                                      
+                                      <label for="myCheckbox4" class="styler">
+                                        <img alt="" class="imos" src="../../assets/images/BTP/kok4.PNG">
+          
+                                     </label>
+                                     
+                                     </div>
+                                     </button>
+                                    </li>
+     
+                                    </div>
+                               </div>
+                           
+
+
+
+
+               </div>
+
+           </div>
+
+
+           <div class="btpro6">
+            <button type="button" (click)="submit()" class="btn-round-lg btn-lg"
+            [routerLink]="['/accdevis']" routerLinkActive="router-link-active">
+                <div class="cont2">Envoyer</div>   
+        </button>
+        </div>
+
+         
+
+</form>
+</div>
+
+</div>
+
+   </div>
+
+
+   </html>

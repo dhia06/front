@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<div class="row">
+  <div class="col-6">
+    <div class="gauche">
+      <img src="https://www.vivons-maison.com/sites/default/files/belle-cuisine-equipee-design-blanc.jpg" class="gauche" width="100%"
+        height="100%" />
+        
+        <!-- https://www.wallpapertip.com/wmimgs/72-722312_beautiful-kitchen.jpg -->
+    </div>
+  </div>
+
+  <div class="col-6" id="table" id="content" #content>
+
+    <div class="droite">
+      <li class="list-group-item">
+
+        <form [formGroup]="stepOneForm">
+
+          <div class="form-group ">
+            <div class="opop">
+              <label class="font-weight-bold" for="surfaceTotale">
+                <div class="cout">Cout estimatif /TND : </div>
+
+              </label>
+
+
+                <input id="total" data-testid="total" class="sc-AxgMl AWIFW form-control text-dark text-right" min="0"
+                  max="9007199254740991" type="text" name="total" value="{{total}}" class="form-control" >
+
+            </div>
+          </div>
+          <!-- <div class="form-row">
+                <div class="form-group">
+                  <label>Number of Tickets</label>
+                  <select formControlName="numberOfTickets" class="form-control" (change)="onChangeTickets($event)">
+                    <option value=""></option>
+                    <option *ngFor="let i of [1,2,3,4,5,6,7,8,9,10]">{{i}}</option>
+                  </select>
+      
+                </div>
+              </div>  -->
+
+
+          <!-- <div *ngFor="let ticket of t.controls; let i = index" class="list-group list-group-flush">
+      <ng-container>  -->
+
+          <div formArrayName="itemst" *ngFor="let item of formDatat.controls; let i = index; let c = count">
+            <div class="line" [formGroupName]="i">
+
+              <!--     
+                <h5 class="card-title">Ticket {{i + 1}}</h5>  -->
+              <div class="form-group ">
+                <!-- <label class="font-weight-bold" for="surfaceTotale"> -->
+                <label class="surface">
+                  Quelle est la surface totale concernée en m² ? (Facultatif)
+                  <!-- <div class="h5 text-dark">Surface totale : </div> -->
+
+                </label>
+                <div class="input-group">
+                  <input id="surfaceTotale" data-testid="surfaceTotale"
+                    class="sc-AxgMl AWIFW form-control text-dark text-right" step="any" min="0" max="9007199254740991"
+                    type="text" name="surface" class="form-control" formControlName="surface">
+
+                  <div class="input-group-append">
+                    <span class="input-group-text ">
+                      <span class="font-weight-bold text-nowrap">m²
+
+                      </span>
+                    </span>
+                  </div>
+
+                </div>
+
+              </div>
+
+
+              <label class="surface"> Combien de cuisines aimeriez-vous avoir?</label>
+
+              <div class="alll">
+                <div id="main" ng-init="count=1">
+                  <div class="InputField_input-text_3zBw5 InputField_stepper_3HPg0 undefined">
+                    <div class="InputField_step-btn_15TbT">
+                  <i class="material-icons" (click)="fctmoins()">remove_circle</i>
+                  </div>
+                  </div>
+                 <div class="black" formControlName="count">{{count}}</div>
+                 <div class="InputField_input-text_3zBw5 InputField_stepper_3HPg0 undefined">
+         <!--khadhra -->  
+          <div class="InputField_step-btn_15TbT">
+                  <i class="material-icons" (click)="fctplus()" ng-click="count=count+1">add_circle</i>
+                  </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
+
+
+
+
+
+              <!-- <label class="font-weight-bold" for="surfaceTotale"> -->
+              <!-- <div class="h5 text-dark"> Gamme :</div> -->
+              <label class="surface">
+                Choisissez la gamme de votre cuisine ?
+                <!-- <div class="h5 text-dark">Surface totale : </div> -->
+
+              </label>
+
+
+              <mat-form-field>
+
+                <mat-select (selectionChange)="GetCategoryDropdown($event)" formControlName="categorie">
+                  <ng-container *ngFor="let cat of all">
+                    <mat-option value="{{cat.id}}">{{cat.name}}</mat-option>
+                    
+                  </ng-container>
+                </mat-select>
+
+              </mat-form-field>
+
+
+
+              <div class="card-text ">
+                <div *ngFor="let pres of Prestation">
+                  <div class="h5 text-dark">{{pres.nom}} </div>
+                  <label class="surface">
+                    Elément optionnel intérieur: </label>
+                  <!-- <div>Accessoires  :</div> -->
+
+                  <div *ngIf="pres.nom=='Menuiserie'">
+                    <div class="checkbox-items">
+                     
+                            <label *ngFor="let cat of allaccessoires">
+                           
+                              <input type="checkbox" formControlName="accessoires" [(ngModel)]="cat.checked"
+                                value="{{cat.Prix}}" id="input_checkbox" (change)="Calculate(cat)"
+                               (change)="CreateAccessoirepiece(cat)">
+
+                                <span class="h6"> {{cat.ArticleEntity.name}}</span>
+                                
+                            
+                            </label>
+                      
+                    </div>
+                  </div>
+
+
+
+                  <div *ngIf="pres.nom=='Electricité'">
+                    <div class="checkbox-items">
+                      <label *ngFor="let cat of allaccessoires1">
+                        <input type="checkbox" formControlName="accessoires" [(ngModel)]="cat.checked"
+                          value="{{cat.Prix}}"  id="input_checkbox1" (change)="Calculate(cat);"
+                          (change)="CreateAccessoirepiece(cat)">
+                          <span class="h6"> {{cat.ArticleEntity.name}}</span>
+                        
+                        <!-- <div *ngIf="display">
+                        <button (click)="download(cat)">Export To PDF</button>
+                        </div> -->
+                      </label>
+                    </div>
+
+                  </div>
+
+
+               <div *ngIf="pres.nom=='peinture'">
+
+                    <div class="checkbox-items">
+
+                      <label *ngFor="let cat of allaccessoires2">
+                        <input type="checkbox" formControlName="accessoires" [(ngModel)]="cat.checked"
+                          value="{{cat.Prix}}"  id="input_checkbox"(change)="Calculate(cat);" (change)="CreateAccessoirepiece(cat)">
+                          <span class="h6"> {{cat.ArticleEntity.name}}</span>
+                      </label>
+                    </div>
+
+                  </div>
+
+                  <div *ngIf="pres.nom=='Equipement'">
+                    <div class="checkbox-items">
+                      <label *ngFor="let cat of allaccessoires3">
+                        <input type="checkbox" formControlName="accessoires" [(ngModel)]="cat.checked"
+                          value="{{cat.Prix}}" (change)="Calculate(cat);" (change)="CreateAccessoirepiece(cat)">
+                          <span class="h6"> {{cat.ArticleEntity.name}}</span>
+                      </label>
+                    </div>
+                  </div> 
+                  <!-- <button (change)="download(cat)">Export To PDF</button> -->
+
+
+                </div>
+              </div>
+
+
+              <!-- <div class="addbutton">
+                <p class="btnm" (click)="addItemt()">
+                  Ajouter une pièce <i class="fa fa-plus"></i>
+                </p>
+              </div> -->
+
+
+
+
+
+
+
+            </div>
+          </div>
+        </form>
+        <!-- <app-list (sendproject)="metho($event)"></app-list> -->
+        <div class="Suivant">
+          <!-- (OnChange)="CreatePieceProjet($event)"  -->
+          <button mat-button matStepperNext (sendproject)="metho($event)" (click)="sendEvent()"
+           (click)="sendlista()"> Suivant </button>
+
+        </div>
+        <!-- <button (click)="download(cat)">Export To PDF</button> -->
+
+
+
+
+      </li>
+
+    </div>
+
+
+  </div>
+
+
+</div>
+
+
+
+
+
+
+<br> <br> <br> <br>
+
+<style>
+
+
+  /* .input[type=checkbox] {
+	margin: 4px 3px 3px 4px;
+} */
+ 
+</style>
+
+</html>

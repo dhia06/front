@@ -1,0 +1,98 @@
+<div class="card-container" *ngIf="projet"
+>
+  <div class="card">
+    <div class="front">
+      <div class="cover">
+        <img src="assets/images/rotating_card_thumb2.png">
+      </div>
+       <div class="user">
+       
+        <img class="img-circle" src="assets/images/BTP/{{projet.path | defaultImage}}">
+  
+      </div> 
+      
+      <div class="content">
+        <div class="main">
+          <h3 class="name">{{projet?.titre}} </h3>
+          <p class="profession">{{projet?.extension}}</p>
+          <p class="text-center"></p>
+          <div class="loul">
+          <div class="d-flex justify-content-center">
+            <button
+             
+              (click)="details(projet)" class="btn btn-info">
+              Demander un devis détaillé
+            </button>
+          </div>
+        </div>
+        </div>
+        <div class="footer">
+          <i class="fa fa-mail-forward"> Tourner pour voir plus de détails</i>
+           <!-- Auto Rotation -->
+        </div>
+      </div>
+    </div> <!-- end front panel -->
+    <div class="back">
+      <div class="header">
+        <h5 class="motto">Les caractéristiques de votre bon commercial:</h5>
+      </div>
+      <div class="content">
+        <div class="main">
+          <h4 class="text-center">
+            <i class="titr">Extension: </i>
+            <i class="see"> {{projet?.extension}} </i></h4>
+          <h4 class="text-center">   <i class="titr">Surface: </i>
+            
+            
+            <i class="see">{{projet?.surface}} m² </i> </h4>
+          <h4 class="text-center">   <i class="titr"> Gamme: </i>
+            <i class="see">{{projet?.gamme}}</i> </h4>
+          <h4 class="text-center">   <i class="titr">
+            Type de bien:</i> <i class="see">{{projet?.typebien}}</i> </h4>
+          <h4 class="text-center">   <i class="titr">Delai: </i>
+            <i class="see">{{projet?.delai}} </i></h4>
+         
+          <!-- <p class="text-center">Web design, Adobe Photoshop, HTML5, CSS3, Corel and many others...</p> -->
+
+
+          
+          <!-- <div class="stats-container">
+            <div class="stats">
+              <h4>235</h4>
+              <p>
+                Followers
+              </p>
+            </div>
+            <div class="stats">
+              <h4>114</h4>
+              <p>
+                Following
+              </p>
+            </div>
+            <div class="stats">
+              <h4>35</h4>
+              <p>
+                Projects
+              </p>
+            </div>
+          </div> -->
+
+        </div>
+      </div>
+     <div class="d-flex justify-content-center">
+        <button
+         
+          (click)="details(projet)" class="btn btn-info">
+          Demander un devis détaillé
+        </button>
+      </div> 
+      <div class="footer">
+        <div class="social-links text-center">
+        
+         </div>
+      </div>
+    </div> <!-- end back panel -->
+  </div> <!-- end card -->
+</div>
+
+

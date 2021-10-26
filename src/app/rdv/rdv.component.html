@@ -1,0 +1,64 @@
+<h1>Repondre aux Rendez-vous</h1>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+           <!-- id Column -->
+    <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> ID </th>
+        <td mat-cell *matCellDef="let element"> {{element.id_rdv}} </td>
+      </ng-container>
+  
+    <!-- titre Column -->
+    <ng-container matColumnDef="titre">
+      <th mat-header-cell *matHeaderCellDef> Titre </th>
+      <td mat-cell *matCellDef="let element"> {{element.titre}} </td>
+    </ng-container>
+  
+    <!-- date Column -->
+    <ng-container matColumnDef="date">
+      <th mat-header-cell *matHeaderCellDef> Date </th>
+      <td mat-cell *matCellDef="let element"> {{element.date |date}} </td>
+    </ng-container>
+  
+    <!-- nomcl Column -->
+    <ng-container matColumnDef="nomcl">
+      <th mat-header-cell *matHeaderCellDef> Nom du client </th>
+      <td mat-cell *matCellDef="let element"> {{element.nomcl}} </td>
+    </ng-container>
+  
+    <!-- tel Column -->
+    <ng-container matColumnDef="tel">
+      <th mat-header-cell *matHeaderCellDef> Numero de Tel </th>
+      <td mat-cell *matCellDef="let element"> {{element.tel}} </td>
+    </ng-container>
+    <!-- tel Column -->
+    <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef> Email </th>
+        <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+      </ng-container>
+
+
+    <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef> Actions </th>
+        <td mat-cell *matCellDef="let element">
+
+          <button class="btn btn-danger btn-xs" mat-raised-button (click)="deleterdv(element.id_rdv)"   
+            color="secondary"><span >Decliner</span> </button>
+          <!-- <div class="ba3adhom"> -->
+          <button  class="ba3adhom" class="btn btn-success btn-xs" mat-raised-button (click)="sendmailmeet(element)"
+          onclick="window.open('https://calendar.google.com/calendar/u/0/r/eventedit?vcon=meet&dates=now&hl=en-GB')"
+      
+            color="secondary"><span href="https//:google.com">Accepter</span> </button>
+          
+
+        </td>
+      </ng-container>
+
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  
+  
+  <!-- onclick="window.open('https://calendar.google.com/calendar/u/0/r/eventedit?vcon=meet&dates=now&hl=en-GB')" -->

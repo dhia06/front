@@ -1,289 +1,364 @@
 <style>
-    
-    .title {
+  .kaun{
+    /* position: right; */
+  }
+  .title {
 color: white;
-        position: -ms-page;
-        font-size: large;
-        font-weight: bold;
-        margin-left: 190px;
-        margin-top: 40px;
-        font-size: 2.5em; 
-    }
-    .h3{
-    font-weight: bold;
-    /* size:8px;  */
-    font-size: 1.3em; 
-    padding-top: 10%;
-    /* padding-left: 2px; */
+      position: -ms-page;
+      font-size: large;
+      font-weight: bold;
+      margin-left: 190px;
+      margin-top: 40px;
+      font-size: 2.5em; 
+  }
+  .h3{
+  font-weight: bold;
+  /* size:8px;  */
+  font-size: 1.3em; 
+  padding-top: 10%;
+ 
 }
 .my{
-    font-weight: bold;
-    color: black;
-    font-size: bold;
-    font-size: 1.7em; 
-    padding-top: 10%;
-    /* padding-left: 2px; */
+  font-weight: bold;
+  color: black;
+  font-size: bold;
+  font-size: 1.7em; 
+  padding-top: 10%;
+
 }
 .myy{
-    font-weight: bold;
-    color: black;
-    font-size: bold;
-    font-size: 1.7em; 
-    /* padding-top: 5%; */
-    /* padding-left: 2px; */
+  font-weight: bold;
+  color: black;
+  font-size: bold;
+  font-size: 1.7em; 
+
 }
 
-    .main {
-   
-        position: fixed;
-        background-size: cover;
-        width: 100%;
-        height: 100%;
-        background-repeat: no-repeat;
-        border-color: orangered;
-        border-width: 1em;
-        background: url('../../assets/img/about/vv.jpg') ;
-    }
-    .kaka{
-        height:560px;
-        margin-top: 10%;
-        margin-left: 30px;
-        margin-right:52%;
-        background-color: rgb(255, 255, 255);
-        
-        border: outset rgb(95, 192, 192);
-        border-color: rgb(22, 139, 185);
-        border-width: 0.4em; 
-    }
-  
-    </style>
-  
-  <body data-spy="scroll" data-target="#navbar-example">
-
-    <!-- ======= Header ======= -->
-    <header id="header" class="fixed-top">
-        <div class="container d-flex">
-  
-            <div class="logo mr-auto">
-                <h1 class="text-light"><a href="index.html"><span>B</span>TP Brain</a></h1>
-            </div>
-  
-            <nav class="nav-menu d-none d-lg-block">
-                <ul>
-                    <li class="active"><a href="#header">Home</a></li>
-                    <li><a href="#aboutttt">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#team">Team</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li class="drop-down"><a href="">Drop Down</a>
-                        <ul>
-                            <li><a href="#">Drop Down 1</a></li>
-                            <li class="drop-down"><a href="#">Drop Down 2</a>
-                                <ul>
-                                    <li><a href="#">Deep Drop Down 1</a></li>
-                                    <li><a href="#">Deep Drop Down 2</a></li>
-                                    <li><a href="#">Deep Drop Down 3</a></li>
-                                    <li><a href="#">Deep Drop Down 4</a></li>
-                                    <li><a href="#">Deep Drop Down 5</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Drop Down 3</a></li>
-                            <li><a href="#">Drop Down 4</a></li>
-                            <li><a href="#">Drop Down 5</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#contact">Contact</a></li>
-  
-                </ul>
-            </nav><!-- .nav-menu -->
-  
-        </div>
-        <h2 class="title">Sign up as Professional</h2> 
-      </header>
-      <div class="main">
-  <mat-horizontal-stepper [linear]="isLinear" #stepper class="kaka" >
+  .main {
  
-      <mat-step >
-        <form [formGroup]="identityFormGroup">
-          <ng-template matStepLabel><div class="my">Identity</div></ng-template>
-          <mat-form-field>
-                      <mat-label class="h3" >Name</mat-label>
-                      <input matInput placeholder="Last name, First name" required  [ngModelOptions]="{standalone: true}" name="lastname"
-                      [(ngModel)]="lastname" #last="ngModel" 
-                      type="text"
   
-                      maxlength="32"
-                      minlength="3"
+      border-width: 1em;
+
+      background-color: #1681e5;
+   
+  background-image: url(https://ld-wp.template-help.com/wordpress_64790/wp-content/uploads/2017/07/home-bg-1.jpg); 
+  background-position: center;
+  background-repeat:no-repeat;
+  padding: 60px 0px 0px 0px;
+  margin-bottom: 290px;
+  padding-top: 8%;
+
+  z-index: 2;
   
-                      pattern="[A-Za-z0-9\-_\-.]{3,32}"/>
-                      <div class="alert alert-danger" *ngIf="last.invalid && last.touched">
-                        <div *ngIf="last.errors.required">Lastname is required</div>
-                        <div *ngIf="last.errors.pattern"> Invalid lastname </div>
-                      </div>
-  
-  
-          </mat-form-field>
-    <br>
-      <mat-form-field>
-          <mat-label>Firstname</mat-label>
-  
-          <input  matInput placeholder="firstname" required name="firstname" [(ngModel)]="firstname" #lastt="ngModel"   [ngModelOptions]="{standalone: true}"
-  
-          maxlength="32"
-          minlength="3"
-          pattern="[A-Za-z0-9\-_\-.]{3,32}"/>
-          <div class="alert alert-danger" *ngIf="lastt.invalid && lastt.touched">
-            <div *ngIf="lastt.errors.required">Firstname is required</div>
-            <div *ngIf="lastt.errors.pattern"> Invalid firstname </div>
-          </div>
-  
-      </mat-form-field>
-  
-  
-  
-  
-  <br>
-  <mat-form-field>
-  
-  <mat-label>Number</mat-label>
-  <input  matInput placeholder="21623558138" required name="number"  [(ngModel)]="number" #nb="ngModel"  [ngModelOptions]="{standalone: true}"
-  type="text"
-  maxlength="11"
-  minlength="11"
-  
-  pattern="^[+216][0-9]{10}"/>
-  <div class="alert alert-danger" *ngIf="nb.invalid && nb.touched">
-    <div *ngIf="nb.errors.required">Phone number is required</div>
-    <div *ngIf="nb.errors.pattern"> Invalid phone number </div>
-  </div>
-  
-  
-  </mat-form-field>
-  
-  <br>
-  <mat-form-field>
-  <mat-label>datedenaissance</mat-label>
-  <input matInput placeholder="11/04/1997" required  [(ngModel)]="datedenaissance"  [ngModelOptions]="{standalone: true}" id="datedenaissance" type="date" ngModel  name="datedenaissance">
-  </mat-form-field>
-  
-  
-  <div>
-      <button mat-button matStepperNext>Next</button>
-  
-    </div>
-  
-        </form>
-      </mat-step>
-  
-  
-  
-  
-  
-  
-  
-  
-      <mat-step >
-  
-  
-        <form [formGroup]="addressFormGroup">
-            <ng-template matStepLabel><div class="myy">Fill out your coordinates</div> </ng-template>
-        <mat-form-field>
-            <mat-label>Address</mat-label>
-            <input matInput  placeholder="address" name="address"  [(ngModel)]="address"  [ngModelOptions]="{standalone: true}"
-                   required>
-          </mat-form-field>
-  <br>
-  
-  
-        <mat-form-field>
-          <mat-label>Registration number</mat-label>
-          <input matInput  placeholder="registration number" name="registration" [(ngModel)]="registration"  [ngModelOptions]="{standalone: true}"
-                 required>
-        </mat-form-field>
-  <br>
-  
-        <mat-form-field>
-          <mat-label>Postal code</mat-label>
-          <input matInput  placeholder="Postal code" name="postal" [(ngModel)]="postal"  [ngModelOptions]="{standalone: true}"
-                 required>
-        </mat-form-field>
-  
-        <br>
-  
-  <mat-form-field>
-          <mat-label>Company</mat-label>
-      <input matInput  placeholder="company" name="company" required  [(ngModel)]="company"  [ngModelOptions]="{standalone: true}">
-  
-        </mat-form-field>
-  
-        <br>
-  
-  <mat-form-field>
-          <mat-label>Bank Identifier Code (BIC)</mat-label>
-      <input matInput  placeholder="bic" name="bic" required  [(ngModel)]="bic" [ngModelOptions]="{standalone: true}">
-  
-        </mat-form-field>
-  
-  
-  
-  
-          <div>
-  
-            <button mat-button matStepperNext>Next</button>
-          </div>
-  
-        </form>
-      </mat-step>
-  
-  
-  
-  
-  
-  
-  
-      <mat-step>
-           <form [formGroup]="thirdFormGroup">
-            <ng-template matStepLabel><div class="myy">Fill in your profile</div></ng-template>
-        <p>You are now done.</p>
-        <mat-form-field>
-        <mat-label>Email</mat-label>
-        <input matInput placeholder="Email"  name="email"[(ngModel)]="email"  [ngModelOptions]="{standalone: true}" required #t="ngModel" 
-          type="email"
-          pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$'
-        />
-        <div class="alert alert-danger" *ngIf="t.invalid && t.touched">
-          <div *ngIf="t.errors.required">Email is required</div>
-          <div *ngIf="t.errors.pattern"> Invalid Email </div>
+    
+  }
+  .kaka{
+      height:500px;
+      width: 23%;
+      margin-bottom: 22%;
+      margin-left: 165px;
+      margin-right:52%;
+    
+      background-color: rgb(255, 255, 255);
+ 
+
+      border-width: 0.4em; 
+  }
+
+  </style>
+
+<body data-spy="scroll" data-target="#navbar-example">
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex">
+
+        <div class="logo mr-auto">
+            <h1 class="text-light"><a href="index.html"><span>B</span>TP Brain</a></h1>
         </div>
-  
-    </mat-form-field>
-    <br>
-  <mat-form-field>
-  
-      <mat-label>password</mat-label>
-  <input matInput placeholder="password" name="password"  [(ngModel)]="password" #p="ngModel" [ngModelOptions]="{standalone: true}" required  type="password" ngModel>
-  
-  
-  
-  </mat-form-field>
-  
-  <br>  
-  <mat-form-field>
-  
-  
-      <mat-label>Confirm your password</mat-label>
-  <input matInput placeholder="retype your password" name="plainTextPassword"  [(ngModel)]="plainTextPassword"  [ngModelOptions]="{standalone: true}" required id="p" type="password" ngModel>
-  </mat-form-field>
-  
-  <div class="center">
-    <button mat-button (click)="add()" [routerLink]="['/admin']" routerLinkActive="router-link-active"  class="btn btn-danger">Envoyer</button>
-       </div>
-  
-       </form>
-  
-  
-      </mat-step>
+
+        <nav class="nav-menu d-none d-lg-block">
+            <ul>
+                <li class="active"><a href="#header">Accueil</a></li>
+                <li><a href="#aboutttt">A propos</a></li>
+               
+                <li><a href="#team">Equipe</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#services">Services</a></li>
       
-  </mat-horizontal-stepper>
+
+               
+                <li><a 
+                    [routerLink]="['/login-pro']" routerLinkActive="router-link-active">Connexion</a> </li>
+
+            </ul>
+        </nav><!-- .nav-menu -->
+
+    </div>
+
+</header><!-- End Header -->
+
+
+    <div class="main">
+
+
+
+            <form  #myForm="ngForm">
+<mat-vertical-stepper [linear]="isLinear" #stepper class="kaka" >
+
+  <mat-step >
+
+    <form [formGroup]="identityFormGroup">
+     <div class="tab-1 resp-tab-content"  class="register" aria-labelledby="tab_item-0">
+     
+      <ng-template matStepLabel><div class="my">A propos de vous</div></ng-template>
+      <mat-form-field>
+       
+ 
+                  <mat-label class="new" >Prenom</mat-label>
+                  <input matInput required="" [ngModelOptions]="{standalone: true}" name="lastname"
+                  [(ngModel)]="lastname" #last="ngModel" 
+                  type="text"
+ 
+                  maxlength="32"
+                  minlength="3"
+ 
+                  pattern="[A-Za-z0-9\-_\-.]{3,32}"/>
+                  <div class="alert alert-danger" *ngIf="last.invalid && last.touched">
+                    <div *ngIf="last.errors.required">Le champ prnom est obligatoire</div>
+                    <div *ngIf="last.errors.pattern">Le prenom est invalide </div>
+                  </div>
+ 
+ 
+      </mat-form-field>
+ <br>
+  <mat-form-field>
+      <mat-label  class="new">Nom</mat-label>
+ 
+      <input  matInput  required="" name="firstname" [(ngModel)]="firstname" #lastt="ngModel"   [ngModelOptions]="{standalone: true}"
+      type="text"
+      maxlength="32"
+      minlength="3"
+      pattern="[A-Za-z0-9\-_\-.]{3,32}"/>
+      <div class="alert alert-danger" *ngIf="lastt.invalid && lastt.touched">
+        <div *ngIf="lastt.errors.required">Le champ nom est obligatoire</div>
+        <div *ngIf="lastt.errors.pattern"> Le nom est invalide</div>
+      </div>
+ 
+  </mat-form-field>
+ 
+ 
+ 
+ 
+ <br>
+ <mat-form-field>
+ 
+ <mat-label  class="new">Telephone</mat-label>
+ <input  matInput required="" name="number"  [(ngModel)]="number" #nb="ngModel"  [ngModelOptions]="{standalone: true}"
+ type="text"
+ 
+ 
+ pattern="^((\\+216-?)|0)?[0-9]{10}$"/>
+ <div class="alert alert-danger" *ngIf="nb.invalid && nb.touched">
+ <div *ngIf="nb.errors.required">Ce champ est obligatoire</div>
+ <div *ngIf="nb.errors.pattern">Le numero de téléphone est invalide </div>
+ </div>
+ 
+ 
+ </mat-form-field>
+ 
+ <br>
+ <mat-form-field>
+ <mat-label class="new"></mat-label>
+ <input matInput  required="" [(ngModel)]="datedenaissance"  [ngModelOptions]="{standalone: true}" id="datedenaissance" type="date" ngModel  name="datedenaissance">
+ </mat-form-field>
+ <br>
+ 
+  <button mat-button matStepperNext type="submit"  ><div class="sign-up">Suivant</div></button>
+ 
+ 
+ 
+ 
+ 
+ </div>
+    </form>
+  </mat-step>
+ 
+ 
+ 
+  <mat-step >
+  
+ 
+    <form [formGroup]="addressFormGroup">
+     <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
+         <div class="facts">
+ 
+           <div class="register">
+        <ng-template matStepLabel><div class="myy">Vos coordonnées</div> </ng-template>
+    <mat-form-field>
+ 
+ 
+        <mat-label class="new">Addresse</mat-label>
+        <input matInput required="" [ngModelOptions]="{standalone: true}" name="address"  [(ngModel)]="address" 
+         #a="ngModel" 
+         type="text" maxlength="32" minlength="5"
+      pattern="^[a-zA-Z ]*$"
+    />
+    <div class="alert alert-danger" *ngIf="a.invalid && a.touched">
+      <div *ngIf="a.errors.required">Ce champ est obligatoire</div>
+      <div *ngIf="a.errors.pattern">Ce champ est invalide</div>
+    </div>
+ 
+ 
+ 
+      </mat-form-field>
+ <br>
+ 
+ 
+    <mat-form-field>
+      <mat-label class="new">Numero d'enregistrement</mat-label>
+      <input matInput   #n="ngModel" name="registration" [(ngModel)]="registration"  [ngModelOptions]="{standalone: true}"
+      type="text" required=""
+      pattern="^[0-9]{6}$"/>
+      <div class="alert alert-danger" *ngIf="n.invalid && n.touched">
+      <div *ngIf="n.errors.required">Ce champ est obligatoire</div>
+      <div *ngIf="n.errors.pattern">Ce champ est invalide </div>
+    </div>
+    </mat-form-field>
+ <br>
+ 
+    <mat-form-field>
+      <mat-label class="new">Code postal</mat-label>
+      <input matInput name="postal" [(ngModel)]="postal"  [ngModelOptions]="{standalone: true}" ngModel
+      type="text" required="" #c="ngModel"
+      pattern="^[0-9]{4}$"/>
+      <div class="alert alert-danger" *ngIf="c.invalid && c.touched">
+      <div *ngIf="c.errors.required">Ce champ est obligatoire</div>
+      <div *ngIf="c.errors.pattern">Ce champ est invalide </div>
+    </div>
+    </mat-form-field>
+ 
+    <br>
+  
+ <mat-form-field>
+      <mat-label class="new">Entreprise</mat-label>
+  <input matInput name="company" required=""  type="text" [(ngModel)]="company"  [ngModelOptions]="{standalone: true}"
+  #ac="ngModel" maxlength="32" minlength="5" pattern="[a-zA-Z]*"/>
+    <div class="alert alert-danger" *ngIf="ac.invalid && ac.touched">
+      <div *ngIf="ac.errors.required">Ce champ est obligatoire</div>
+      <div *ngIf="ac.errors.pattern">Ce champ est invalide </div>
+    </div>
+ 
+    </mat-form-field>
+ 
+    <br>
+ 
+ <mat-form-field>
+      <mat-label class="new">Relevé d'identité bancaire (RIB)</mat-label>
+  <input matInput   name="bic" required="" [(ngModel)]="bic"  type="text" [ngModelOptions]="{standalone: true}"
+  #b="ngModel" minlength="5" pattern="[a-z0-9]{8}$"/>
+    <div class="alert alert-danger" *ngIf="b.invalid && b.touched">
+      <div *ngIf="b.errors.required">Le champ RIB est obligatoire</div>
+      <div *ngIf="b.errors.pattern">Ce champ est invalide</div>
+    </div>
+ 
+    </mat-form-field>
+ 
+ 
+ 
+ 
+      <div>
+  
+ <button mat-button matStepperPrevious><div class="back">Retourner</div></button>
+        <button mat-button matStepperNext type="submit" ><div class="sign-up">Suivant</div></button>
+      </div>
+ 
+      </div>
+      </div>
+      </div>
+    </form>
+  </mat-step>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  <mat-step>
+       <form [formGroup]="thirdFormGroup">
+         <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
+         <div class="facts">
+           <!--login1-->
+           <div class="register">
+        <ng-template matStepLabel><div class="myy">Votre profil</div></ng-template>
+  
+    <mat-form-field>
+    <mat-label class="new">Email</mat-label>
+    <input matInput name="email" [(ngModel)]="email"  [ngModelOptions]="{standalone: true}" required="" #t="ngModel" ngModel
+      type="email"
+      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+    />
+    <div class="alert alert-danger" *ngIf="t.invalid && t.touched">
+      <div *ngIf="t.errors.required">Le champ email est obligatoire</div>
+      <div *ngIf="t.errors.pattern"> Email est invalide </div>
+    </div>
+ 
+ </mat-form-field>
+ <br>
+ <mat-form-field>
+ 
+  <mat-label class="new">Mot de passe</mat-label>
+ <input matInput  name="password"  [(ngModel)]="password" #p="ngModel" [ngModelOptions]="{standalone: true}" required="" type="password" ngModel
+ pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{6,12}$"
+    />
+    <div class="alert alert-danger" *ngIf="p.invalid && p.touched">
+      <div *ngIf="p.errors.required">Le mot de passe est obligatoire</div>
+      <div *ngIf="p.errors.pattern"> Le mot de passe est invalide</div>
+    </div>
+ 
+ 
+ </mat-form-field>
+ 
+ <br>  
+ <mat-form-field>
+ 
+ 
+  <mat-label class="new">Confirmer votre mot de passe</mat-label>
+ <input matInput name="plainTextPassword"  [(ngModel)]="plainTextPassword" #pp="ngModel" [ngModelOptions]="{standalone: true}"required="" id="p" type="password" ngModel>
+ <div *ngIf=" p.value !== pp.value"
+              class="alert alert-danger">
+               
+              La confirmation ne correspond pas au mot de passe
+           
+             </div>
+ </mat-form-field>
+ 
+ 
+ 
+ <div class="center">
+   <button mat-button matStepperPrevious><div class="back">Retourner</div></button>
+   <button mat-button (click)="add()"
+   
+   
+   
+   [disabled]="myForm.invalid" ><div class="sign-up">Envoyer</div></button>
+ </div>
+ 
+ 
+ </div>
+ </div>
+ </div>
+   
+   </form>
+ 
+ 
+  </mat-step>
+  
+</mat-vertical-stepper>
+
+</form>
+
+
 </div>

@@ -1,0 +1,266 @@
+
+
+<div class="d-flex justify-content-center" *ngIf="listpiece">
+    <div class="col-lg-8 push-lg-4">
+      <div class="tab-content p-b-3">
+        <div class="tab-pane active" id="profile">
+          <h1><div class="print">Descriptif de ce projet : </div></h1>
+          <div class="d-flex justify-content-center">
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <!-- <span class="fa fa-clock-o ion-clock pull-xs-right"></span>
+              <h3>Les piéces :</h3> -->
+  
+              <table class="table table-hover table-striped">
+                <tbody>
+                  <br>
+  
+                  <!-- <div class="bb">
+                    <marquee direction="right" style="width: 150px; position:center; margin-left: 10px; margin-right: 10px;">
+                      <img src="../../assets/images/BTP/icons8-user-48.png" style="width: 120px; margin-left: 10px; margin-right: 10px;">
+                      <img src="../../assets/images/BTP/icons8-expensive-price-48.png" style="width: 120px; margin-left: 10px; margin-right: 10px;">
+                      <img src="../../assets/images/BTP/icons8-city-buildings-48.png" style="width: 120px; margin-left: 10px; margin-right: 10px;">
+                      <img src="../../assets/images/BTP/icons8-notepad-48.png" style="width: 120px; margin-left: 10px; margin-right: 10px;">
+               
+                  </marquee>
+                </div> -->
+  
+                  <div class="style">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                      <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                        <!--   <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="8"></li> -->
+                      </ol>
+                      <div class="carousel-inner">
+  
+  
+                        <div class="carousel-item active">
+                          <img class="d-block w-75" src="../../assets/images/BTP/nice4.PNG" alt="Second slide">
+                        </div>
+  
+                        <div class="carousel-item">
+                          <img class="d-block w-75" src="../../assets/images/BTP/nice1.PNG" alt="Second slide">
+                        </div>
+  
+                        <div class="carousel-item">
+                          <img class="d-block w-75" src="../../assets/images/BTP/nice2.PNG" alt="Second slide">
+                        </div>
+  
+                        <div class="carousel-item">
+                          <img class="d-block w-75" src="../../assets/images/BTP/nice3.PNG" alt="Second slide">
+                        </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+                        <!-- <div class="carousel-item active">
+                      <img  class="d-block w-75" src="../../assets/images/BTP/kk1.PNG" alt="Second slide">
+                    </div> -->
+  
+  
+                        <!--         
+                    <div class="carousel-item">
+                      <img  class="d-block w-75" src="../../assets/images/BTP/kk2.PNG" alt="Third slide">
+                    </div>
+  
+  
+  
+                    <div class="carousel-item">
+                    <img class="d-block w-75" src="../../assets/images/BTP/kk3.PNG">
+                    </div>
+  
+  
+                    <div class="carousel-item">
+                      <img class="d-block w-75" src="../../assets/images/BTP/785.PNG">
+                      </div>
+  
+                    <div class="carousel-item">
+                      <img class="d-block w-75" src="../../assets/images/BTP/kk6.PNG">
+                      </div>
+  
+                      <div class="carousel-item">
+                        <img class="d-block w-75" src="../../assets/images/BTP/657.PNG">
+                        </div>
+  
+                        <div class="carousel-item">
+                          <img class="d-block w-75" src="../../assets/images/BTP/421.PNG">
+                          </div>
+  
+                          <div class="carousel-item">
+                            <img class="d-block w-75" src="../../assets/images/BTP/147.PNG">
+                            </div>
+  
+                            <div class="carousel-item">
+                              <img class="d-block w-75" src="../../assets/images/BTP/83.PNG">
+                              </div> -->
+  
+  
+                      </div>
+                      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+                  </div>
+  
+                  <br>
+                  
+                  <div *ngFor="let pp of listpiece">
+  
+                    <div class="maintt"> {{pp.nbr}} {{ pp.pieces.nom }}(s) </div>
+  
+                    <br>
+                    <!-- <td> -->
+                      <img src="https://www.mtcmaisons.com/wp-content/uploads/2017/05/ic-home.png" class="ll">
+                      <!-- <div class="maint">Accessoires :</div> -->
+                        <span class="mainto">Accessoires</span> 
+                    <!-- </td> -->
+                    <!-- <div *ngFor="let in of [0]"  class="list-group-item" > -->
+                    <div *ngIf="pp.pieces.nom=='cuisine'">
+  
+                      <div *ngFor="let mm of kk[0]">
+  
+                        <td> {{pp.nbr}}-{{ mm.ArticleEntity.name }} </td>
+                      </div>
+                    </div>
+                    <div *ngIf="pp.pieces.nom=='Salle d eau'">
+                      <div *ngFor="let mm of kk[1]">
+  
+                        <td> {{pp.nbr}}-{{ mm.ArticleEntity.name }} </td>
+                      </div>
+  
+                      <!-- </div> -->
+                    </div>
+  
+  
+  
+                    <div *ngIf="pp.pieces.nom=='chambre'">
+                      <div *ngFor="let mm of kk[2]">
+  
+                        <td> {{pp.nbr}}-{{ mm.ArticleEntity.name }} </td>
+                      </div>
+                    </div>
+  
+  
+                    <div *ngIf="pp.pieces.nom=='Salon'">
+                      <div *ngFor="let mm of kk[3]">
+  
+                        <td> {{pp.nbr}}-{{ mm.ArticleEntity.name }} </td>
+                      </div>
+                    </div>
+  
+  
+  
+  
+                    <div *ngIf="pp.pieces.nom=='Terrasse et exterieur'">
+                      <div *ngFor="let mm of kk[4]">
+  
+                        <td> {{pp.nbr}}-{{ mm.ArticleEntity.name }} </td>
+                      </div>
+                    </div>
+  
+  
+  
+  
+                    <!----    <td>    {{ pp.AccessoiresProjet[1].accessoires.nom }} </td> 
+                <td>    {{ pp.AccessoiresProjet[2].accessoires.nom }} </td> 
+                <td>    {{ pp.AccessoiresProjet[3].accessoires.nom }} </td> 
+                <td>    {{ pp.AccessoiresProjet[4].accessoires.nom }} </td> 
+             -->
+  
+  
+  
+                    <!-- <td> {{ pp.AccessoiresProjet[1].accessoires.nom }} </td>  
+            <td> {{ pp.AccessoiresProjet[2].accessoires.nom }} </td>  
+              -->
+  
+  
+  
+  
+                    <!-- <td> {{ pp.pieces.Prestation[0].accessoires[0].nom }}</td>
+       
+       
+                         <td> {{ pp.pieces.Prestation[0].accessoires[1].nom }}</td>  -->
+  
+  
+  
+                    <!-- 
+                             {{ pp.AccessoiresProjet.idprojet }} -->
+                  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+                  <!-- <tr>
+  
+                   <div *ngFor="let acc of listaccessoires">
+               <td>   {{acc.PieceProjet.pieces.nom}}</td> -->
+                  <!-- <td> {{acc.accessoires.nom}}</td>  -->
+                  <!-- <div *ngFor="let pp of listpiece">
+                    <td>{{ pp.pieces.nom }}</td>  
+                      </div> -->
+                  <!-- </div> 
+                      </tr> -->
+  
+  
+  
+  
+  
+  
+                  <!-- <tr>
+                      <td>
+                          <strong>Nom : </strong>
+                          {{ pp.Projet.nom }}
+                      
+                      </td>
+                    </tr> -->
+  
+  
+  
+                  <!-- </li>  -->
+  
+  
+                </tbody>
+              </table>
+  
+              <div class="d-flex justify-content-center">
+                <button class="btn btn-info" (click)="backthen()">Retourner</button>
+                <!-- <button class="btn btn-danger">Delete</button> -->
+  
+              </div>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+  

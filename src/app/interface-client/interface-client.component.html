@@ -1,0 +1,336 @@
+<header id="header" class="fixed-top">
+    <div class="container d-flex">
+
+        <div class="logo mr-auto">
+            <h1 class="text-light"><a href="index.html"><span>B</span>TP Brain</a></h1>
+        </div>
+
+        <nav class="nav-menu d-none d-lg-block">
+            <ul>
+                <li class="active"><a href="#header">Accueil</a></li>
+                <li><a href="bloog">A propos</a></li>
+                <li><a href="#team">Equipe</a></li>
+                <!-- <li><a href="#services">Services</a></li> -->
+                <!-- <li><a href="#team">Equipe</a></li> -->
+                <!-- <li><a href="#portfolio">Portfolio</a></li> -->
+                <li><a href="propos">blog</a></li>
+                <li class="drop-down"><a href="feather icon-pie-chart"> Services</a>
+                    <ul>
+                        <li class="drop-down"><a href="#">Devis Personalisé</a>
+                            <ul>
+                                <li><a href="Devis">Devis Express</a></li>
+                                <li><a href="#">Devis Detaillé</a></li>
+                            </ul>
+                        </li>
+                        <li class="drop-down"><a href="#">Construction </a>
+                            <ul>
+                                <li><a href="#">Genie Civil</a></li>
+                                <li><a href="#">Genie Fluides</a></li>
+                                <li><a href="#">Finition</a></li>
+
+                            </ul>
+                        </li>
+                        <li><a href="#">Prise des Rendez-vous</a></li>
+                   
+                    </ul>
+                </li>
+
+               <li class="drop-down">
+                   <a href="#">{{userService.loggedUser}} {{userService.loggedUser2}}
+                <!-- <img data-v-eb60624a="" src="../../assets/images/BTP/linaa.jpg" class="w-24 h-24 object-cover align-middle rounded-full"
+                width="30px" 
+                height="40px" /> -->
+            </a>
+              
+            
+                <ul>
+
+                    <li> <a href="#" *ngIf="!userService.isloggedIn" class="dropdown-item"  [routerLink]="['/connexion']" routerLinkActive="router-link-active">Login</a></li>
+                  <li> <a href="#" *ngIf="userService.isloggedIn" class="dropdown-item" (click) = "OnLogout()">Déconnexion</a></li>
+                  
+                </ul>           
+            </li>
+
+
+
+
+
+
+
+
+
+         </ul>
+        </nav><!-- .nav-menu -->
+
+    </div>
+
+</header><!-- End Header -->
+<br>
+<br>
+<br>
+<br>
+
+
+
+<div class="hm-gradient">
+    <div class="home">
+        <section class="relative flex flex-col items-center text-center p-6">
+            <div data-v-eb60624a="" class="relative mt-4 overflow-hidden">
+
+                <img data-v-eb60624a="" src="../../assets/images/BTP/linaa.jpg" class="w-24 h-24 object-cover align-middle rounded-full"
+                width="100px" 
+                height="120px" />
+    </div>
+    <h2>
+        {{userService.loggedUser}}  {{userService.loggedUser2}}
+      </h2>
+
+      <div class="flex flex-col items-center">
+        <h3>
+         Vous êtes maintenant connectées à votre compte </h3>
+     
+      <div class="flex-1 py-2 m-2">
+        <p>
+            <button type="button" class="btn btn-primary btn-round-lg btn-lg" [routerLink]="['/nv-projet']" routerLinkActive="router-link-active">
+                <span class="bout">
+                  
+                    Créer un nouveau projet
+                         </span>
+            </button>
+          </p>
+    
+</div>
+</div>
+
+  
+
+
+
+
+
+<div class="bottom">
+    <ul data-v-5915f69c="" class="glide__slides pointer-events-auto" style="transition: transform 0ms cubic-bezier(0.165, 0.84, 0.44, 1) 0s; width: 574px; transform: translate3d(9px, 0px, 0px);">
+        <li data-v-5915f69c="" class="glide__slide glide__slide--active" style="width: 106.8px; margin-right: 5px;">
+    
+            <div class="kk">
+                <div class="dt">
+                <img src="../../assets/images/BTP/icons8-user-48.png">
+                </div>
+                <div class="msgd">Profile</div>
+                
+                
+                </div>
+                
+           
+    </li>
+    
+    <li data-v-5915f69c="" class="glide__slide glide__slide--active" style="width: 106.8px; margin-right: 5px;">
+    
+        <div class="kk">
+            <div class="say">
+            <img src="../../assets/images/BTP/rdv.PNG"  [routerLink]="['/prdv']" routerLinkActive="router-link-active"> 
+            </div>
+            <div class="msg">Rendez-vous</div>
+            
+            
+            </div>
+            
+       
+    </li>
+    
+    <li data-v-5915f69c="" class="glide__slide glide__slide--active" style="width: 106.8px; margin-right: 5px;">
+    
+        <div class="kk">
+            <div class="dt">
+            <img src="../../assets/images/BTP/icons8-expensive-price-48.png"  [routerLink]="['/accdevis']" routerLinkActive="router-link-active">
+            </div>
+            <div class="msgd">Devis</div>
+            
+            
+            </div>
+            
+       
+    </li>
+    
+    <li data-v-5915f69c="" class="glide__slide glide__slide--active" style="width: 106.8px; margin-right: 5px;">
+    
+        <div class="kk">
+            <div class="dt">
+            <img src="../../assets/images/BTP/icons8-city-buildings-48.png"  [routerLink]="['/projj']" routerLinkActive="router-link-active">
+            </div>
+            <div class="msgd">Projet</div>
+          </div>
+            
+       
+    </li>
+    
+    
+    <li data-v-5915f69c="" class="glide__slide glide__slide--active" style="width: 106.8px; margin-right: 5px;">
+    
+        <div class="kk">
+            <div class="dt">
+            <img src="../../assets/images/BTP/icons8-notepad-48.png">
+            </div>
+            <div class="msg">Blog</div>
+            
+            
+            </div>
+            
+       
+    </li>
+    
+    
+    
+    
+    </ul>
+    
+    
+    </div>
+
+</section>
+
+    </div>
+    
+</div>
+
+
+
+
+<button  (click)="openDialog()" type='submit'>
+    <i class="fa fa-send fa-2x"></i>
+  </button>
+
+
+
+
+
+
+
+
+
+
+          <!--CHAT ICONO-->
+          <input type="checkbox" id="chat-overlay" class="check-chat" (click)="openDialog()">
+          <section class="chat-icono">
+          <label for="chat-overlay">
+          <div class="chat-boton"></div>
+          </label>
+          </section>
+          <!--FIN DE CHAT ICONO--->
+          
+          <!-- <section class="chat">
+          <div class="datos-chat"> -->
+              <!--MENSAJE-->
+              <!-- <div class="mensaje"> -->
+                <!-- <div class="chat-franja">Estamos disponible!</div> -->
+  
+              <!-- <iframe src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/Fackin-Genius-129819771054436/%2F&amp;tabs=messages&amp;width=320&amp;height=500&amp;small_header=true&amp;adapt_container_width=true&amp;hide_cover=true&amp;show_facepile=true&amp;appId=1513413698897095" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowtransparency="true"></iframe> -->
+              <!-- </div> -->
+              <!--FIN DE MENSAJE-->
+              
+          <!-- </div>
+       
+          
+                  </section> -->
+
+
+
+
+
+<footer>
+    <div class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="footer-content">
+                        <div class="footer-head">
+                            <div class="footer-logo">
+                                <h2><span>e</span>Business</h2>
+                            </div>
+
+                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                                laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
+                            <div class="footer-icons">
+                                <ul>
+                                    <li>
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-google"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-pinterest"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end single footer -->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="footer-content">
+                        <div class="footer-head">
+                            <h4>information</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                            <div class="footer-contacts">
+                                <p><span>Tel:</span> +123 456 789</p>
+                                <p><span>Email:</span> contact@example.com</p>
+                                <p><span>Working Hours:</span> 9am-5pm</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end single footer -->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="footer-content">
+                        <div class="footer-head">
+                            <h4>Instagram</h4>
+                            <div class="flicker-img">
+                                <a href="#"><img src="assets/img/portfolio/1.jpg" alt=""></a>
+                                <a href="#"><img src="assets/img/portfolio/2.jpg" alt=""></a>
+                                <a href="#"><img src="assets/img/portfolio/3.jpg" alt=""></a>
+                                <a href="#"><img src="assets/img/portfolio/4.jpg" alt=""></a>
+                                <a href="#"><img src="assets/img/portfolio/5.jpg" alt=""></a>
+                                <a href="#"><img src="assets/img/portfolio/6.jpg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-area-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="copyright text-center">
+                        <p>
+                            &copy; Copyright <strong>eBusiness</strong>. Tous droits réservés
+                        </p>
+                    </div>
+                    <div class="credits">
+  
+                        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer><!-- End  Footer -->
+
+
+
+
+
+
+
+
+
+
+
+

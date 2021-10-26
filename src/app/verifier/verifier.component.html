@@ -1,0 +1,74 @@
+<div class="centrerfor">
+    <div class="container h-100">
+        <div class="row h-100 justify-content-center align-items-center">
+            <form class="col-md-9">
+                <div class="AppForm shadow-lg">
+                    <div class="row">
+                        <div class="col-md-6 d-flex justify-content-center align-items-center">
+                            <div class="AppFormLeft">
+                               
+                                <h2 class="ho">Confirmer votre adresse e-mail </h2>
+                                   <h2 class="hoo">pour commencer dans Brain Consulting</h2>
+                            
+    
+                                <form (ngSubmit)='submitForm()'>
+                                    <br>
+          
+                                    <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
+                                      <div class="facts">
+                                        <!--login1-->
+                                       <br><br><br>
+                                        <label for="email"><b>Email</b></label>
+                                        <br><br>
+                                        <div class="register">
+                                            <input  name="email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" required
+                                            class="form-control border-top-0 border-right-0 border-left-0 rounded-0 shadow-none"
+                                            placeholder="Entrer votre email..."   #t="ngModel" type="email" pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$' />
+                                            <div class="alert alert-danger" *ngIf="t.invalid && t.touched">
+                                            </div>
+                                            <br><br>
+                                            <div class="centrer">
+                                                
+                                            <button  type="submit()" class="btn btn-success btn-lg shadow border-1 py-2 ">
+                                                Envoyer
+                                            </button>
+                                        </div>
+                              
+          
+                                    </div>
+                                    </div>
+                                    </div>
+          
+                                  </form>
+    
+    
+                               
+                           <br><br>
+                                <div class="centrer">
+                                  
+                              
+                                </div>
+    
+                                <p class="text-center mt-5">
+        
+                                    <span>
+                                        Créer un compte
+                                    </span>
+    
+                                </p>
+    
+                            </div>
+    
+                        </div>
+                        <div class="col-md-6">
+                            <div class="AppFormRight position-relative d-flex justify-content-center flex-column align-items-center text-center p-5 text-white">
+                                <h2 class="position-relative px-4 pb-3 mb-4">Bienvenue</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+            </form>
+        </div>
+    </div>
+    </div>

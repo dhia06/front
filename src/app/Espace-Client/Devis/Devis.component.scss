@@ -3,9 +3,22 @@
 .mat-stepper-horizontal {
     margin-top: 8px;
   }
+
+
+  .opack [type='radio'] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  
   
   .mat-form-field {
     margin-top: 16px;
+  }
+  .bordure{
+    border: solid rgb(19, 18, 18);
   }
   .fieldset
   {
@@ -64,6 +77,70 @@
 	overflow:hidden;
 }
 .nivo-box img { display:block; }
+
+li {
+  display: inline-block;
+}
+
+input[type="checkbox"][id^="myCheckbox"] {
+  display: none;
+}
+
+label {
+  border: 1px solid #fff;
+  padding: 10px;
+  display: block;
+  position: relative;
+  margin: 10px;
+  cursor: pointer;
+}
+
+label:before {
+  background-color: white;
+  color: white;
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  border: 1px solid grey;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 28px;
+  transition-duration: 0.4s;
+  transform: scale(0);
+  
+}
+
+label img {
+  height: 220px;
+  width: 220px;
+  transition-duration: 0.2s;
+  transform-origin: 50% 50%;
+  content: "✓";
+  background-color: rgb(187, 27, 27);
+  transform: scale(1);
+  
+  
+}
+
+:checked + label {
+  border-color: rgb(198, 40, 40);
+}
+
+:checked + label:before {
+  content: "✓";
+  background-color: rgb(187, 27, 27);
+  transform: scale(1);
+}
+
+:checked + label img {
+  transform: scale(0.9);
+  /* box-shadow: 0 0 5px #333; */
+  z-index: -1;
+}
 
 /* Caption styles */
 .nivo-caption {
@@ -437,7 +514,7 @@ a {
 }
 
 a:hover {
-  color: #3EC1D5;
+  color: #d1ac44;
   text-decoration: none;
 }
 
@@ -576,10 +653,31 @@ div#preloader {
   background: rgba(0, 0, 0, 0.5);
 }
 
+.hh{
+  font-size: 1.6em;
+  font-weight: bold;
+  color: black;
+  padding-left: 50px;
+}
+.hhh{
+  font-size: 1.6em;
+  font-weight: bold;
+  color: black;
+  padding-left: 115px;
+}
+
+
+.iuiu{
+  width: 477px;
+
+}
 #header.header-scrolled {
   background: rgba(0, 0, 0, 0.8);
   height: 60px;
   padding: 10px 0;
+}
+.lol{
+  padding-left: 220px;
 }
 
 #header .logo h1 {
@@ -590,14 +688,23 @@ div#preloader {
   font-weight: bold;
 }
 
+.opack [type='checkbox'] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
 #header .logo h1 span {
   color: #3ec1d5;
 }
 
-#header .logo h1 a, #header .logo h1 a:hover {
-  color: #fff;
-  text-decoration: none;
-}
+
+
+// #header .logo h1 a, #header .logo h1 a:hover {
+//   // color: #fff;
+//   // text-decoration: none;
+//   background-color: rgb(130, 157, 179);
+// }
 
 #header .logo img {
   padding: 0;
@@ -1860,6 +1967,10 @@ preview-2
   transition: 0.4s;
 }
 
+
+.kaka{
+  padding-left: 210px;
+}
 /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
@@ -2465,6 +2576,16 @@ preview-2
   margin: 20px 0;
 }
 
+
+.hyhy{
+  padding-right: 800px;
+
+}
+.jiji{
+
+  padding-right: 450px;
+  // padding-bottom: 200px;
+}
 .post-information .entry-meta span i {
   padding: 0 10px;
 }
@@ -2555,6 +2676,7 @@ preview-2
   margin-bottom: 60px;
   max-width: 650px;
 }
+.title{padding-left: 90%;}
 
 .comments-heading h3, h3.comment-reply-title {
   border-bottom: 1px solid #e8e8e9;
@@ -2809,6 +2931,60 @@ span.email-notes {
 .copyright > p {
   margin-bottom: 0;
   color: #444;
+}
+
+
+li {
+  display: inline-block;
+}
+
+input[type="checkbox"][id^="myCheckbox"] {
+  display: none;
+}
+
+label {
+  border: 1px solid #fff;
+  padding: 10px;
+  display: block;
+  position: relative;
+  margin: 10px;
+  cursor: pointer;
+}
+
+label:before {
+  background-color: white;
+  color: white;
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  border: 1px solid grey;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 28px;
+  transition-duration: 0.4s;
+  transform: scale(0);
+}
+
+
+
+:checked + label {
+  border-color: #ddd;
+}
+
+:checked + label:before {
+  content: "✓";
+  background-color: grey;
+  transform: scale(1);
+}
+
+:checked + label img {
+  transform: scale(0.9);
+  /* box-shadow: 0 0 5px #333; */
+  z-index: -1;
 }
 
 .copyright a, .credits a {
@@ -3074,8 +3250,8 @@ span.email-notes {
   }
 }
 
-@media (max-width: 575px) {
-  .slider-content {
-    padding: 0;
-  }
-}
+// @media (max-width: 575px) {
+//   .slider-content {
+//     padding: 0;
+//   }
+
